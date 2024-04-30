@@ -37,7 +37,7 @@ export default function Home() {
       </section>
 
       <div className={styles.headerImgWrapper}>
-        <Image src={'/home-header.png'} fill alt='Beehive logo mark' priority />
+        <Image src={'/home-hero.jpg'} fill alt='Beehive logo mark' priority />
       </div>
 
       <section className={styles.aboutUsSection}>
