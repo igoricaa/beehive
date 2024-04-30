@@ -1,0 +1,26 @@
+.slider {
+  grid-column: span 9;
+  display: flex;
+  width: 100vw;
+}
+
+.embla {
+  margin: auto;
+  --slide-spacing: 1rem
+  position: relative;
+  overflow: hidden;
+
+  .emblaContainer {
+    backface-visibility: hidden;
+    display: flex;
+    touch-action: pan-y;
+    margin-left: calc(1rem * -1);
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .slider {
+    grid-column: span 12;
+  }
+  
+}

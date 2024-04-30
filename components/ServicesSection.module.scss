@@ -1,0 +1,44 @@
+$gridGap: 2rem;
+
+.servicesSection {
+  margin: 7.8rem 0 10.6rem;
+  display: grid;
+  grid-template-columns: repeat(12, minMax(0, 1fr));
+  gap: $gridGap;
+
+  .imageWrapper {
+    grid-column: span 5;
+    width: 100%;
+    aspect-ratio: 667 / 819;
+    position: relative;
+  }
+
+  .servicesInfoWrapper {
+    grid-column: span 7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  $gridGap: 1.5rem;
+
+  .servicesSection {
+    margin: 3rem 0;
+    gap: $gridGap;
+
+    .imageWrapper {
+      grid-column: span 12;
+      aspect-ratio: 383 / 203;
+    }
+
+    .servicesInfoWrapper {
+      grid-column: span 12;
+
+      section {
+        margin-top: 10px;
+      }
+    }
+  }
+}

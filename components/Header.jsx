@@ -1,0 +1,176 @@
+'use client';
+
+import styles from './Header.module.scss';
+import { useCallback, useEffect, useRef, useState } from 'react';
+import { Link } from 'next-view-transitions';
+import { usePathname } from 'next/navigation';
+import { routes, socials } from '@/data';
+import CleanLogo from '@/public/logos/BeehiveCleanLogo';
+import FullLogo from '@/public/logos/BeehiveCreativeAgencyLogo';
+
+// type Theme = 'dark' | 'light';
+
+export default function Header({ theme = 'dark' }) {
+  const [mounted, setMounted] = useState(false);
+  const pathname = usePathname();
+  const [menuOpen, setMenuOpen] = useState(false);
+  const burgerRef = useRef(null);
+  const menuRef = useRef(null);
+  const [isDesktop, setIsDesktop] = useState(false);
+  const [headerTransformed, setHeaderTransformed] = useState(false);
+
+  const handleClickOutside = useCallback(
+    (event) => {
+      if (
+        menuOpen &&
+        menuRef.current &&
+        !menuRef.current.contains(event.target) &&
+        !burgerRef.current.contains(event.target)
+      ) {
+        setMenuOpen(false);
+      }
+    },
+    [menuOpen, menuRef, burgerRef]
+  );
+
+  const transformHeader = () => {
+    const scrolled = document.documentElement.scrollTop;
+    // TODO: table/mobile
+    const breakpoint = 67;
+    if (scrolled > breakpoint) {
+      setHeaderTransformed(true);
+    } else if (scrolled <= breakpoint) {
+      setHeaderTransformed(false);
+    }
+  };
+
+  useEffect(() => {
+    setMounted(true);
+
+    const isDesktopCurr = window.matchMedia('(min-width: 991px)').matches;
+    if (typeof window !== 'undefined') setIsDesktop(isDesktopCurr);
+
+    document.addEventListener('mousedown', handleClickOutside);
+
+    if (!isDesktopCurr) {
+      window.addEventListener('scroll', transformHeader);
+    }
+
+    return () => {
+      if (!isDesktop) {
+        window.removeEventListener('scroll', transformHeader);
+      }
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [handleClickOutside, isDesktop]);
+
+  if (!mounted) {
+    return null;
+  }
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+    document.body.classList.contains('stopScrolling')
+      ? document.body.classList.remove('stopScrolling')
+      : document.body.classList.add('stopScrolling');
+  };
+
+  return (
+    <>
+      <header className={[styles.header, styles[theme]].join(' ')}>
+        <Link href='/' className={styles.logoWrapper}>
+          {isDesktop ? <FullLogo theme={theme} /> : <CleanLogo theme={theme} />}
+        </Link>
+        <nav
+          className={[styles.navMenu, menuOpen ? styles.active : ''].join(' ')}
+        >
+          {isDesktop && (
+            <ul>
+              {routes.map((route, index) => (
+                <li
+                  key={index}
+                  className={pathname == route.path ? styles.active : ''}
+                >
+                  <Link href={route.path}>{route.name}</Link>
+                </li>
+              ))}
+            </ul>
+          )}
+          {!isDesktop && (
+            <>
+              <div
+                className={styles.burger}
+                ref={burgerRef}
+                onClick={toggleMenu}
+              >
+                <div className={styles.bar}></div>
+                <div className={styles.bar}></div>
+              </div>
+
+              <div className={styles.mobileMenu} ref={menuRef}>
+                <Link href='/' className={styles.logoWrapper}>
+                  {isDesktop ? (
+                    <FullLogo theme={'dark'} />
+                  ) : (
+                    <CleanLogo theme={'dark'} />
+                  )}
+                </Link>
+                <ul>
+                  {routes.map((route, index) => (
+                    <li
+                      key={index}
+                      className={pathname == route.path ? styles.active : ''}
+                    >
+                      <Link href={route.path} onClick={toggleMenu}>
+                        {route.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <div className={styles.menuFooter}>
+                  <div className={styles.socialsWrapper}>
+                    <p>gde zujimo:</p>
+                    <div className={styles.socials}>
+                      {socials.map((social, index) => (
+                        <Link
+                          key={index}
+                          href={social.link}
+                          className={styles.social}
+                          target='_blank'
+                        >
+                          <span>{social.text}</span>
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                  <div className={styles.closeMenuButton} onClick={toggleMenu}>
+                    <div className={styles.bar}></div>
+                    <div className={styles.bar}></div>
+                  </div>
+                </div>
+              </div>
+            </>
+          )}
+        </nav>
+      </header>
+
+      {!isDesktop && (
+        <div
+          className={[
+            styles.navbarMobileScrolled,
+            headerTransformed ? styles.visible : '',
+            menuOpen ? styles.active : '',
+          ].join(' ')}
+        >
+          <Link href='/' className={styles.logoWrapper}>
+            <CleanLogo theme='dark' />
+          </Link>
+          <div className={styles.burger} ref={burgerRef} onClick={toggleMenu}>
+            <div className={styles.bar}></div>
+            <div className={styles.bar}></div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+}

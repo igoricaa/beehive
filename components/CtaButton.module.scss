@@ -1,0 +1,116 @@
+.ctaLinkMobile {
+  display: none;
+}
+
+.ctaLinkDesktop {
+  background-color: #000;
+  border-radius: 4rem;
+  padding: 12px 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  position: relative;
+  overflow: hidden;
+  width: fit-content;
+  margin-top: 4rem;
+
+  .overlay {
+    position: absolute;
+    display: block;
+    width: 0px;
+    height: 0px;
+    background-color: #6b11b3;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    opacity: 0.95;
+    z-index: -1;
+    transition: width 0.5s, height 0.5s;
+  }
+
+  &:hover {
+    .overlay {
+      width: 500px;
+      height: 500px;
+    }
+  }
+
+  .innerWrapper {
+    position: relative;
+    z-index: 1;
+
+    .textWrapper {
+      display: flex;
+      flex-direction: column;
+      span:first-of-type {
+        color: #fff;
+        font-size: 1rem;
+        font-weight: 500;
+      }
+
+      span:last-of-type {
+        color: #fff;
+        font-size: 12px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  &::after {
+    content: ' ';
+    background-image: url('/arrow-right.svg');
+    width: 28px;
+    height: 16px;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .ctaLinkDesktop {
+    display: none;
+  }
+
+  .ctaLinkMobile {
+    grid-column: span 12;
+    background-color: #000;
+    border-radius: 4rem;
+    padding: 12px 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    position: relative;
+    width: fit-content;
+    margin: 10px auto 0;
+
+    .innerWrapper {
+      position: relative;
+      z-index: 1;
+
+      .textWrapper {
+        display: flex;
+        flex-direction: column;
+
+        span:first-of-type {
+          color: #fff;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+
+        span:last-of-type {
+          color: #fff;
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+    }
+
+    &::after {
+      content: ' ';
+      background-image: url('/arrow-right.svg');
+      width: 28px;
+      height: 16px;
+    }
+  }
+}
