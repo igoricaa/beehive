@@ -1,10 +1,3 @@
-// export type SlideContent = {
-//   listImage: string;
-//   subtitle: string;
-//   title: string;
-//   categories?: string[];
-// };
-
 export const projectsPreview = [
   {
     listImage: '/our-work/la-cantina-home.png',
@@ -44,17 +37,6 @@ export const projectsPreview = [
   },
 ];
 
-// type Project = {
-//   title: string;
-//   slug: string;
-//   description: string;
-//   description2: string;
-//   featuredImage: string;
-//   listImage: string;
-//   subtitle?: string;
-//   categories: string[];
-// };
-
 export const projects = [
   {
     title: 'La Cantina',
@@ -66,6 +48,8 @@ export const projects = [
     listImage: '/our-work/la-cantina-home.png',
     categories: ['branding', 'social media', 'marketing'],
     subtitle: 'klijent:',
+    backgroundColor: '#fff',
+    textColor: '#000',
   },
   {
     title: 'Bistro grad',
@@ -77,6 +61,8 @@ export const projects = [
     listImage: '/our-work/bistro-grad-home.png',
     categories: ['social media', 'marketing'],
     subtitle: 'klijent:',
+    backgroundColor: '#000',
+    textColor: '#fff',
   },
   {
     title: 'Prana',
@@ -88,25 +74,17 @@ export const projects = [
     listImage: '/our-work/prana-home.png',
     categories: ['branding', 'social media', 'marketing'],
     subtitle: 'klijent:',
+    backgroundColor: '#FFF7EC',
+    textColor: '#000',
   },
 ];
 
-// export type SliderSectionContent = {
-//   copyTitle?: string;
-//   copyTextMain?: string;
-//   copyTextSub?: string;
-//   ctaLink: string;
-//   ctaTextMain: string;
-//   ctaTextSub: string;
-//   sliderContent: any;
-// };
-
 export const portfolioSectionContent = {
   copyTextMain:
-    'jaka pčelinja zajednica u toku dana može oprašiti do 3 miliona cvetova.<br>i vaš brend može biti oprašen.',
-  ctaLink: '/contact',
+    'jaka pčelinja zajednica u toku dana može oprašiti do 3 miliona cvetova.',
+  ctaLink: '/kontakt',
   ctaTextMain: 'Imate projekat?',
-  ctaTextSub: 'Kontaktirajte nas za brief',
+  ctaTextSub: 'Hajde da se ispričamo',
   sliderContent: projects,
 };
 
@@ -153,9 +131,9 @@ export const teamSectionContent = {
   copyTitle: 'naš tim:',
   copyTextSub:
     'Svaki član košnice je u svom polju dugi niz godina. Naše pčele stalno zuje kroz nove tehnologije i sa sobom donose veliko kolektivno znanje, kreativnost i disciplinu.',
-  ctaLink: '/contact',
+  ctaLink: '/kontakt',
   ctaTextMain: 'Imate projekat?',
-  ctaTextSub: 'Kontaktirajte nas za brief',
+  ctaTextSub: 'Hajde da se ispričamo',
   sliderContent: team,
 };
 
@@ -225,8 +203,8 @@ export const socials = [
 ];
 
 export const routes = [
-  { name: 'Home', path: '/' },
-  { name: 'About Us', path: '/about-us' },
-  { name: 'Our work', path: '/our-work' },
-  { name: 'Contact', path: '/contact' },
+  { name: 'Početna', path: '/' },
+  { name: 'O nama', path: '/o-nama' },
+  { name: 'Naši radovi', path: '/nasi-radovi' },
+  { name: 'Kontakt', path: '/kontakt' },
 ];

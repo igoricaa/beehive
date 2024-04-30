@@ -19,7 +19,8 @@ export default function Home() {
         {/* <h2>šta je beehive:</h2> */}
         <h3>
           Mi smo Beehive. Umemo da ispričamo priču vašeg brenda kroz{' '}
-          <span className={styles.changingWords}> </span>.<br />
+          <span className={styles.changingWords}> </span>
+          <br />
           Ukratko - zujimo po svim digitalnim aktivnostima kojesu vama potrebne.
         </h3>
       </section>
@@ -29,14 +30,14 @@ export default function Home() {
       </div>
 
       <section className={styles.aboutUsSection}>
-        <h2>šta je beehive:</h2>
+        <h2>pričanje priča</h2>
         <p>
-          Pričanje priča je jedna od najstarijih veština čovečanstva koja se
-          održala do danas. Dobra priča namiruje našu potrebu za zajedništvom,
-          razmenom i razumevanjem. Mi smo tim ljudi koji upravo zajedništvom,
-          razmenom i razumevanjem može da od vašeg biznisa napravi most do
-          potreba ljudi oko nas. Svi žele da čuju dobru priču, mi smo tu da im
-          to damo. Neka zujanje počne.
+          Jedna od najstarijih veština čovečanstva koja se održala do danas.
+          Dobra priča namiruje našu potrebu za zajedništvom, razmenom i
+          razumevanjem. Mi smo tim ljudi koji upravo zajedništvom, razmenom i
+          razumevanjem može da od vašeg biznisa napravi most do potreba ljudi
+          oko nas. Svi žele da čuju dobru priču, mi smo tu da im to damo. Neka
+          zujanje počne.
         </p>
       </section>
 

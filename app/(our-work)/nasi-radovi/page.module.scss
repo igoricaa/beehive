@@ -22,11 +22,13 @@ $gridRowGap: 3rem;
 }
 
 .projectsSection {
+  position: relative;
+
   .project {
     display: grid;
     grid-template-columns: repeat(12, minMax(0, 1fr));
     column-gap: $gridColumnGap;
-    padding: 86px var(--site-padding);
+    padding: 5.5rem var(--site-padding);
     $bgColorLight: #fff;
     $textColorLight: #000;
     $borderColorLight: rgba(0, 0, 0, 0.6);
@@ -34,23 +36,9 @@ $gridRowGap: 3rem;
     $textColorDark: #fff;
     $borderColorDark: rgba(255, 255, 255, 0.6);
     background-color: $bgColorLight;
+
     * {
-      color: $textColorLight;
-    }
-
-    &.even {
-      background-color: $bgColorDark;
-      * {
-        color: $textColorDark;
-      }
-
-      .titleWrapper {
-        a {
-          h3 {
-            border-bottom: 1px solid $borderColorDark;
-          }
-        }
-      }
+      color: inherit;
     }
 
     .titleWrapper {
@@ -92,17 +80,44 @@ $gridRowGap: 3rem;
   }
 }
 
-.servicesSection {
-  padding: 0 var(--site-padding);
-  display: grid;
-  grid-template-columns: repeat(12, minMax(0, 1fr));
+.ctaSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 8rem;
+  padding: 0 8rem;
+  height: 348px;
+  position: relative;
 
-  h2 {
-    grid-column: span 3;
+  &::after,
+  &::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    z-index: -1;
   }
 
-  section {
-    grid-column: span 9;
+  &::after {
+    bottom: 0;
+    left: 0;
+    width: 28vw;
+    background-image: url(/cta-bg-2.svg);
+    background-position: bottom left;
+  }
+
+  &::before {
+    top: 0;
+    right: 0;
+    width: 66vw;
+    background-image: url(/cta-bg-1.svg);
+    background-position: top right;
+  }
+
+  h2 {
+    font-size: 3rem;
+    line-height: 4rem;
   }
 }
 
@@ -123,6 +138,10 @@ $gridRowGap: 3rem;
       flex-direction: column;
       padding: 2rem var(--site-padding);
 
+      &:last-of-type {
+        padding-bottom: 4rem;
+      }
+
       .titleWrapper {
         h3 {
           font-size: 2rem;
@@ -142,9 +161,17 @@ $gridRowGap: 3rem;
     }
   }
 
-  .servicesSection {
-    display: flex;
+  .ctaSection {
     flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+    padding: 7rem 3rem;
+    gap: 3rem;
+
+    h2 {
+      font-size: 2.5rem;
+      line-height: 3.5rem;
+    }
   }
 }
 
@@ -156,6 +183,34 @@ $gridRowGap: 3rem;
       font-size: 2rem;
       left: 1.5rem;
       bottom: 1.5rem;
+    }
+  }
+
+  .projectsSection {
+    .project {
+      &:last-of-type {
+        padding-bottom: 3.5rem;
+      }
+    }
+  }
+
+  .ctaSection {
+    padding: 4.875rem 1.5rem;
+    gap: 2rem;
+
+    h2 {
+      font-size: 2rem;
+      line-height: 3rem;
+    }
+
+    &::after {
+      width: 63vw;
+      background-image: url(/cta-bg-2.svg);
+    }
+
+    &::before {
+      width: 100vw;
+      background-image: url(/cta-bg-1-mobile.svg);
     }
   }
 }

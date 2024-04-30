@@ -1,8 +1,4 @@
-.ctaLinkMobile {
-  display: none;
-}
-
-.ctaLinkDesktop {
+.button {
   background-color: #000;
   border-radius: 4rem;
   padding: 12px 2rem;
@@ -13,7 +9,31 @@
   position: relative;
   overflow: hidden;
   width: fit-content;
-  margin-top: 4rem;
+  min-width: fit-content;
+
+  &.ctaLinkDesktop {
+    margin-top: 4rem;
+  }
+
+  &.ctaLinkMobile {
+    display: none;
+  }
+
+  &.floating {
+    position: sticky;
+    top: 85vh;
+    margin-bottom: 5.5rem;
+    left: 2rem;
+    z-index: 1000;
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.5s ease;
+
+    &.atBorder {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
 
   .overlay {
     position: absolute;
@@ -67,50 +87,51 @@
 }
 
 @media screen and (max-width: 991px) {
-  .ctaLinkDesktop {
-    display: none;
-  }
-
-  .ctaLinkMobile {
-    grid-column: span 12;
-    background-color: #000;
-    border-radius: 4rem;
-    padding: 12px 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 0.5rem;
-    position: relative;
-    width: fit-content;
-    margin: 10px auto 0;
-
-    .innerWrapper {
-      position: relative;
-      z-index: 1;
-
-      .textWrapper {
-        display: flex;
-        flex-direction: column;
-
-        span:first-of-type {
-          color: #fff;
-          font-size: 1rem;
-          font-weight: 500;
-        }
-
-        span:last-of-type {
-          color: #fff;
-          font-size: 12px;
-          font-weight: 300;
-        }
-      }
+  .button {
+    &.ctaLinkDesktop {
+      display: none;
     }
 
-    &::after {
-      content: ' ';
-      background-image: url('/arrow-right.svg');
-      width: 28px;
-      height: 16px;
+    &.ctaLinkMobile {
+      grid-column: span 12;
+      margin: 10px auto 0;
+
+      .innerWrapper {
+        position: relative;
+        z-index: 1;
+
+        .textWrapper {
+          display: flex;
+          flex-direction: column;
+
+          span:first-of-type {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 500;
+          }
+
+          span:last-of-type {
+            color: #fff;
+            font-size: 12px;
+            font-weight: 300;
+          }
+        }
+      }
+
+      &::after {
+        content: ' ';
+        background-image: url('/arrow-right.svg');
+        width: 28px;
+        height: 16px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .button {
+    &.floating {
+      position: fixed;
     }
   }
 }

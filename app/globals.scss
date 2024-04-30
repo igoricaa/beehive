@@ -17,7 +17,7 @@ $color_text_secondary: #000;
 html,
 body {
   // max-width: 100vw;
-  overflow-x: hidden;
+  // overflow-x: hidden;
 }
 
 body {
@@ -26,7 +26,7 @@ body {
 
 .stopScrolling {
   height: 100%;
-  overflow: hidden;
+  // overflow: hidden;
 }
 
 body::-webkit-scrollbar {
@@ -73,7 +73,8 @@ a {
 main {
   padding-left: var(--site-padding);
   padding-right: var(--site-padding);
-  margin-top: 98px;
+  margin-top: 6.125rem;
+  padding-bottom: 10.5rem;
 }
 
 @media screen and (max-width: 991px) {
@@ -99,7 +100,8 @@ main {
   }
 
   main {
-    margin-top: 67px;
+    margin-top: 4.2rem;
+    padding-bottom: 5rem;
   }
 }
 

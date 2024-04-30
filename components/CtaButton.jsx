@@ -2,11 +2,18 @@
 
 import { Link } from 'next-view-transitions';
 import styles from './CtaButton.module.scss';
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
-export default function CtaButton({ href, mainText, subText, specialClass }) {
+export default function CtaButton({
+  href,
+  mainText,
+  subText,
+  specialClass,
+  floating,
+}) {
   const buttonRef = useRef(null);
   const overlayRef = useRef(null);
+  const [isAtBorder, setIsAtBorder] = useState(false);
 
   const calculacteOverlayPosition = (event) => {
     if (!event) return;
@@ -27,14 +34,44 @@ export default function CtaButton({ href, mainText, subText, specialClass }) {
     button.addEventListener('mouseout', (e) => {
       calculacteOverlayPosition(e);
     });
+
+    if (floating) window.addEventListener('scroll', hideAtBorder);
     return () => {
       button.removeEventListener('mouseenter', calculacteOverlayPosition());
       button.removeEventListener('mouseleave', calculacteOverlayPosition());
+      if (floating) window.removeEventListener('scroll', hideAtBorder);
     };
-  }, []);
+  }, [floating]);
+
+  const hideAtBorder = () => {
+    const floatingBorderElement = document.getElementById(
+      'floatingBorderElement'
+    );
+
+    const callback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsAtBorder(true);
+        } else {
+          setIsAtBorder(false);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback);
+    observer.observe(floatingBorderElement);
+  };
 
   return (
-    <Link className={styles[specialClass]} href={href}>
+    <Link
+      className={[
+        styles.button,
+        specialClass ? styles[specialClass] : '',
+        floating ? styles.floating : '',
+        isAtBorder ? styles.atBorder : '',
+      ].join(' ')}
+      href={href}
+    >
       <div ref={buttonRef} className={styles.innerWrapper}>
         <span ref={overlayRef} className={styles.overlay}></span>
         <div className={styles.textWrapper}>

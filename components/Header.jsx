@@ -7,17 +7,18 @@ import { usePathname } from 'next/navigation';
 import { routes, socials } from '@/data';
 import CleanLogo from '@/public/logos/BeehiveCleanLogo';
 import FullLogo from '@/public/logos/BeehiveCreativeAgencyLogo';
-
-// type Theme = 'dark' | 'light';
+import BurgerIcon from './BurgerIcon';
 
 export default function Header({ theme = 'dark' }) {
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
   const burgerRef = useRef(null);
+  const stickyBurgerRef = useRef(null);
   const menuRef = useRef(null);
   const [isDesktop, setIsDesktop] = useState(false);
   const [headerTransformed, setHeaderTransformed] = useState(false);
+  const [isAtFooter, setIsAtFooter] = useState(false);
 
   const handleClickOutside = useCallback(
     (event) => {
@@ -25,13 +26,31 @@ export default function Header({ theme = 'dark' }) {
         menuOpen &&
         menuRef.current &&
         !menuRef.current.contains(event.target) &&
-        !burgerRef.current.contains(event.target)
+        !burgerRef.current.contains(event.target) &&
+        !stickyBurgerRef.current.contains(event.target)
       ) {
         setMenuOpen(false);
       }
     },
     [menuOpen, menuRef, burgerRef]
   );
+
+  const hideAtFooter = () => {
+    const floatingBorderElement = document.getElementById('footerTop');
+
+    const callback = (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setIsAtFooter(true);
+        } else {
+          setIsAtFooter(false);
+        }
+      });
+    };
+
+    const observer = new IntersectionObserver(callback);
+    observer.observe(floatingBorderElement);
+  };
 
   const transformHeader = () => {
     const scrolled = document.documentElement.scrollTop;
@@ -47,18 +66,20 @@ export default function Header({ theme = 'dark' }) {
   useEffect(() => {
     setMounted(true);
 
-    const isDesktopCurr = window.matchMedia('(min-width: 991px)').matches;
+    const isDesktopCurr = window.matchMedia('(min-width: 680px)').matches;
     if (typeof window !== 'undefined') setIsDesktop(isDesktopCurr);
 
     document.addEventListener('mousedown', handleClickOutside);
 
     if (!isDesktopCurr) {
+      window.addEventListener('scroll', hideAtFooter);
       window.addEventListener('scroll', transformHeader);
     }
 
     return () => {
       if (!isDesktop) {
         window.removeEventListener('scroll', transformHeader);
+        window.removeEventListener('scroll', hideAtFooter);
       }
       document.removeEventListener('mousedown', handleClickOutside);
     };
@@ -70,9 +91,14 @@ export default function Header({ theme = 'dark' }) {
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
-    document.body.classList.contains('stopScrolling')
-      ? document.body.classList.remove('stopScrolling')
-      : document.body.classList.add('stopScrolling');
+
+    if (!menuOpen) {
+      document.body.classList.add('stopScrolling');
+      document.documentElement.classList.add('stopScrolling');
+    } else {
+      document.body.classList.remove('stopScrolling');
+      document.documentElement.classList.remove('stopScrolling');
+    }
   };
 
   return (
@@ -98,14 +124,12 @@ export default function Header({ theme = 'dark' }) {
           )}
           {!isDesktop && (
             <>
-              <div
-                className={styles.burger}
-                ref={burgerRef}
-                onClick={toggleMenu}
-              >
-                <div className={styles.bar}></div>
-                <div className={styles.bar}></div>
-              </div>
+              <BurgerIcon
+                isSticky={false}
+                active={menuOpen}
+                burgerRef={burgerRef}
+                onClickHandler={toggleMenu}
+              />
 
               <div className={styles.mobileMenu} ref={menuRef}>
                 <Link href='/' className={styles.logoWrapper}>
@@ -143,10 +167,15 @@ export default function Header({ theme = 'dark' }) {
                       ))}
                     </div>
                   </div>
-                  <div className={styles.closeMenuButton} onClick={toggleMenu}>
-                    <div className={styles.bar}></div>
-                    <div className={styles.bar}></div>
-                  </div>
+                  {headerTransformed && (
+                    <div
+                      className={styles.closeMenuButton}
+                      onClick={toggleMenu}
+                    >
+                      <div className={styles.bar}></div>
+                      <div className={styles.bar}></div>
+                    </div>
+                  )}
                 </div>
               </div>
             </>
@@ -158,17 +187,20 @@ export default function Header({ theme = 'dark' }) {
         <div
           className={[
             styles.navbarMobileScrolled,
-            headerTransformed ? styles.visible : '',
+            headerTransformed && !isAtFooter ? styles.visible : '',
             menuOpen ? styles.active : '',
           ].join(' ')}
         >
           <Link href='/' className={styles.logoWrapper}>
             <CleanLogo theme='dark' />
           </Link>
-          <div className={styles.burger} ref={burgerRef} onClick={toggleMenu}>
-            <div className={styles.bar}></div>
-            <div className={styles.bar}></div>
-          </div>
+
+          <BurgerIcon
+            burgerRef={stickyBurgerRef}
+            isSticky={true}
+            active={menuOpen}
+            onClickHandler={toggleMenu}
+          />
         </div>
       )}
     </>

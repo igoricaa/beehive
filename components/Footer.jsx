@@ -1,9 +1,10 @@
 import styles from './Footer.module.scss';
-import { Link } from 'next-view-transitions'
+import { Link } from 'next-view-transitions';
 import BackToTopButton from './BackToTopButton';
 import { footerBottomLinks, socials } from '@/data';
-import ContactForm from './ContactForm';
 import CleanLogo from '@/public/logos/BeehiveCleanLogo';
+import { routes } from '@/data';
+import MenuItems from './MenuItems';
 
 export const Footer = () => {
   return (
@@ -29,10 +30,13 @@ export const Footer = () => {
             ))}
           </div>
         </div>
-        <div className={styles.contactFormWrapper}>
+        <div className={styles.menuWrapper}>
+          <MenuItems />
+        </div>
+        {/* <div className={styles.contactFormWrapper}>
           <p>Kontaktiraj nas za sva pitanja:</p>
           <ContactForm />
-        </div>
+        </div> */}
       </div>
       <div className={styles.footerBottom}>
         {footerBottomLinks.map((link, index) => (

@@ -1,8 +1,8 @@
 import { projects } from '@/data';
 import styles from './page.module.scss';
 import Image from 'next/image';
-import Accordions from '@/components/Accordions';
-import { Link } from 'next-view-transitions'
+import { Link } from 'next-view-transitions';
+import CtaButton from '@/components/CtaButton';
 
 const Projects = () => {
   return (
@@ -24,17 +24,26 @@ const Projects = () => {
         </h2>
       </section>
       <section className={styles.projectsSection}>
+        <CtaButton
+          href='/kontakt'
+          mainText='Imate projekat?'
+          subText='Hajde da se ispričamo'
+          floating
+        />
         {projects.map((project, index) => (
           <article
             key={project.title}
-            className={[
-              styles.project,
-              index % 2 !== 0 ? styles.even : '',
-            ].join(' ')}
+            className={styles.project}
+            style={{
+              backgroundColor: project.backgroundColor,
+              color: project.textColor,
+            }}
           >
             <div className={styles.titleWrapper}>
               <Link href={`our-work/${project.slug}`}>
-                <h3>{project.title}:</h3>
+                <h3 style={{ borderColor: project.textColor }}>
+                  {project.title}:
+                </h3>
               </Link>
             </div>
 
@@ -56,9 +65,16 @@ const Projects = () => {
           </article>
         ))}
       </section>
-      <section className={styles.servicesSection}>
-        <h2>naše usluge:</h2>
-        {/* <Accordions /> */}
+
+      <section className={styles.ctaSection}>
+        <h2 id='floatingBorderElement'>
+          Pitanje, nedoumica? Dostupni smo za svaku potrebu
+        </h2>
+        <CtaButton
+          href='/kontakt'
+          mainText='Zakažite konsultacije'
+          subText='Dostupni smo za svaki piksel'
+        />
       </section>
     </main>
   );

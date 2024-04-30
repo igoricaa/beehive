@@ -21,38 +21,51 @@ $gridGap: 2rem;
       //    logo / sve digitalno
 
       &:before {
-        content: 'sajt';
-        animation: animate infinite 9s;
+        content: 'sajt.';
+        animation: animate infinite 12s, blink 1.714s infinite;
         // padding-left: 10px;
+      }
+
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        50% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+        }
       }
 
       @keyframes animate {
         0% {
-          content: 'sajt';
+          content: 'sajt.';
         }
 
         15% {
-          content: 'brand book';
+          content: 'brand book.';
         }
 
         30% {
-          content: 'društvene mreže';
+          content: 'društvene mreže.';
         }
 
         45% {
-          content: 'aplikaciju';
+          content: 'aplikaciju.';
         }
 
         60% {
-          content: 'dizajn';
+          content: 'dizajn.';
         }
 
         75% {
-          content: 'logo';
+          content: 'logo.';
         }
 
         90% {
-          content: 'sve digitalno';
+          content: 'sve digitalno.';
         }
       }
     }
@@ -78,6 +91,7 @@ $gridGap: 2rem;
     width: fit-content;
     height: fit-content;
     white-space: nowrap;
+    margin-top: -1.5rem;
   }
 
   p {
@@ -94,6 +108,7 @@ $gridGap: 2rem;
   .aboutUsSection {
     h2 {
       grid-row: 1;
+      margin-top: 0;
     }
 
     p {
@@ -105,11 +120,13 @@ $gridGap: 2rem;
 
 @media screen and (max-width: 991px) {
   .main {
-    h1 {
-      span {
-        svg {
-          width: 65px;
-          height: 67px;
+    .statementSection {
+      h1 {
+        span {
+          svg {
+            width: 65px;
+            height: 67px;
+          }
         }
       }
     }
@@ -119,11 +136,14 @@ $gridGap: 2rem;
 @media screen and (max-width: 680px) {
   $gridGap: 1.5rem;
   .main {
-    h1 {
-      span {
-        svg {
-          width: 36px;
-          height: 37px;
+    .statementSection {
+      padding-top: 2.5rem;
+      h1 {
+        span {
+          svg {
+            width: 36px;
+            height: 37px;
+          }
         }
       }
     }
