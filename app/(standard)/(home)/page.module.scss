@@ -109,6 +109,16 @@ $gridGap: 2rem;
           }
         }
       }
+
+      h3 {
+        span {
+          white-space: normal;
+
+          span {
+            font-size: 29px;
+          }
+        }
+      }
     }
 
     .headerImgWrapper {

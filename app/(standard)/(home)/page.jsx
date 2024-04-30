@@ -5,6 +5,7 @@ import { portfolioSectionContent, teamSectionContent } from '@/data';
 import LogoMark from '@/public/logos/BeehiveLogoMark';
 import ServicesSection from '@/components/ServicesSection';
 import Typewriter from '@/components/Typewritter';
+import heroImg from '@/public/home-hero.jpg';
 
 export default function Home() {
   return (
@@ -37,7 +38,7 @@ export default function Home() {
       </section>
 
       <div className={styles.headerImgWrapper}>
-        <Image src={'/home-hero.jpg'} fill alt='Beehive logo mark' priority />
+        <Image src={heroImg} fill alt='Beehive - Belgrade Sunset' priority />
       </div>
 
       <section className={styles.aboutUsSection}>

@@ -18,8 +18,6 @@ const sourceSerif4 = Source_Serif_4({
   style: ['italic'],
 });
 
-// 38px
-
 export const metadata = {
   title: 'BeeHive Creative Agency',
   description: 'Official website of BeeHive Creative Agency',
