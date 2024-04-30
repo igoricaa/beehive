@@ -16,57 +16,10 @@ $gridGap: 2rem;
       }
     }
 
-    .changingWords {
-      // sajt / brand book / društvene mreže / aplikaciju / dizajn /
-      //    logo / sve digitalno
-
-      &:before {
-        content: 'sajt.';
-        animation: animate infinite 12s, blink 1.714s infinite;
-        // padding-left: 10px;
-      }
-
-      @keyframes blink {
-        0% {
-          opacity: 1;
-        }
-        50% {
-          opacity: 0;
-        }
-
-        100% {
-          opacity: 1;
-        }
-      }
-
-      @keyframes animate {
-        0% {
-          content: 'sajt.';
-        }
-
-        15% {
-          content: 'brand book.';
-        }
-
-        30% {
-          content: 'društvene mreže.';
-        }
-
-        45% {
-          content: 'aplikaciju.';
-        }
-
-        60% {
-          content: 'dizajn.';
-        }
-
-        75% {
-          content: 'logo.';
-        }
-
-        90% {
-          content: 'sve digitalno.';
-        }
+    h3 {
+      font-weight: 400;
+      span {
+        white-space: nowrap;
       }
     }
   }

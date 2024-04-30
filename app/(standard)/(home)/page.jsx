@@ -4,6 +4,7 @@ import SliderSection from '@/components/SliderSection';
 import { portfolioSectionContent, teamSectionContent } from '@/data';
 import LogoMark from '@/public/logos/BeehiveLogoMark';
 import ServicesSection from '@/components/ServicesSection';
+import Typewriter from '@/components/Typewritter';
 
 export default function Home() {
   return (
@@ -16,10 +17,20 @@ export default function Home() {
           uzzing with ideas!
         </h1>
 
-        {/* <h2>šta je beehive:</h2> */}
         <h3>
-          Mi smo Beehive. Umemo da ispričamo priču vašeg brenda kroz{' '}
-          <span className={styles.changingWords}> </span>
+          <span>
+            Mi smo Beehive. Umemo da ispričamo priču vašeg brenda kroz{' '}
+            <Typewriter
+              strings={[
+                'dizajn',
+                'tekst',
+                'video',
+                'fotografiju',
+                'programiranje',
+              ]}
+            />
+            .
+          </span>
           <br />
           Ukratko - zujimo po svim digitalnim aktivnostima kojesu vama potrebne.
         </h3>
