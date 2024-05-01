@@ -50,6 +50,7 @@ export default function SliderItem({ content }) {
             alt={content.title}
             fill
             sizes='(max-width: 1024px) 50vw, 22.5vw'
+            style={{ objectFit: 'cover' }}
           />
         </div>
         {content.hoverText && (

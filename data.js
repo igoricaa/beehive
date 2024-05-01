@@ -38,19 +38,20 @@ export const projectsPreview = [
 ];
 
 export const projects = [
-  // {
-  //   title: 'La Cantina',
-  //   slug: 'la-cantina',
-  //   description:
-  //     'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
-  //   description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
-  //   featuredImage: '/our-work/la-cantina.png',
-  //   listImage: '/our-work/la-cantina-home.png',
-  //   categories: ['branding', 'social media', 'marketing'],
-  //   subtitle: 'klijent:',
-  //   backgroundColor: '#fff',
-  //   textColor: '#000',
-  // },
+  {
+    title: 'La Cantina',
+    slug: 'la-cantina',
+    description:
+      'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
+    description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
+    featuredImage: '/our-work/la-cantina.png',
+    listImage: '/our-work/la-cantina-home.png',
+    categories: ['branding', 'social media', 'marketing'],
+    subtitle: 'klijent:',
+    backgroundColor: '#fff',
+    textColor: '#000',
+    ready: false,
+  },
   {
     title: 'Bistro grad',
     slug: 'bistro-grad',
@@ -63,6 +64,7 @@ export const projects = [
     subtitle: 'klijent:',
     backgroundColor: '#000',
     textColor: '#fff',
+    ready: false,
   },
   {
     title: 'Prana',
@@ -76,6 +78,7 @@ export const projects = [
     subtitle: 'klijent:',
     backgroundColor: '#FFF7EC',
     textColor: '#000',
+    ready: true,
   },
 ];
 
@@ -90,36 +93,49 @@ export const portfolioSectionContent = {
 
 export const team = [
   {
-    listImage: '/team/milan.png',
+    listImage: '/team/darja-babovic.jpg',
     subtitle: 'founder',
-    title: 'Milan',
-    hoverTextTitle: 'Milance 33 leta',
-    hoverText:
-      '“Citat u dva , mozda tri reda hm hm dot dot i tako to sve u krug”',
-    hoverColor: '#ffd600',
-  },
-  {
-    listImage: '/team/darja.png',
-    subtitle: 'founder',
-    title: 'Darja',
+    title: 'Darja Babović',
     hoverTextTitle: 'Dara 34 leta',
-    hoverText:
-      '“Citat u dva , mozda tri reda hm hm dot dot i tako to sve u krug”',
+    hoverText: '“Više voli slano od slatkog.”',
     hoverColor: '#ffd600',
   },
   {
-    listImage: '/team/ristic.png',
+    listImage: '/team/tara-dinic.jpg',
+    subtitle: 'the smart one',
+    title: 'Tara Dinić',
+    hoverTextTitle: 'Tara 32 leta',
+    hoverText: '“Odlučna, ali prijatna (New Business Director).',
+    hoverColor: '#ffd600',
+  },
+  {
+    listImage: '/team/andjela-zivic.jpeg',
+    subtitle: 'the good one',
+    title: 'Anđela Živić',
+    hoverTextTitle: 'Anđela 26 leta',
+    hoverText: '“Lepa kao lutka, dobra kao hleb.',
+    hoverColor: '#ffd600',
+  },
+  {
+    listImage: '/team/jelena-ristic.jpg',
     subtitle: 'the creative one',
-    title: 'Jelena',
+    title: 'Jelena Ristić',
     hoverTextTitle: 'Rista 32 leta',
-    hoverText:
-      '“Citat u dva , mozda tri reda hm hm dot dot i tako to sve u krug”',
+    hoverText: '“Ako ne zna, saznaće”',
     hoverColor: '#ffd600',
   },
   {
-    listImage: '/team/maja.png',
-    subtitle: 'designer',
-    title: 'Maja',
+    listImage: '/team/igor-stanisavljevic.jpg',
+    subtitle: 'the techy one',
+    title: 'Igor Stanisavljević',
+    hoverTextTitle: 'Igorica 32 leta',
+    hoverText: '“Rešava"',
+    hoverColor: '#ffd600',
+  },
+  {
+    listImage: '/team/maja-simeunovic.jpg',
+    subtitle: 'the visual one',
+    title: 'Maja Simonović',
     hoverTextTitle: 'Joma 38 leta',
     hoverText:
       '“Citat u dva , mozda tri reda hm hm dot dot i tako to sve u krug”',

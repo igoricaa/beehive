@@ -8,6 +8,7 @@ import { routes, socials } from '@/data';
 import CleanLogo from '@/public/logos/BeehiveCleanLogo';
 import FullLogo from '@/public/logos/BeehiveCreativeAgencyLogo';
 import BurgerIcon from './BurgerIcon';
+import path from 'path';
 
 export default function Header({ theme = 'dark' }) {
   const [mounted, setMounted] = useState(false);
@@ -66,7 +67,6 @@ export default function Header({ theme = 'dark' }) {
   useEffect(() => {
     setMounted(true);
 
-    console.log('PATH: ' + pathname);
     const isDesktopCurr = window.matchMedia('(min-width: 680px)').matches;
     if (typeof window !== 'undefined') setIsDesktop(isDesktopCurr);
 
@@ -117,8 +117,8 @@ export default function Header({ theme = 'dark' }) {
                 <li
                   key={index}
                   className={
-                    (route.path === '/' && pathname === route.path) ||
-                    (pathname !== '/' &&
+                    pathname == route.path ||
+                    (route.path !== '/' &&
                       pathname.slice(1).includes(route.path.slice(1)))
                       ? styles.active
                       : ''
@@ -150,7 +150,13 @@ export default function Header({ theme = 'dark' }) {
                   {routes.map((route, index) => (
                     <li
                       key={index}
-                      className={pathname == route.path ? styles.active : ''}
+                      className={
+                        pathname == route.path ||
+                        (route.path !== '/' &&
+                          pathname.slice(1).includes(route.path.slice(1)))
+                          ? styles.active
+                          : ''
+                      }
                     >
                       <Link href={route.path} onClick={toggleMenu}>
                         {route.name}

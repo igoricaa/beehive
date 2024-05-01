@@ -50,27 +50,62 @@ const Projects = () => {
             }}
           >
             <div className={styles.titleWrapper}>
-              <Link href={`nasi-radovi/${project.slug}`}>
-                <h3 style={{ borderColor: project.textColor }}>
-                  {project.title}:
-                </h3>
-              </Link>
+              {project.ready ? (
+                <Link href={`nasi-radovi/${project.slug}`}>
+                  <h3 style={{ borderColor: project.textColor }}>
+                    {project.title}:
+                  </h3>
+                </Link>
+              ) : (
+                <>
+                  <h3 style={{ borderColor: project.textColor }}>
+                    {project.title}:
+                  </h3>
+                  <RoughNotation
+                    type='highlight'
+                    color='#FFD600'
+                    style={{ width: 'fit-content', display: 'block' }}
+                    show
+                  >
+                    <span
+                      style={{
+                        display: 'block',
+                        fontSize: '1.5rem',
+                        marginTop: '2rem',
+                      }}
+                    >
+                      Uskoro
+                    </span>
+                  </RoughNotation>
+                </>
+              )}
             </div>
 
             <div className={styles.projectContent}>
               <p>{project.description}</p>
               <p>{project.description2}</p>
-              <Link
-                href={`nasi-radovi/${project.slug}`}
-                className={styles.projectImageWrapper}
-              >
-                <Image
-                  src={project.featuredImage}
-                  alt={project.title}
-                  fill
-                  style={{ objectFit: 'cover' }}
-                />
-              </Link>
+              {project.ready ? (
+                <Link
+                  href={`nasi-radovi/${project.slug}`}
+                  className={styles.projectImageWrapper}
+                >
+                  <Image
+                    src={project.featuredImage}
+                    alt={project.title}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </Link>
+              ) : (
+                <div className={styles.projectImageWrapper}>
+                  <Image
+                    src={project.featuredImage}
+                    alt={project.title}
+                    fill
+                    style={{ objectFit: 'cover' }}
+                  />
+                </div>
+              )}
             </div>
           </article>
         ))}
