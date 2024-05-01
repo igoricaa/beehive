@@ -1,11 +1,13 @@
 $sitePadding: 2.5rem;
 $color_text_main: rgba(29, 29, 29, 1);
 $color_text_secondary: #000;
+$color_yellow: #ffd600;
 
 :root {
   --site-padding: #{$sitePadding};
-  --color_text_main: $color_text_main;
-  --color_text_secondary: $color_text_secondary;
+  --color_text_main: #{$color_text_main};
+  --color_text_secondary: #{$color_text_secondary};
+  --color_yellow: #{$color_yellow};
 }
 
 * {

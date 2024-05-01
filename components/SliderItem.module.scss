@@ -44,7 +44,7 @@
       span {
         padding: 0 31px 0px 0;
         font-size: 16px;
-        color: #FFCF52;
+        color: #000;
         visibility: hidden;
         opacity: 0;
         transform: translateY(50px);
@@ -57,7 +57,7 @@
       p {
         padding: 0 31px 40px 0;
         font-size: 18px;
-        color: #fff;
+        color: #450303;
         visibility: hidden;
         opacity: 0;
         transform: translateY(50px);
@@ -133,6 +133,24 @@
   .emblaSlide {
     --slide-size: 50vw;
     min-width: 50vw;
+
+    .innerWrapper {
+      .hoverTextWrapper {
+        p {
+          font-size: 1rem;
+          padding: 0 1rem 1rem;
+          width: 100%;
+          text-align: start;
+        }
+
+        span {
+          font-size: 14px;
+          padding: 0 1rem 0.25rem;
+          width: 100%;
+          text-align: start;
+        }
+      }
+    }
   }
 
   .projectInfoWrapper {

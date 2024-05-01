@@ -1,102 +1,374 @@
-.header > div {
-  position: relative;
-  aspect-ratio: 1843 / 613;
-  margin-top: 4rem;
-}
+$gridGap: 2rem;
 
-.header > div > img {
-  border-radius: 30px;
-  object-fit: cover;
-}
-
-.content {
-  margin-top: 5rem;
-}
-
-.content > h2 {
-  color: var(--color__text-main);
-}
-
-.innerWrapper {
-  max-width: 1355px;
-  margin: 0 auto;
-  padding: 2.43rem 0 5rem;
-}
-
-.innerWrapper:last-child {
-  padding-top: 114.5px;
-  padding-bottom: 36px;
-}
-
-.innerWrapper > p {
-  font-size: 1.5rem;
-  line-height: 2rem;
-  color: var(--color__text-main);
-}
-
-.innerWrapper > p:not(:last-child) {
-  margin-bottom: 2rem;
-}
-
-.ctaAnimated {
-  padding: 26px 0;
-  background-color: #f0dd3d;
-  margin: 0 -38px;
-  white-space: nowrap;
-  overflow: hidden;
-  display: flex;
-}
-
-.ctaAnimated h2 {
-  color: #2b2b2b;
-  animation: loopText 5s infinite linear;
-  padding-right: 12px;
-}
-
-@keyframes loopText {
-  from {
-    transform: translateX(0);
+.main {
+  padding-top: 3.75rem;
+  .headerImgWrapper {
+    position: relative;
+    aspect-ratio: 1654 / 592;
+    margin-top: 3.75rem;
   }
-  to {
-    transform: translateX(-100%);
+
+  .aboutUsSection {
+    display: grid;
+    grid-template-columns: repeat(12, minMax(0, 1fr));
+    padding: 4rem 0 0;
+    gap: $gridGap;
+
+    h2 {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+      grid-column: span 3;
+      line-height: 6.875rem;
+      width: fit-content;
+      height: fit-content;
+      white-space: nowrap;
+      margin-top: -1.5rem;
+    }
+
+    p {
+      grid-column: span 9;
+      font-size: 3rem;
+      line-height: 4rem;
+    }
+  }
+
+  .coreValuesSection {
+    display: grid;
+    grid-template-columns: repeat(4, minMax(0, 1fr));
+    gap: 3rem;
+    max-width: 1700px;
+    margin: 5.125rem auto 6.5rem;
+
+    .coreValue {
+      grid-column: span 1;
+      position: relative;
+
+      &::before {
+        display: block;
+        font-size: 10rem;
+        font-weight: 200;
+        color: #060606;
+        position: absolute;
+        right: 0;
+        top: -2rem;
+        opacity: 0.1;
+      }
+
+      &:nth-of-type(1) {
+        &::before {
+          content: '01';
+        }
+      }
+
+      &:nth-of-type(2) {
+        &::before {
+          content: '02';
+        }
+      }
+
+      &:nth-of-type(3) {
+        &::before {
+          content: '03';
+        }
+      }
+
+      &:nth-of-type(4) {
+        &::before {
+          content: '04';
+        }
+      }
+
+      &:nth-of-type(even) {
+        margin-top: 3rem;
+      }
+
+      img {
+        display: block;
+        margin: 0 auto 2rem;
+      }
+
+      h3 {
+        font-size: 36px;
+        line-height: normal;
+      }
+
+      p {
+        font-size: 22px;
+      }
+    }
+  }
+
+  .breakSection {
+    display: grid;
+    grid-template-columns: repeat(12, minMax(0, 1fr));
+    gap: $gridGap;
+    position: relative;
+
+    h1 {
+      position: absolute;
+      font-size: 8vw;
+
+      &:first-of-type {
+        top: 1rem;
+        left: 0;
+      }
+
+      &:last-of-type {
+        bottom: 0;
+        right: 0;
+      }
+    }
+
+    .imgWrapper {
+      position: relative;
+      aspect-ratio: 1088 / 443;
+      grid-column: 3 / 11;
+      width: 100%;
+
+      img {
+        z-index: -1;
+      }
+    }
+  }
+
+  .aboutBeesSection {
+    display: grid;
+    grid-template-columns: repeat(12, minMax(0, 1fr));
+    padding: 4rem 0 0;
+    gap: $gridGap;
+
+    h2 {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+      grid-column: span 3;
+      line-height: 6.875rem;
+      width: fit-content;
+      height: fit-content;
+      white-space: nowrap;
+      margin-top: -1.5rem;
+    }
+
+    div {
+      grid-column: span 9;
+
+      p {
+        font-size: 3rem;
+      }
+
+      ul {
+        margin-top: 2rem;
+        padding-left: 2rem;
+
+        li {
+          font-size: 2rem;
+
+          &::marker {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+
+    h3 {
+      grid-column: 4 / 10;
+      margin-top: 3rem;
+      font-size: 3rem;
+      font-weight: 300;
+
+      span {
+        font-family: var(--font-source-serif-4);
+        font-size: 3rem;
+        background-color: var(--color_yellow);
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1750px) {
+  .main {
+    padding-top: 2.2rem;
+
+    .aboutUsSection {
+      h2 {
+        grid-row: 1;
+        margin-top: 0;
+      }
+
+      p {
+        grid-row: 2;
+        grid-column: 3 / 12;
+      }
+    }
+
+    .aboutBeesSection {
+      h2 {
+        grid-row: 1;
+        margin-top: 0;
+      }
+
+      div {
+        grid-row: 2;
+        grid-column: 3 / 12;
+      }
+
+      h3 {
+        grid-row: 3;
+        grid-column: 3 / 10;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 991px) {
+  .main {
+    .aboutUsSection {
+      p {
+        font-size: 2rem;
+        line-height: 3rem;
+      }
+    }
+
+    .coreValuesSection {
+      gap: 3rem;
+      margin: 4.125rem auto 5rem;
+
+      .coreValue {
+        &::before {
+          top: 0rem;
+          font-size: 8rem;
+        }
+
+        h3 {
+          font-size: 1.5rem;
+        }
+
+        p {
+          font-size: 1rem;
+        }
+      }
+    }
+
+    .aboutBeesSection {
+      div {
+        p {
+          font-size: 2.5rem;
+        }
+
+        ul {
+          margin-top: 1rem;
+          li {
+            font-size: 1.5rem;
+
+            &::marker {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+      h3 {
+        margin-top: 2rem;
+        font-size: 2rem;
+        grid-column: 3 / 12;
+        span {
+          font-size: 2rem;
+        }
+      }
+    }
   }
 }
 
 @media screen and (max-width: 680px) {
-  .header > div {
-    aspect-ratio: 1;
-    margin-top: 35px;
-  }
+  $gridGap: 1.5rem;
+  .main {
+    padding-top: 4.5rem;
+    padding-bottom: 4rem;
 
-  .content {
-    margin-top: 2rem;
-  }
+    .headerImgWrapper {
+      margin-top: 1.5rem;
+    }
 
-  .innerWrapper {
-    padding: 27px 0 30px;
-  }
+    .aboutUsSection {
+      padding: 3rem 0;
+      gap: $gridGap;
 
-  .innerWrapper > p {
-    font-size: 1rem;
-    line-height: 1.5rem;
-  }
+      h2 {
+        line-height: 56px;
+      }
 
-  .innerWrapper > p:not(:last-child) {
-    margin-bottom: 1.5rem;
-  }
+      p {
+        grid-column: span 12;
+        font-size: 1rem;
+        line-height: 2rem;
+      }
+    }
 
-  .ctaAnimated {
-    padding: 13px 0 12px;
-    margin: 0 -17px;
-  }
+    .coreValuesSection {
+      gap: 2rem;
+      margin: 2.5 auto 3rem;
+      grid-template-columns: repeat(2, minMax(0, 1fr));
 
-  .ctaAnimated h2 {
-    font-size: 1.625rem;
-    line-height: 2.25rem;
-  }
+      .coreValue {
+        &::before {
+          top: 1rem;
+          font-size: 6rem;
+        }
+      }
+    }
 
-  .innerWrapper:last-child {
-    padding-top: 2.18rem;
-    padding-bottom: 0;
+    .breakSection {
+      display: grid;
+      grid-template-columns: repeat(12, minMax(0, 1fr));
+
+      h1 {
+        font-size: 8vw;
+
+        &:first-of-type {
+          top: 1rem;
+        }
+
+        &:last-of-type {
+          bottom: 0;
+        }
+      }
+
+      .imgWrapper {
+        aspect-ratio: 1088 / 443;
+        grid-column: 1 / 13;
+      }
+    }
+
+    .aboutBeesSection {
+      padding-top: 3rem;
+
+      h2 {
+        line-height: 56px;
+      }
+
+      div {
+        grid-column: 2 / 13;
+        p {
+          font-size: 1.5rem;
+        }
+
+        ul {
+          margin-top: 0.5rem;
+          padding-left: 1.5rem;
+
+          li {
+            font-size: 1rem;
+
+            &::marker {
+              font-size: 1rem;
+            }
+          }
+        }
+      }
+      h3 {
+        margin-top: 0px;
+        font-size: 1.5rem;
+        grid-column: 2 / 13;
+        span {
+          font-size: 1.5rem;
+        }
+      }
+    }
   }
 }

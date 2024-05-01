@@ -1,80 +1,32 @@
-// 'use client';
+'use client';
 
-// import { useCallback, useEffect } from 'react';
-// import styles from './DistortionImage.module.scss';
-// import hoverEffect from 'hover-effect';
-// import { useState } from 'react';
-// import DisplacementAnimation from './DisplacementAnimation';
-// import { SlowMo } from 'gsap/EasePack';
-// import gsap from 'gsap';
+import hoverEffect from 'hover-effect';
+import { useEffect, useRef } from 'react';
+import homeHero1 from '@/public/home-hero-1.png';
+import homeHero2 from '@/public/home-hero-2.png';
+import distortionImage from '@/public/distortions/fluid.jpeg';
 
-// const images = [
-//   'https://picsum.photos/1440/1179?image=336',
-//   'https://picsum.photos/1440/1179?image=242',
-//   'https://picsum.photos/1440/1179?image=140',
-//   'https://picsum.photos/1440/1179?image=204',
-// ];
+const DistortionImage = () => {
+  const wrapperRef = useRef(null);
 
-// const coordsArray = () => {
-//   return {
-//     xf: (Math.random() - 0.4) * 2,
-//     yf: (Math.random() - 0.4) * 2,
-//     zf: Math.random() * 4 + 1,
-//   };
-// };
+  useEffect(() => {
+    if (!wrapperRef.current) return;
+    const animate = new hoverEffect({
+      parent: wrapperRef.current,
+      intensity: 0.3,
+      aspectRatio: 575 / 1647,
+      image1: '/home-hero-1.png',
+      image2: '/home-hero-2.png',
+      displacementImage: '/distortions/fluid.jpeg',
+    });
+  }, []);
 
-// const MagicBackgroundText = () => {
-//   const text = "WOW IT'S A BEAUTIFUL DISPLACEMENT ANIMATION ";
-//   const repeatedText = new Array(1000).fill(1).map(() => text);
-//   return (
-//     <div
-//       style={{
-//         position: 'absolute',
-//         zIndex: -1,
-//       }}
-//     >
-//       {repeatedText}
-//     </div>
-//   );
-// };
+  return (
+    <div
+      ref={wrapperRef}
+      style={{ width: '100%', height: "100%", objectFit: "cover", overflow: 'hidden' }}
+    ></div>
+  );
+};
 
-// const DistortionImage = ({ activeServiceIndex }) => {
-//   gsap.registerPlugin(SlowMo);
-
-//   const animationProps = {
-//     dispImg: 'https://picsum.photos/1440/1179?image=735',
-//     intensity1: 1,
-//     intensity2: 1,
-//     commonAngle: Math.PI / 4,
-//     speedIn: 2,
-//     easing: SlowMo.ease.config(0.5, 0.4, false),
-//     onComplete: () => setDisabled(false),
-//   };
-
-//   const [selected, setSelected] = useState(0);
-//   const [coords, setCoords] = useState();
-//   const [disabled, setDisabled] = useState(false);
-
-//   const changeImage = () => {
-//     if (selected >= images.length - 1) {
-//       setSelected(0);
-//     } else {
-//       setSelected(selected + 1);
-//     }
-//   };
-
-//   return (
-//     <>
-//       <DisplacementAnimation
-//         {...animationProps}
-//         image={images[selected]}
-//         coords={coords}
-//       />
-//       {/* <div
-//         className={[styles.imageWrapper, 'distortContainer'].join(' ')}
-//       ></div> */}
-//     </>
-//   );
-// };
-
-// export default DistortionImage;
+export default DistortionImage;

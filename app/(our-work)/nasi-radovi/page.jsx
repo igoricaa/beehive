@@ -40,7 +40,7 @@ const Projects = () => {
             }}
           >
             <div className={styles.titleWrapper}>
-              <Link href={`our-work/${project.slug}`}>
+              <Link href={`nasi-radovi/${project.slug}`}>
                 <h3 style={{ borderColor: project.textColor }}>
                   {project.title}:
                 </h3>
@@ -51,7 +51,7 @@ const Projects = () => {
               <p>{project.description}</p>
               <p>{project.description2}</p>
               <Link
-                href={`our-work/${project.slug}`}
+                href={`nasi-radovi/${project.slug}`}
                 className={styles.projectImageWrapper}
               >
                 <Image

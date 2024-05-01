@@ -1,4 +1,4 @@
-const CleanLogo = ({ theme }: { theme: string }) => {
+const CleanLogo = ({ theme }) => {
   const color = theme === 'dark' ? '#000' : '#fff';
 
   return (

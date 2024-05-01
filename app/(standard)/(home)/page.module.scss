@@ -2,6 +2,7 @@ $gridGap: 2rem;
 
 .main {
   padding-top: 3rem;
+  overflow: hidden;
 
   .statementSection {
     h1 {
@@ -24,6 +25,22 @@ $gridGap: 2rem;
         span {
           font-family: var(--font-source-serif-4);
           font-size: 38px;
+
+          &.blinking {
+            animation: blink 1s infinite;
+          }
+
+          @keyframes blink {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
         }
       }
     }
@@ -111,6 +128,7 @@ $gridGap: 2rem;
       }
 
       h3 {
+        margin-top: 1rem;
         span {
           white-space: normal;
 

@@ -1,11 +1,11 @@
-import Image from 'next/image';
 import styles from './page.module.scss';
 import SliderSection from '@/components/SliderSection';
 import { portfolioSectionContent, teamSectionContent } from '@/data';
-import LogoMark from '@/public/logos/BeehiveLogoMark';
 import ServicesSection from '@/components/ServicesSection';
 import Typewriter from '@/components/Typewritter';
 import heroImg from '@/public/home-hero.jpg';
+import LogoWrapper from '@/public/logos/LogoWrapper';
+import DistortionImage from '@/components/DistortionImage';
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <section className={styles.statementSection}>
         <h1>
           <span>
-            <LogoMark />
+            <LogoWrapper />
           </span>
           uzzing with ideas!
         </h1>
@@ -30,7 +30,7 @@ export default function Home() {
                 'programiranje',
               ]}
             />
-            .
+            <span className={styles.blinking}>_</span>.
           </span>
           <br />
           Ukratko - zujimo po svim digitalnim aktivnostima kojesu vama potrebne.
@@ -38,7 +38,7 @@ export default function Home() {
       </section>
 
       <div className={styles.headerImgWrapper}>
-        <Image src={heroImg} fill alt='Beehive - Belgrade Sunset' priority />
+        <DistortionImage />
       </div>
 
       <section className={styles.aboutUsSection}>

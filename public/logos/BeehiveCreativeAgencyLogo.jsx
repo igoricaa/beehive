@@ -1,4 +1,4 @@
-const FullLogo = ({ theme }: { theme: string }) => {
+const FullLogo = ({ theme }) => {
   const color = theme === 'dark' ? '#000' : '#fff';
 
   return (

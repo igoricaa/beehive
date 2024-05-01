@@ -11,30 +11,6 @@
   width: fit-content;
   min-width: fit-content;
 
-  &.ctaLinkDesktop {
-    margin-top: 4rem;
-  }
-
-  &.ctaLinkMobile {
-    display: none;
-  }
-
-  &.floating {
-    position: sticky;
-    top: 85vh;
-    margin-bottom: 5.5rem;
-    left: 2rem;
-    z-index: 1000;
-    opacity: 1;
-    visibility: visible;
-    transition: all 0.5s ease;
-
-    &.atBorder {
-      opacity: 0;
-      visibility: hidden;
-    }
-  }
-
   .overlay {
     position: absolute;
     display: block;
@@ -62,6 +38,8 @@
     .textWrapper {
       display: flex;
       flex-direction: column;
+      align-items: flex-start;
+
       span:first-of-type {
         color: #fff;
         font-size: 1rem;
@@ -88,10 +66,6 @@
 
 @media screen and (max-width: 991px) {
   .button {
-    &.ctaLinkDesktop {
-      display: none;
-    }
-
     &.ctaLinkMobile {
       grid-column: span 12;
       margin: 10px auto 0;

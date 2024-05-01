@@ -7,6 +7,14 @@
     svg {
       width: 34px;
       height: 34px;
+
+      rect {
+        fill: #000;
+      }
+
+      circle {
+        fill: #fff;
+      }
     }
   }
 
@@ -62,11 +70,6 @@
 
   &.active {
     svg {
-      circle {
-        -webkit-transform: scale(1.6);
-        -moz-transform: scale(1.6);
-        transform: scale(1.6);
-      }
       rect {
         &:nth-child(2) {
           -webkit-transform: scaleY(1.51);

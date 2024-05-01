@@ -33,10 +33,6 @@ export const Footer = () => {
         <div className={styles.menuWrapper}>
           <MenuItems />
         </div>
-        {/* <div className={styles.contactFormWrapper}>
-          <p>Kontaktiraj nas za sva pitanja:</p>
-          <ContactForm />
-        </div> */}
       </div>
       <div className={styles.footerBottom}>
         {footerBottomLinks.map((link, index) => (

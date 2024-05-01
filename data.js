@@ -96,7 +96,7 @@ export const team = [
     hoverTextTitle: 'Milance 33 leta',
     hoverText:
       '“Citat u dva , mozda tri reda hm hm dot dot i tako to sve u krug”',
-    hoverColor: '#6b11b3',
+    hoverColor: '#ffd600',
   },
   {
     listImage: '/team/darja.png',
@@ -105,7 +105,7 @@ export const team = [
     hoverTextTitle: 'Dara 34 leta',
     hoverText:
       '“Citat u dva , mozda tri reda hm hm dot dot i tako to sve u krug”',
-    hoverColor: '#6b11b3',
+    hoverColor: '#ffd600',
   },
   {
     listImage: '/team/ristic.png',
@@ -114,7 +114,7 @@ export const team = [
     hoverTextTitle: 'Rista 32 leta',
     hoverText:
       '“Citat u dva , mozda tri reda hm hm dot dot i tako to sve u krug”',
-    hoverColor: '#6b11b3',
+    hoverColor: '#ffd600',
   },
   {
     listImage: '/team/maja.png',
@@ -123,7 +123,7 @@ export const team = [
     hoverTextTitle: 'Joma 38 leta',
     hoverText:
       '“Citat u dva , mozda tri reda hm hm dot dot i tako to sve u krug”',
-    hoverColor: '#6b11b3',
+    hoverColor: '#ffd600',
   },
 ];
 
@@ -207,4 +207,31 @@ export const routes = [
   { name: 'O nama', path: '/o-nama' },
   { name: 'Naši radovi', path: '/nasi-radovi' },
   { name: 'Kontakt', path: '/kontakt' },
+];
+
+export const coreValues = [
+  {
+    title: 'Poštovanje',
+    description: 'Međusobnih potreba, vremena, znanja i profesionalnosti.',
+    icon: '/coreValues/core-value-icon-1.svg',
+    number: '01',
+  },
+  {
+    title: 'Poverenje',
+    description: 'Da ćemo jedni drugima pružiti svoj maksimum.',
+    icon: '/coreValues/core-value-icon-2.svg',
+    number: '02',
+  },
+  {
+    title: 'Radoznalost',
+    description: 'Da istražimo svaki pravac i nađemo najbolje rešenja za vas.',
+    icon: '/coreValues/core-value-icon-3.svg',
+    number: '03',
+  },
+  {
+    title: 'Sloboda',
+    description: 'Da budemo kreativni, odvažni, dosledni i iskreni.',
+    icon: '/coreValues/core-value-icon-4.svg',
+    number: '04',
+  },
 ];
