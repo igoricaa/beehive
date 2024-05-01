@@ -105,7 +105,7 @@ const Project = () => {
       </section>
 
       <section className={styles.contentSection}>
-        <p>
+        <p className={styles.specialOne}>
           Otvaranje lokala: <span>Mart 2022.</span>
         </p>
         <p>

@@ -80,7 +80,7 @@ main {
   padding-bottom: 10.5rem;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1024px) {
   $sitePadding: 2rem;
   :root {
     --site-padding: #{$sitePadding};

@@ -14,7 +14,7 @@ const ServicesSection = () => {
         <Image
           src={'/beehive-services-home.png'}
           fill
-          sizes='(max-width: 991px) 100vw, 40vw'
+          sizes='(max-width: 1024px) 100vw, 40vw'
           alt='Beehive Services'
         />
       </div>

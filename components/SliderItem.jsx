@@ -49,7 +49,7 @@ export default function SliderItem({ content }) {
             src={content.listImage}
             alt={content.title}
             fill
-            sizes='(max-width: 991px) 50vw, 22.5vw'
+            sizes='(max-width: 1024px) 50vw, 22.5vw'
           />
         </div>
         {content.hoverText && (
