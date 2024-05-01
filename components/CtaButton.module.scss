@@ -22,7 +22,6 @@
   &.floating {
     position: sticky;
     top: 85vh;
-    margin-bottom: 5.5rem;
     left: 2rem;
     z-index: 1000;
     opacity: 1;
@@ -92,6 +91,10 @@
       display: none;
     }
 
+    &.floating {
+      position: fixed;
+    }
+
     &.ctaLinkMobile {
       grid-column: span 12;
       margin: 10px auto 0;
@@ -130,8 +133,6 @@
 
 @media screen and (max-width: 680px) {
   .button {
-    &.floating {
-      position: fixed;
-    }
+   
   }
 }

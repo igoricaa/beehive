@@ -1,23 +1,34 @@
 $gridColumnGap: 2rem;
 $gridRowGap: 3rem;
+
 .main {
-  margin-top: 0;
-  padding: 0;
+  padding-top: 7.75rem;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .heroSection {
-  width: 100vw;
-  position: relative;
-  aspect-ratio: 1729 / 603;
+  display: grid;
+  grid-template-columns: repeat(12, minMax(0, 1fr));
+  column-gap: $gridColumnGap;
+  padding-left: var(--site-padding);
+  padding-right: var(--site-padding);
+  padding-bottom: 6rem;
+
+  * {
+    grid-column: 4 / 10;
+    text-align: center;
+  }
 
   h2 {
-    font-size: 3rem;
-    line-height: 60px;
-    color: #fff;
-    z-index: 1;
-    position: absolute;
-    bottom: var(--site-padding);
-    left: var(--site-padding);
+    font-size: 4rem;
+    line-height: 4.1rem;
+  }
+
+  p {
+    font-size: 22px;
+    line-height: 40px;
+    margin-top: 1.5rem;
   }
 }
 
@@ -123,12 +134,14 @@ $gridRowGap: 3rem;
 
 @media screen and (max-width: 1024px) {
   .heroSection {
-    aspect-ratio: 1 / 1;
+    padding-bottom: 5rem;
+
+    * {
+      grid-column: span 12;
+    }
 
     h2 {
       font-size: 2.5rem;
-      left: 2rem;
-      bottom: 2rem;
     }
   }
 
@@ -179,6 +192,8 @@ $gridRowGap: 3rem;
   $gridGap: 1.5rem;
 
   .heroSection {
+    padding-bottom: 4rem;
+
     h2 {
       font-size: 2rem;
       left: 1.5rem;

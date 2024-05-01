@@ -16,7 +16,7 @@
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.3",
-    "rough-notation": "^0.5.1"
+    "react-rough-notation": "^1.0.5"
   },
   "devDependencies": {
     "@types/node": "20.12.7",

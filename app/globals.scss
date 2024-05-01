@@ -80,6 +80,22 @@ main {
   padding-bottom: 8.5rem;
 }
 
+.exclamationMark {
+  position: relative;
+
+  &::before {
+    content: ' ';
+    position: absolute;
+    background-image: url('/exclamation-mark-orange.svg');
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 12px;
+    height: 94px;
+    top: 0;
+    right: 3px;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   $sitePadding: 2rem;
   :root {
@@ -106,6 +122,15 @@ main {
     margin-top: 4.2rem;
     padding-bottom: 5rem;
   }
+
+  .exclamationMark {
+    &::before {
+      width: 10px;
+      height: 84px;
+      top: -0.5rem;
+      right: 1px;
+    }
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -128,5 +153,14 @@ main {
 
   h5 {
     font-size: 1rem;
+  }
+
+  .exclamationMark {
+    &::before {
+      width: 10px;
+      height: 40px;
+      top: -1px;
+      right: -1px;
+    }
   }
 }

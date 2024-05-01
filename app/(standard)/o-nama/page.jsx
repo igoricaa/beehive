@@ -3,11 +3,27 @@ import styles from './page.module.scss';
 import headerBg from '@/public/about-us-header-bg.png';
 import { coreValues } from '@/data';
 import IntersectingHeading from '@/components/IntersectingHeading';
+import { RoughNotation } from 'react-rough-notation';
 
 export default function AboutUs() {
   return (
     <main className={styles.main}>
-      <h1>Obavezno nas kontaktiraj!</h1>
+      <h1>
+        <RoughNotation
+          type='circle'
+          color='#FF6B00'
+          iterations={3}
+          strokeWidth={3}
+          show
+        >
+          Svi
+        </RoughNotation>{' '}
+        idemo na{' '}
+        <span style={{ whiteSpace: 'nowrap' }}>
+          terapiju<span className={'exclamationMark'}>.</span>
+        </span>
+      </h1>
+
       <div className={styles.headerImgWrapper}>
         <Image
           src={headerBg}
@@ -69,19 +85,40 @@ export default function AboutUs() {
           <p>Da li ste znali da:</p>
           <ul>
             <li>Su pčele radoholici</li>
-            <li> Komuniciraju plesom, kao i mi.</li>
+            <li>
+              {' '}
+              Komuniciraju{' '}
+              <RoughNotation type='circle' strokeWidth={3} color='#ff6b00' show>
+                plesom
+              </RoughNotation>
+              , kao i mi.
+            </li>
             <li>Pčele imaju petoro očiju, mi sigurno imamo više.</li>
             <li>Vide boje</li>
             <li>I imaju ličnost…</li>
             <li>Stvaraju poslove</li>
             <li>Pčele retko spavaju. To je slučaj i sa nama.</li>
             <li>Pamte lica i…</li>
-            <li>Privlači ih kofein.</li>
+            <li>
+              Privlači ih{' '}
+              <RoughNotation
+                type='underline'
+                strokeWidth={3}
+                iterations={3}
+                color='#ff6b00'
+                show
+              >
+                kofein.
+              </RoughNotation>
+            </li>
           </ul>
         </div>
 
         <h3>
-          Mi smo se svuda pronašli. Zato smo i stvorili <span>košnicu.</span>
+          Mi smo se svuda pronašli. Zato smo i stvorili{' '}
+          <RoughNotation type='highlight' color='#FFD600' show>
+            <span>košnicu.</span>
+          </RoughNotation>
         </h3>
       </section>
     </main>

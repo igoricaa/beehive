@@ -3,7 +3,7 @@ import Header from '@/components/Header';
 export default function MainLayout({ children }) {
   return (
     <>
-      <Header theme='light' />
+      <Header theme='dark' />
       {children}
     </>
   );

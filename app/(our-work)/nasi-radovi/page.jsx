@@ -3,25 +3,35 @@ import styles from './page.module.scss';
 import Image from 'next/image';
 import { Link } from 'next-view-transitions';
 import CtaButton from '@/components/CtaButton';
+import { RoughNotation } from 'react-rough-notation';
 
 const Projects = () => {
   return (
     <main className={styles.main}>
       <section className={styles.heroSection}>
-        <Image
-          src={'/case-study-header.png'}
-          alt='BeeHive case study'
-          quality={100}
-          fill
-          sizes='100vw'
-          style={{ objectFit: 'cover', zIndex: 0 }}
-          priority
-        />
         <h2>
-          saradjujemo sa vama za
-          <br />
-          hrabre ciljeve
+          Sarađujemo sa vama za hrabre{' '}
+          <RoughNotation
+            type='circle'
+            color='#FF6B00'
+            iterations={3}
+            strokeWidth={3}
+            show
+          >
+            ciljeve
+          </RoughNotation>
         </h2>
+        <p>
+          Ovo su samo neke od naših uspešnih saradnji, više informacija u
+          detaljima studija
+        </p>
+        <Image
+          style={{ margin: '21px auto 0;' }}
+          src='/arrow-down-orange.svg'
+          alt='Arrow Direction'
+          width={30}
+          height={68}
+        />
       </section>
       <section className={styles.projectsSection}>
         <CtaButton

@@ -8,6 +8,10 @@ $gridGap: 2rem;
     margin-top: 3.75rem;
   }
 
+  h1 {
+    font-size: 5.625rem;
+  }
+
   .aboutUsSection {
     display: grid;
     grid-template-columns: repeat(12, minMax(0, 1fr));
@@ -176,7 +180,6 @@ $gridGap: 2rem;
       span {
         font-family: var(--font-source-serif-4);
         font-size: 3rem;
-        background-color: var(--color_yellow);
       }
     }
   }
@@ -219,6 +222,10 @@ $gridGap: 2rem;
 
 @media screen and (max-width: 1024px) {
   .main {
+    h1 {
+      font-size: 4rem;
+    }
+
     .aboutUsSection {
       p {
         font-size: 2rem;
@@ -280,6 +287,10 @@ $gridGap: 2rem;
   .main {
     padding-top: 4.5rem;
     padding-bottom: 4rem;
+
+    h1 {
+      font-size: 3rem;
+    }
 
     .headerImgWrapper {
       margin-top: 1.5rem;
