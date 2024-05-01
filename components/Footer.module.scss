@@ -5,14 +5,20 @@ $gridGap: 4rem;
   grid-template-columns: repeat(12, minMax(0, 1fr));
   gap: $gridGap;
   background-color: #f9f8f6;
-  padding: 90px 0;
+  padding: 5.625rem 0;
 
-  .logoSocialsWrapper {
-    grid-column: 2 / 7;
+  .innerWrapper {
+    grid-column: 2 / 12;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4rem;
+
     .logoWrapper {
       position: relative;
       display: block;
-      width: 100%;
+      width: 50%;
+      min-width: 50%;
       aspect-ratio: 666 / 101;
 
       svg {
@@ -22,44 +28,42 @@ $gridGap: 4rem;
     }
 
     .socialsWrapper {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-top: 1.5rem;
-
       p {
         font-size: 22px;
         font-weight: 500;
         color: #1d1d1d;
         white-space: nowrap;
         margin-right: 0.5rem;
+        width: 100%;
       }
-      .social {
-        display: flex;
-        justify-content: flex-end;
-        gap: 0.5rem;
 
-        span {
+      > div {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        margin-top: 1rem;
+
+        .social {
           display: flex;
-          padding: 0.25rem 0.5rem;
-          align-items: center;
-          gap: 9px;
-          border-radius: 1.5rem;
-          border: 1px solid #cecece;
-          background: #f3f3f3;
-          color: var(--color_text_main);
-          font-size: 10px;
-          font-weight: 500;
-          white-space: nowrap;
-          height: fit-content;
+          gap: 0.5rem;
+
+          span {
+            display: flex;
+            padding: 0.25rem 0.5rem;
+            align-items: center;
+            gap: 9px;
+            border-radius: 1.5rem;
+            border: 1px solid #cecece;
+            background: #f3f3f3;
+            color: var(--color_text_main);
+            font-size: 10px;
+            font-weight: 500;
+            white-space: nowrap;
+            height: fit-content;
+          }
         }
       }
     }
-  }
-
-  .menuWrapper {
-    grid-column: span 5;
-    justify-self: flex-end;
   }
 }
 
@@ -79,6 +83,13 @@ $gridGap: 4rem;
 }
 
 @media screen and (max-width: 1024px) {
+  .footerTop {
+    .innerWrapper {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+    }
+  }
 }
 
 @media screen and (max-width: 680px) {
@@ -88,7 +99,7 @@ $gridGap: 4rem;
     padding: 3rem 1.5rem;
     gap: 1.5rem;
 
-    .logoSocialsWrapper {
+    .innerWrapper {
       .logoWrapper {
         width: 80%;
         aspect-ratio: 307 / 47;

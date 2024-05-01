@@ -12,26 +12,28 @@ export const Footer = () => {
       {/* <BackToTopButton /> */}
 
       <div id='footerTop' className={styles.footerTop}>
-        <div className={styles.logoSocialsWrapper}>
+        <div className={styles.innerWrapper}>
           <a href='/' className={styles.logoWrapper}>
             <CleanLogo theme='dark' />
           </a>
           <div className={styles.socialsWrapper}>
             <p>gde zujimo:</p>
-            {socials.map((social, index) => (
-              <Link
-                key={index}
-                href={social.link}
-                className={styles.social}
-                target='_blank'
-              >
-                <span>{social.text}</span>
-              </Link>
-            ))}
+            <div>
+              {socials.map((social, index) => (
+                <Link
+                  key={index}
+                  href={social.link}
+                  className={styles.social}
+                  target='_blank'
+                >
+                  <span>{social.text}</span>
+                </Link>
+              ))}
+            </div>
           </div>
-        </div>
-        <div className={styles.menuWrapper}>
+          {/* <div className={styles.menuWrapper}> */}
           <MenuItems />
+          {/* </div> */}
         </div>
       </div>
       <div className={styles.footerBottom}>

@@ -2,9 +2,7 @@ $gridColumnGap: 2rem;
 $gridRowGap: 3rem;
 
 .main {
-  padding-top: 7.75rem;
-  padding-left: 0;
-  padding-right: 0;
+  padding: 7.75rem 0 0;
 }
 
 .heroSection {
@@ -196,8 +194,6 @@ $gridRowGap: 3rem;
 
     h2 {
       font-size: 2rem;
-      left: 1.5rem;
-      bottom: 1.5rem;
     }
   }
 

@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 
 const Typewriter = ({ strings }) => {
-  const [currentString, setCurrentString] = useState('');
+  const [currentString, setCurrentString] = useState('dizajn');
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);

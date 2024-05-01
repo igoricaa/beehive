@@ -66,6 +66,7 @@ export default function Header({ theme = 'dark' }) {
   useEffect(() => {
     setMounted(true);
 
+    console.log('PATH: ' + pathname);
     const isDesktopCurr = window.matchMedia('(min-width: 680px)').matches;
     if (typeof window !== 'undefined') setIsDesktop(isDesktopCurr);
 
@@ -115,7 +116,13 @@ export default function Header({ theme = 'dark' }) {
               {routes.map((route, index) => (
                 <li
                   key={index}
-                  className={pathname == route.path ? styles.active : ''}
+                  className={
+                    (route.path === '/' && pathname === route.path) ||
+                    (pathname !== '/' &&
+                      pathname.slice(1).includes(route.path.slice(1)))
+                      ? styles.active
+                      : ''
+                  }
                 >
                   <Link href={route.path}>{route.name}</Link>
                 </li>

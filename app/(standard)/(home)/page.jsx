@@ -37,7 +37,7 @@ export default function Home() {
       </section>
 
       {/* <div className={styles.headerImgWrapper}> */}
-        <DistortionImage />
+      <DistortionImage />
       {/* </div> */}
 
       <section className={styles.aboutUsSection}>

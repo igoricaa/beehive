@@ -11,6 +11,7 @@
 
     &:last-of-type {
       justify-content: space-between;
+      align-items: center;
     }
 
     p {
@@ -61,6 +62,7 @@
     font-family: var(--font-poppins);
     cursor: pointer;
     gap: 0.5rem;
+    max-height: 67px;
 
     &::after {
       content: ' ';
@@ -71,6 +73,18 @@
   }
 }
 
+@media screen and (max-width: 1650px) {
+  .contactForm {
+    grid-column: 2 / 8;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .contactForm {
+    grid-column: 2 / 9;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .contactForm {
     grid-column: span 12;
@@ -78,7 +92,6 @@
     input,
     textarea {
       font-size: 18px;
-      // padding: 0.5rem 1.5rem;
     }
   }
 }
@@ -91,6 +104,7 @@
       &:last-of-type {
         flex-direction: column;
         justify-content: space-between;
+        align-items: flex-start;
       }
 
       p {
