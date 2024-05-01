@@ -4,11 +4,23 @@ import Image from 'next/image';
 import { Link } from 'next-view-transitions';
 import CtaButton from '@/components/CtaButton';
 import RoughNotationWrapper from '@/components/RoughNotationWrapper';
+import EyeAnimation from '@/components/EyeAnimation';
 
 const Projects = () => {
   return (
     <main className={styles.main}>
       <section className={styles.heroSection}>
+        <EyeAnimation
+          style={{
+            position: 'absolute',
+            height: '125px',
+            width: '125px',
+            position: 'absolute',
+            left: '10vw',
+            top: '200px',
+          }}
+          animationSrc='https://lottie.host/b0d0b8b0-444b-45d2-a9f4-41f1f4e93b0c/0YL52S4bsw.json'
+        />
         <h2>
           Sarađujemo sa vama za hrabre{' '}
           <RoughNotationWrapper
@@ -30,6 +42,16 @@ const Projects = () => {
           alt='Arrow Direction'
           width={30}
           height={68}
+        />
+        <EyeAnimation
+          style={{
+            height: '72px',
+            width: '72px',
+            position: 'absolute',
+            right: '10vw',
+            top: '250px',
+          }}
+          animationSrc='https://lottie.host/b0d0b8b0-444b-45d2-a9f4-41f1f4e93b0c/0YL52S4bsw.json'
         />
       </section>
       <section className={styles.projectsSection}>

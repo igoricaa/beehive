@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@lottiefiles/react-lottie-player": "^3.5.3",
     "embla-carousel-react": "^8.0.2",
     "hover-effect": "^1.2.1",
     "next": "14.2.3",
