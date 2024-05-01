@@ -14,7 +14,7 @@ const DistortionImage = () => {
       imagesRatio: 894 / 2560,
       image1: '/home-hero-2.webp',
       image2: '/home-hero-1.webp',
-      displacementImage: '/distortions/ramen.jpg',
+      displacementImage: '/distortions/ramen.webp',
     });
   }, []);
 
