@@ -18,8 +18,9 @@ export default function Home() {
         </h1>
 
         <h3>
-          <span>
-            Mi smo Beehive. Umemo da ispričamo priču vašeg brenda kroz{' '}
+          Mi smo Beehive. Umemo da ispričamo priču vašeg brenda <br />
+          <span style={{ whiteSpace: 'nowrap' }}>
+            kroz{' '}
             <Typewriter
               strings={[
                 'dizajn',
@@ -36,9 +37,7 @@ export default function Home() {
         </h3>
       </section>
 
-      {/* <div className={styles.headerImgWrapper}> */}
       <DistortionImage />
-      {/* </div> */}
 
       <section className={styles.aboutUsSection}>
         <h2>pričanje priča</h2>

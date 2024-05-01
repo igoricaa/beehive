@@ -20,6 +20,13 @@ $gridGap: 2rem;
 
     h3 {
       font-weight: 400;
+
+      br {
+        &:first-of-type {
+          display: none;
+        }
+      }
+
       span {
         white-space: nowrap;
 
@@ -120,6 +127,11 @@ $gridGap: 2rem;
 
       h3 {
         margin-top: 1rem;
+        br {
+          &:first-of-type {
+            display: block;
+          }
+        }
         span {
           white-space: normal;
 
