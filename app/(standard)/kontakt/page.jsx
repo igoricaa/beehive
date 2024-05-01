@@ -1,21 +1,23 @@
 import styles from './page.module.scss';
 import ContactForm from '@/components/ContactForm';
-import { RoughNotation } from 'react-rough-notation';
+import RoughNotationWrapper from '@/components/RoughNotationWrapper';
 
 const Contact = () => {
   return (
     <main className={styles.main}>
       <h1>
-        <RoughNotation
+        <RoughNotationWrapper
           type='circle'
           color='#FF6B00'
           iterations={3}
           strokeWidth={3}
-          show
         >
           Obavezno
-        </RoughNotation>{' '}
-        nas <span style={{whiteSpace: "nowrap"}}>kontaktiraj <span className={'exclamationMark'}>.</span></span>
+        </RoughNotationWrapper>{' '}
+        nas{' '}
+        <span style={{ whiteSpace: 'nowrap' }}>
+          kontaktiraj <span className={'exclamationMark'}>.</span>
+        </span>
       </h1>
       <section className={styles.contactSection}>
         <h2>

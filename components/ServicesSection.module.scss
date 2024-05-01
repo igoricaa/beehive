@@ -8,9 +8,28 @@ $gridGap: 2rem;
 
   .imageWrapper {
     grid-column: span 5;
-    width: 100%;
+    width: 80%;
     aspect-ratio: 667 / 819;
     position: relative;
+    margin: auto;
+    box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+    transform: translate(0px, 0px);
+    animation: floatY 6s ease-in-out infinite;
+  }
+
+  @keyframes floatY {
+    0% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translate(0px, 0px);
+    }
+    50% {
+      box-shadow: 0 25px 15px 0px rgba(0, 0, 0, 0.2);
+      transform: translate(0px, -20px);
+    }
+    100% {
+      box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
+      transform: translate(0px, 0px);
+    }
   }
 
   .servicesInfoWrapper {
@@ -21,13 +40,8 @@ $gridGap: 2rem;
   }
 }
 
-@media screen and (max-width: 680px) {
-  $gridGap: 1.5rem;
-
+@media screen and (max-width: 1024px) {
   .servicesSection {
-    margin: 3rem 0;
-    gap: $gridGap;
-
     .imageWrapper {
       grid-column: span 12;
       aspect-ratio: 383 / 203;
@@ -35,7 +49,18 @@ $gridGap: 2rem;
 
     .servicesInfoWrapper {
       grid-column: span 12;
+    }
+  }
+}
 
+@media screen and (max-width: 680px) {
+  $gridGap: 1.5rem;
+
+  .servicesSection {
+    margin: 3rem 0;
+    gap: $gridGap;
+
+    .servicesInfoWrapper {
       section {
         margin-top: 10px;
       }

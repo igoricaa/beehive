@@ -3,21 +3,20 @@ import styles from './page.module.scss';
 import headerBg from '@/public/about-us-header-bg.png';
 import { coreValues } from '@/data';
 import IntersectingHeading from '@/components/IntersectingHeading';
-import { RoughNotation } from 'react-rough-notation';
+import RoughNotationWrapper from '@/components/RoughNotationWrapper';
 
 export default function AboutUs() {
   return (
     <main className={styles.main}>
       <h1>
-        <RoughNotation
+        <RoughNotationWrapper
           type='circle'
           color='#FF6B00'
           iterations={3}
           strokeWidth={3}
-          show
         >
           Svi
-        </RoughNotation>{' '}
+        </RoughNotationWrapper>{' '}
         idemo na{' '}
         <span style={{ whiteSpace: 'nowrap' }}>
           terapiju<span className={'exclamationMark'}>.</span>
@@ -88,9 +87,13 @@ export default function AboutUs() {
             <li>
               {' '}
               Komuniciraju{' '}
-              <RoughNotation type='circle' strokeWidth={3} color='#ff6b00' show>
+              <RoughNotationWrapper
+                type='circle'
+                strokeWidth={3}
+                color='#ff6b00'
+              >
                 plesom
-              </RoughNotation>
+              </RoughNotationWrapper>
               , kao i mi.
             </li>
             <li>Pčele imaju petoro očiju, mi sigurno imamo više.</li>
@@ -101,24 +104,23 @@ export default function AboutUs() {
             <li>Pamte lica i…</li>
             <li>
               Privlači ih{' '}
-              <RoughNotation
+              <RoughNotationWrapper
                 type='underline'
                 strokeWidth={3}
                 iterations={3}
                 color='#ff6b00'
-                show
               >
                 kofein.
-              </RoughNotation>
+              </RoughNotationWrapper>
             </li>
           </ul>
         </div>
 
         <h3>
           Mi smo se svuda pronašli. Zato smo i stvorili{' '}
-          <RoughNotation type='highlight' color='#FFD600' show>
+          <RoughNotationWrapper type='highlight' color='#FFD600'>
             <span>košnicu.</span>
-          </RoughNotation>
+          </RoughNotationWrapper>
         </h3>
       </section>
     </main>

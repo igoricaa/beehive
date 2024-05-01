@@ -3,7 +3,7 @@ import styles from './page.module.scss';
 import Image from 'next/image';
 import { Link } from 'next-view-transitions';
 import CtaButton from '@/components/CtaButton';
-import { RoughNotation } from 'react-rough-notation';
+import RoughNotationWrapper from '@/components/RoughNotationWrapper';
 
 const Projects = () => {
   return (
@@ -11,15 +11,14 @@ const Projects = () => {
       <section className={styles.heroSection}>
         <h2>
           Sarađujemo sa vama za hrabre{' '}
-          <RoughNotation
+          <RoughNotationWrapper
             type='circle'
             color='#FF6B00'
             iterations={3}
             strokeWidth={3}
-            show
           >
             ciljeve
-          </RoughNotation>
+          </RoughNotationWrapper>
         </h2>
         <p>
           Ovo su samo neke od naših uspešnih saradnji, više informacija u
@@ -61,11 +60,10 @@ const Projects = () => {
                   <h3 style={{ borderColor: project.textColor }}>
                     {project.title}:
                   </h3>
-                  <RoughNotation
+                  <RoughNotationWrapper
                     type='highlight'
                     color='#FFD600'
                     style={{ width: 'fit-content', display: 'block' }}
-                    show
                   >
                     <span
                       style={{
@@ -76,7 +74,7 @@ const Projects = () => {
                     >
                       Uskoro
                     </span>
-                  </RoughNotation>
+                  </RoughNotationWrapper>
                 </>
               )}
             </div>

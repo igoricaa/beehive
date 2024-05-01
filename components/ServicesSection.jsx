@@ -3,13 +3,17 @@
 import styles from './ServicesSection.module.scss';
 import Image from 'next/image';
 import Accordions from './Accordions';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const ServicesSection = () => {
   const [activeServiceIndex, setActiveServiceIndex] = useState(null);
+
+  useEffect(() => {
+    if (!activeServiceIndex) setActiveServiceIndex(0);
+  }, [])
+
   return (
     <section className={styles.servicesSection}>
-      {/* <DistortionImage activeServiceIndex={activeServiceIndex} /> */}
       <div className={styles.imageWrapper}>
         <Image
           src={'/beehive-services-home.png'}

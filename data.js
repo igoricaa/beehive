@@ -155,31 +155,31 @@ export const teamSectionContent = {
 
 export const services = [
   {
-    title: 'social media marketing',
+    title: 'social media management (Instagram, LinkedIn, Facebook and TikTok)',
     description: {
       __html:
-        '<ul><li>Monthly Social Media Plan creation</li><li>Community Management</li><li>Posting content across social media accounts</li><li>Engagement</li><li>Reporting and optimization</li></ul><ul><li>Research on current benchmark trends</li><li>Planning and developing social media campaigns</li><li>SEO monitoring and web traffic metrics</li><li>IntegratedCampaigns</li></ul>',
+        '<ul><li>Monthly Social Media Plan creation</li><li>Community Management</li><li>Posting content across social media accounts</li><li>Content Creation</li><li>Copywriting</li></ul><ul><li>Reporting and optimization</li><li>Research on current benchmark trends</li><li>Advertising on Social Media</li><li>Influencer management</li></ul>',
     },
   },
   {
-    title: 'content creation',
+    title: 'marketing and communications',
     description: {
       __html:
-        '<ul><li>Video and Media Production</li><li>Photography</li><li>Design for Social Media</li><li>Copywriting</li></ul>',
+        '<ul><li>Brand Name & Slogan - Tagline</li><li>Brand Strategy and Planning</li><li>Brand Book Creation</li><li>PR</li><li>Event Production</li><li>E-mail</li></ul>',
     },
   },
   {
-    title: 'marketing & communication',
+    title: 'design',
     description: {
       __html:
-        '<ul><li>Brand Naming</li><li>Strategy and Planning</li><li>Brand Slogan - Tagline</li><li>PR</li><li>Influencer management</li></ul>',
+        '<ul><li>Logo creation</li><li>Graphic Design</li><li>Web Design</li><li>UX</li><li>UI</li></ul>',
     },
   },
   {
     title: 'web & app development',
     description: {
       __html:
-        '<ul><li>Web Development</li><li>Web Design</li><li>UX & UI Design</li><li>eCommerce</li><li>App Development</li></ul>',
+        '<ul><li>Web Development</li><li>eCommerce</li><li>App Development</li></ul>',
     },
   },
 ];
