@@ -38,19 +38,19 @@ export const projectsPreview = [
 ];
 
 export const projects = [
-  {
-    title: 'La Cantina',
-    slug: 'la-cantina',
-    description:
-      'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
-    description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
-    featuredImage: '/our-work/la-cantina.png',
-    listImage: '/our-work/la-cantina-home.png',
-    categories: ['branding', 'social media', 'marketing'],
-    subtitle: 'klijent:',
-    backgroundColor: '#fff',
-    textColor: '#000',
-  },
+  // {
+  //   title: 'La Cantina',
+  //   slug: 'la-cantina',
+  //   description:
+  //     'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
+  //   description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
+  //   featuredImage: '/our-work/la-cantina.png',
+  //   listImage: '/our-work/la-cantina-home.png',
+  //   categories: ['branding', 'social media', 'marketing'],
+  //   subtitle: 'klijent:',
+  //   backgroundColor: '#fff',
+  //   textColor: '#000',
+  // },
   {
     title: 'Bistro grad',
     slug: 'bistro-grad',

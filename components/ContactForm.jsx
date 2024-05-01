@@ -46,7 +46,7 @@ export default function ContactForm() {
         {/* {errors.message && <p>message is required</p>} */}
       </div>
       <div>
-        <p>Odgovor mozes ocekivati u najkracem mogucem roku.</p>
+        <p>Odgovor možeš očekivati u najkraćem mogućem roku.</p>
         {/* <button type='submit'>
           <div className={styles.innerWrapper}>
             <span ref={overlayRef} className={styles.overlay}></span>

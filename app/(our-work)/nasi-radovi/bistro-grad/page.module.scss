@@ -53,6 +53,24 @@
     font-size: 3rem;
     line-height: 4rem;
   }
+  h3 {
+    font-size: 2.5rem;
+    margin: 3rem 0 2rem;
+
+    &:first-of-type {
+      margin-bottom: 0;
+      margin-top: 0rem;
+    }
+  }
+
+  &:first-of-type {
+    h3 {
+      &:first-of-type {
+        margin-bottom: 0;
+        margin-top: 5rem;
+      }
+    }
+  }
 
   p {
     font-size: 28px;
@@ -60,7 +78,7 @@
     margin-top: 3rem;
 
     &:first-of-type {
-      margin-top: 4.5rem;
+      margin-top: 3rem;
     }
 
     span {
@@ -139,7 +157,6 @@
     font-weight: 600;
     color: #161616;
     padding-left: 8.3vw;
-    white-space: nowrap;
 
     span {
       padding-left: 0px;
@@ -286,6 +303,7 @@
     span {
       font-size: 28px;
       padding-left: 6.3vw;
+      white-space: nowrap;
     }
 
     .scopeWrapper {

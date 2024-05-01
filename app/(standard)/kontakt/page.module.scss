@@ -1,6 +1,9 @@
 .main {
   padding: 3.5rem 5.5rem 8.75rem;
   position: relative;
+  h1 {
+    font-size: 5.625rem;
+  }
 
   &::after {
     content: '';
@@ -24,6 +27,7 @@
 
     h2 {
       grid-column: 2 / 12;
+      font-size: 3rem;
     }
   }
 }

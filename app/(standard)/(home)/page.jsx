@@ -3,7 +3,6 @@ import SliderSection from '@/components/SliderSection';
 import { portfolioSectionContent, teamSectionContent } from '@/data';
 import ServicesSection from '@/components/ServicesSection';
 import Typewriter from '@/components/Typewritter';
-import heroImg from '@/public/home-hero.jpg';
 import LogoWrapper from '@/public/logos/LogoWrapper';
 import DistortionImage from '@/components/DistortionImage';
 
@@ -37,9 +36,9 @@ export default function Home() {
         </h3>
       </section>
 
-      <div className={styles.headerImgWrapper}>
+      {/* <div className={styles.headerImgWrapper}> */}
         <DistortionImage />
-      </div>
+      {/* </div> */}
 
       <section className={styles.aboutUsSection}>
         <h2>pričanje priča</h2>

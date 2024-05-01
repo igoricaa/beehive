@@ -6,7 +6,7 @@ const categories = ['Branding', 'Web Design', 'Development'];
 const socials = [
   {
     name: 'Instagram',
-    link: 'https://www.instagram.com/pranabigtree/',
+    link: 'https://www.instagram.com/bistro_grad/',
   },
 ];
 
@@ -14,7 +14,7 @@ const Project = () => {
   return (
     <main className={styles.main}>
       <div className={styles.headerTop}>
-        <h2>Prana</h2>
+        <h2>Bistro Grad</h2>
         <div className={styles.categoriesWrapper}>
           {categories.map((category) => (
             <span key={category}>{category}</span>
@@ -26,30 +26,33 @@ const Project = () => {
       </div>
 
       <section className={styles.contentSection}>
-        <span>O Prani</span>
+        <span>O Bistrou</span>
         <h2>
-          Prana je porodični fusion restoran, osnovan 2022. godine. Zabavna
-          ideja za restoran, da bude community orijentisan, da u sebi nosi duh
-          italije, ali i havajsku egzotiku.
+          Beogradski Hometown bar i restoran. Lociran u samom centru, u Uzun
+          MIrkovoj broj 5. Slikai prilika urbanog načina života. Ljudi koji vole
+          da se zabavljaju, druže ibacaju dobre fore. Njihov meni je
+          raznovrstan, kao i klijentela, u samom lokalupostoji mnoštvo easter
+          egg-ova, a pravaca komunikacije na mrežama može bitimali milion. Kako
+          izvući esenciju ovog lokala i prikazati je najbolje moguće
+          nadigitalnim kanalima?
         </h2>
 
+        <h3>Zadatak i izazov?</h3>
         <p>
-          Prana je porodični fusion restoran, osnovan2022. godine. Zabavna ideja
-          za restoran, da bude community orijentisan, da u sebi nosi duh
-          italije, ali i havajsku egzotiku. Ideja koja nosi ovo svetlo mesto u
-          Hilandarskoj 6 i dve godinekasnije Kneginje Zorke 28, je da se služi
-          hrana koja povećava životnu energiju.
+          Nadovezatise na postojeći identitet i ispričati Bistro priču na
+          zabavan, interaktivan iuzbudljiv način.{' '}
         </p>
-
         <p>
-          Istina je, hrana je marketinški vrlozavodljiva jer je neraskidivo
-          povezana sa emocijama, ali, postavlja se pitanje:kako ispričati jednu
-          nežnu, porodičnu priču; učiniti da se svi osećaju kao kodkuće;
-          stvoriti ambijent u kojem je Prana omiljeno mesto u komšiluku, koja,
-          uzizuzetnu ponudu hrane, može da donese i zrak sunca?
+          Znamo da je u centru Beograda ali Bistro je centar za sebe. Mesto gde
+          je sve moguće, gdeceđena može da se služi u ponoć, a flaša vina uz
+          doručak. Gde se pire za mesopravi od kestenja, hleb po Zuzinom
+          receptu, a za supu kažu da je infuzija.Ekipa koja radi ima dosta
+          posloženog životnog iskustva, lepe manire, osmehe idobar ukus. Prava
+          moderna gostionica, zaključio bi neko ko eklektičnomenterijeru, ali
+          ipak, nije to to - ne može baš da se uhvati tek tako. Žurke sene
+          planiraju, one se dešavaju. A dešavaju se. Bistro je veliki Beograd u
+          jednomodličnom ćošku Starog Grada - Beograd na pravi način.
         </p>
-
-        <p>Upravo je to priča koju smo imali zadatak da ispričamo.</p>
       </section>
 
       <section className={styles.gallerySection}>
@@ -73,20 +76,23 @@ const Project = () => {
 
       <section className={styles.contentSection}>
         <span>Izazov</span>
-        <h2>
-          Kako precizno preslikati nečiju viziju kroz sadržaj?
-          <br />
-          <br />
-          Razumeti, istražiti, naučiti i sprovesti.
-        </h2>
+        <h3>Kako smo odgovorili na zadatak?</h3>
+        <p>
+          Napravilismo jedan digitalni, nesavršeni Bistro reality program.
+          Prikazali smo štase dešava kada se jelo poruči, hvatali momente
+          zabave, smeha, zanimljivihpriča. Upoznali smo publiku sazaposlenima,
+          njihovim karakterom, dočarali smo ambijent i malo više od toga-
+          prikazali smo kako različita društvasede na istom mestu, kako se
+          stvara sinergija i kako nastaje žurka, kako seslažu sveže namirnice i
+          šta se dešava kada odzvoni radno vreme petkom. Nismopozivali ljude već
+          smo im preneliatmosferu, čiji su deo rado želeli da postanu. Svi žele
+          da budu na Bistro storiju, i to je naš najveći uspeh.
+        </p>
 
         <p>
-          Stvaranjem sadržaja koji je adekvatan za društvene mreže, a koji je
-          baziran na željama ikreativnoj vizijij klienta, stvorili smo vizuelni
-          i komunikacioni ton koji preslikava baš onaj koji se nalazi unutar
-          <span> Prane</span>. Pažljivo iskrojenom strategijom, testiranjem
-          sadržaja i osluškivanjem publike, došli smo do odličnih rezultata i
-          uspešno odgovorili na poslovni izazov.
+          Unapredili smo komunikacije i kroz copywriting koji je pisan na
+          maštovit, bajkovit način, nekadainspirisan anegdotama, a nekada
+          gradskim legendama.
         </p>
       </section>
 
@@ -100,45 +106,30 @@ const Project = () => {
         />
       </section>
 
-      <section className={styles.contentSection}>
-        <p className={styles.specialOne}>
-          Otvaranje lokala: <span>Mart 2022.</span>
-        </p>
-        <p>
-          Organizovali smo <span>pre-opening</span> event zaprijatelje kuće -{' '}
-          <span>influenseri, glumci, prijatelji i partneri,</span> dobili su
-          uvid u to kako će Prana izgledati - kroz male zalogaje odabranih jela,
-          vina, prijateljskog i porodičnog druženja, jedne prolećne nedelje
-          ujutru. Pre nego što je otvoren lokal, <span>Prana</span> je već imala
-          organskih 1000 pratilaca, od samog događaja i najave nečeg potpuno
-          novog i jedinstvenog.
-        </p>
-      </section>
-
       <section className={styles.infoSection}>
         <div className={styles.scopeWrapper}>
           <h3>Scope</h3>
           <ul>
             <li>Content creation (video, photography)</li>
             <li>Copywriting</li>
-            <li>Social media management</li>
-            <li>Social media strategy</li>
+            <li>Social Media Management</li>
+            <li>Social Media Strategy</li>
             <li>PR</li>
-            <li>Event management</li>
             <li>Influencer marketing</li>
+            <li>Advertising / Campaigns</li>
           </ul>
         </div>
         <div className={styles.statsWrapper}>
           <h3>Statistika</h3>
           <ul>
-            <li>Followers</li>
+            <li>Pratioci</li>
           </ul>
-          <span>4544</span>
+          <span>11.2K</span>
           <ul>
             <li>Uloženi budžet</li>
           </ul>
           <span>
-            500euro <span>(total)</span>
+            400evra <span>(total)</span>
           </span>
         </div>
       </section>
