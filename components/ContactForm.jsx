@@ -4,12 +4,6 @@ import { SubmitHandler, useForm } from 'react-hook-form';
 import styles from './ContactForm.module.scss';
 import ContactFormButton from './ContactFormButton';
 
-// type FormData = {
-//   subject: string;
-//   email: string;
-//   message: string;
-// };
-
 export default function ContactForm() {
   const {
     register,
@@ -17,9 +11,24 @@ export default function ContactForm() {
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => {
-    console.log(data);
-  };
+  async function onSubmit(formData) {
+    await fetch('/api/send', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+      }),
+    }).then(() => {
+      console.log('Your email message has been sent successfully');
+    });
+
+    // reset();
+  }
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
