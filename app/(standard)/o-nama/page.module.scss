@@ -297,7 +297,7 @@ $gridGap: 2rem;
     }
 
     .aboutUsSection {
-      padding: 3rem 0;
+      padding: 3rem 0 2.5rem;
       gap: $gridGap;
 
       h2 {
@@ -313,7 +313,7 @@ $gridGap: 2rem;
 
     .coreValuesSection {
       gap: 2rem;
-      margin: 2.5 auto 3rem;
+      margin: 0 auto 4rem;
       grid-template-columns: repeat(2, minMax(0, 1fr));
 
       .coreValue {
@@ -348,6 +348,7 @@ $gridGap: 2rem;
 
     .aboutBeesSection {
       padding-top: 3rem;
+      column-gap: 0;
 
       h2 {
         line-height: 56px;

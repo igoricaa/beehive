@@ -37,7 +37,6 @@ const Projects = () => {
           detaljima studija
         </p>
         <Image
-          style={{ margin: '21px auto 0;' }}
           src='/arrow-down-orange.svg'
           alt='Arrow Direction'
           width={30}

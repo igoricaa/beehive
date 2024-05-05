@@ -155,7 +155,7 @@ export const teamSectionContent = {
 
 export const services = [
   {
-    title: 'social media management (Instagram, LinkedIn, Facebook and TikTok)',
+    title: 'social media management',
     description: {
       __html:
         '<ul><li>Monthly Social Media Plan creation</li><li>Community Management</li><li>Posting content across social media accounts</li><li>Content Creation</li><li>Copywriting</li></ul><ul><li>Reporting and optimization</li><li>Research on current benchmark trends</li><li>Advertising on Social Media</li><li>Influencer management</li></ul>',
@@ -185,18 +185,18 @@ export const services = [
 ];
 
 export const footerBottomLinks = [
-  {
-    href: '/cookie-policy',
-    text: 'Cookie policy',
-  },
-  {
-    href: '/privacy-policy',
-    text: 'Privacy policy',
-  },
-  {
-    href: '/legal',
-    text: 'Legal',
-  },
+  // {
+  //   href: '/cookie-policy',
+  //   text: 'Cookie policy',
+  // },
+  // {
+  //   href: '/privacy-policy',
+  //   text: 'Privacy policy',
+  // },
+  // {
+  //   href: '/legal',
+  //   text: 'Legal',
+  // },
   {
     href: '#',
     text: 'c 2024 beehiveagency',

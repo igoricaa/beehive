@@ -14,6 +14,10 @@ const Contact = () => {
           bottom: '25%',
           right: '5vw',
         }}
+        mobileStyle={{
+          bottom: '7%',
+          right: '0vw',
+        }}
         animationSrc='https://lottie.host/e70b0c8e-eeb6-49a3-9200-4f328769e2c5/nc6aORCcQw.json'
       />
       <h1>

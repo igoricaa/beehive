@@ -4,22 +4,26 @@ import { RoughNotation } from 'react-rough-notation';
 import { useInView } from 'react-intersection-observer';
 
 const RoughNotationWrapper = (props) => {
-  const { ref, inView, entry } = useInView({ threshold: 1, initialInView: true});
+  const { ref, inView, entry } = useInView({
+    threshold: 1,
+    initialInView: true,
+  });
 
-  const { type, strokeWidth, color, style, children } = props;
+  const { type, strokeWidth, color, animationDelay, style, children } = props;
 
   return (
-    <div ref={ref}>
+    <span ref={ref}>
       <RoughNotation
         type={type}
         strokeWidth={strokeWidth}
+        animationDelay={animationDelay}
         color={color}
         show={inView}
         style={style}
       >
         {children}
       </RoughNotation>
-    </div>
+    </span>
   );
 };
 

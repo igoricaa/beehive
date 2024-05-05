@@ -39,13 +39,6 @@ const CleanLogo = ({ theme }) => {
           fill={color}
         />
       </g>
-      <defs>
-        <clipPath id='clip0_0_801'>
-          <rect width='113' height='16' fill={color}>
-            <title>beehive logo</title>
-          </rect>
-        </clipPath>
-      </defs>
     </svg>
   );
 };

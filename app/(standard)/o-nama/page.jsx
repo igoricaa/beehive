@@ -90,6 +90,7 @@ export default function AboutUs() {
               <RoughNotationWrapper
                 type='circle'
                 strokeWidth={3}
+                animationDelay="500"
                 color='#ff6b00'
               >
                 plesom
@@ -108,6 +109,7 @@ export default function AboutUs() {
                 type='underline'
                 strokeWidth={3}
                 iterations={3}
+                animationDelay="500"
                 color='#ff6b00'
               >
                 kofein.
@@ -118,7 +120,7 @@ export default function AboutUs() {
 
         <h3>
           Mi smo se svuda pronašli. Zato smo i stvorili{' '}
-          <RoughNotationWrapper type='highlight' color='#FFD600'>
+          <RoughNotationWrapper type='highlight' animationDelay="500" color='#FFD600'>
             <span>košnicu.</span>
           </RoughNotationWrapper>
         </h3>

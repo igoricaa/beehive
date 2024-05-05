@@ -23,7 +23,7 @@ $gridGap: 4rem;
 
       svg {
         width: 100%;
-        height: fit-content;
+        height: 100%;
       }
     }
 
@@ -121,7 +121,6 @@ $gridGap: 4rem;
   }
 
   .footerBottom {
-    justify-content: space-between;
     padding: 0.25rem 1.5rem;
     gap: 0;
 

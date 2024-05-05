@@ -29,6 +29,10 @@ $gridRowGap: 3rem;
     line-height: 40px;
     margin-top: 1.5rem;
   }
+
+  img {
+    margin: 1.5rem auto 0;
+  }
 }
 
 .projectsSection {
@@ -191,7 +195,7 @@ $gridRowGap: 3rem;
   $gridGap: 1.5rem;
 
   .heroSection {
-    padding-bottom: 4rem;
+    padding-bottom: 2rem;
 
     h2 {
       font-size: 2rem;
