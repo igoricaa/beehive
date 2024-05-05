@@ -14,6 +14,7 @@ export default function AboutUs() {
           color='#FF6B00'
           iterations={3}
           strokeWidth={3}
+          playOnce
         >
           Svi
         </RoughNotationWrapper>{' '}
@@ -90,7 +91,8 @@ export default function AboutUs() {
               <RoughNotationWrapper
                 type='circle'
                 strokeWidth={3}
-                animationDelay="500"
+                animationDelay='500'
+                playOnce
                 color='#ff6b00'
               >
                 plesom
@@ -109,7 +111,8 @@ export default function AboutUs() {
                 type='underline'
                 strokeWidth={3}
                 iterations={3}
-                animationDelay="500"
+                animationDelay='750'
+                playOnce
                 color='#ff6b00'
               >
                 kofein.
@@ -120,7 +123,12 @@ export default function AboutUs() {
 
         <h3>
           Mi smo se svuda pronašli. Zato smo i stvorili{' '}
-          <RoughNotationWrapper type='highlight' animationDelay="500" color='#FFD600'>
+          <RoughNotationWrapper
+            type='highlight'
+            animationDelay='1000'
+            playOnce
+            color='#FFD600'
+          >
             <span>košnicu.</span>
           </RoughNotationWrapper>
         </h3>
