@@ -9,15 +9,18 @@ import EyeAnimation from '@/components/EyeAnimation';
 const Projects = () => {
   return (
     <main className={styles.main}>
-      <section className={styles.heroSection}>
+      <section className={[styles.heroSection, 'hideCtaSection'].join(' ')}>
         <EyeAnimation
           style={{
             position: 'absolute',
-            height: '125px',
-            width: '125px',
+            height: '150px',
+            width: '150px',
             position: 'absolute',
             left: '10vw',
             top: '200px',
+          }}
+          mobileStyle={{
+            top: '100vw',
           }}
           animationSrc='https://lottie.host/b0d0b8b0-444b-45d2-a9f4-41f1f4e93b0c/0YL52S4bsw.json'
         />
@@ -44,11 +47,14 @@ const Projects = () => {
         />
         <EyeAnimation
           style={{
-            height: '72px',
-            width: '72px',
+            height: '100px',
+            width: '100px',
             position: 'absolute',
             right: '10vw',
             top: '250px',
+          }}
+          mobileStyle={{
+            top: '100vw',
           }}
           animationSrc='https://lottie.host/b0d0b8b0-444b-45d2-a9f4-41f1f4e93b0c/0YL52S4bsw.json'
         />
@@ -131,7 +137,7 @@ const Projects = () => {
       </section>
 
       <section className={styles.ctaSection}>
-        <h2 id='floatingBorderElement'>
+        <h2 className='hideCtaSection'>
           Pitanje, nedoumica? Dostupni smo za svaku potrebu
         </h2>
         <CtaButton

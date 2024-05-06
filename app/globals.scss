@@ -54,6 +54,7 @@ span {
 
 h1 {
   font-size: 7.5rem;
+  line-height: 110%;
 }
 
 h2 {
@@ -119,7 +120,7 @@ main {
   }
 
   main {
-    margin-top: 4.2rem;
+    margin-top: 5.5rem;
     padding-bottom: 5rem;
   }
 
@@ -137,6 +138,10 @@ main {
   $sitePadding: 1.5rem;
   :root {
     --site-padding: #{$sitePadding};
+  }
+
+  main {
+    margin-top: 6.125rem;
   }
 
   h1 {

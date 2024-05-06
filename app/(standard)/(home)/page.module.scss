@@ -1,7 +1,7 @@
 $gridGap: 2rem;
 
 .main {
-  padding-top: 3rem;
+  padding-top: 5rem;
   overflow: hidden;
 
   .statementSection {
@@ -20,6 +20,7 @@ $gridGap: 2rem;
 
     h3 {
       font-weight: 400;
+      margin-top: 1.5rem;
 
       br {
         &:first-of-type {
@@ -79,9 +80,6 @@ $gridGap: 2rem;
 }
 
 @media screen and (max-width: 1750px) {
-  .main {
-    padding-top: 2.2rem;
-  }
   .aboutUsSection {
     h2 {
       grid-row: 1;
@@ -97,6 +95,8 @@ $gridGap: 2rem;
 
 @media screen and (max-width: 1024px) {
   .main {
+    padding-top: 4rem;
+
     .statementSection {
       h1 {
         span {
@@ -113,9 +113,8 @@ $gridGap: 2rem;
 @media screen and (max-width: 680px) {
   $gridGap: 1.5rem;
   .main {
+    padding-top: 2.1rem;
     .statementSection {
-      padding-top: 2.5rem;
-      margin-top: 1.5rem;
       h1 {
         span {
           svg {

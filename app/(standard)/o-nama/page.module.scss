@@ -2,10 +2,15 @@ $gridGap: 2rem;
 
 .main {
   padding-top: 3.75rem;
+
   .headerImgWrapper {
     position: relative;
     aspect-ratio: 1654 / 592;
     margin-top: 3.75rem;
+
+    img {
+      object-fit: cover;
+    }
   }
 
   h1 {
@@ -187,8 +192,6 @@ $gridGap: 2rem;
 
 @media screen and (max-width: 1750px) {
   .main {
-    padding-top: 2.2rem;
-
     .aboutUsSection {
       h2 {
         grid-row: 1;
@@ -285,7 +288,7 @@ $gridGap: 2rem;
 @media screen and (max-width: 680px) {
   $gridGap: 1.5rem;
   .main {
-    padding-top: 4.5rem;
+    padding-top: 2.1rem;
     padding-bottom: 4rem;
 
     h1 {
@@ -294,6 +297,7 @@ $gridGap: 2rem;
 
     .headerImgWrapper {
       margin-top: 1.5rem;
+      aspect-ratio: 1 / 1;
     }
 
     .aboutUsSection {

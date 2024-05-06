@@ -13,7 +13,7 @@ export default function CtaButton({
 }) {
   const buttonRef = useRef(null);
   const overlayRef = useRef(null);
-  const [isAtBorder, setIsAtBorder] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const calculacteOverlayPosition = (event) => {
     if (!event) return;
@@ -35,31 +35,33 @@ export default function CtaButton({
       calculacteOverlayPosition(e);
     });
 
-    if (floating) window.addEventListener('scroll', hideAtBorder);
+    if (floating) window.addEventListener('scroll', toggleVisibility);
     return () => {
       button.removeEventListener('mouseenter', calculacteOverlayPosition());
       button.removeEventListener('mouseleave', calculacteOverlayPosition());
-      if (floating) window.removeEventListener('scroll', hideAtBorder);
+      if (floating) window.removeEventListener('scroll', toggleVisibility);
     };
   }, [floating]);
 
-  const hideAtBorder = () => {
-    const floatingBorderElement = document.getElementById(
-      'floatingBorderElement'
-    );
+  const toggleVisibility = () => {
+    const hideCtaSections = document.getElementsByClassName('hideCtaSection');
 
-    const callback = (entries, observer) => {
+    const callback = (entries) => {
+      let isIntersecting = false;
+
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
-          setIsAtBorder(true);
-        } else {
-          setIsAtBorder(false);
+          isIntersecting = true;
         }
       });
+
+      setIsVisible(!isIntersecting);
     };
 
     const observer = new IntersectionObserver(callback);
-    observer.observe(floatingBorderElement);
+    for (const section of hideCtaSections) {
+      observer.observe(section);
+    }
   };
 
   return (
@@ -68,7 +70,7 @@ export default function CtaButton({
         styles.button,
         specialClass ? styles[specialClass] : '',
         floating ? styles.floating : '',
-        isAtBorder ? styles.atBorder : '',
+        isVisible ? styles.visible : '',
       ].join(' ')}
       href={href}
     >

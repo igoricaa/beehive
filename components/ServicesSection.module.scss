@@ -6,15 +6,16 @@ $gridGap: 2rem;
   grid-template-columns: repeat(12, minMax(0, 1fr));
   gap: $gridGap;
 
-  .imageWrapper {
+  picture {
     grid-column: span 5;
     width: 80%;
-    aspect-ratio: 667 / 819;
-    position: relative;
     margin: auto;
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translate(0px, 0px);
     animation: floatY 6s ease-in-out infinite;
+    aspect-ratio: 667 / 819;
+    position: relative;
+    display: block;
   }
 
   @keyframes floatY {
@@ -42,7 +43,7 @@ $gridGap: 2rem;
 
 @media screen and (max-width: 1024px) {
   .servicesSection {
-    .imageWrapper {
+    picture {
       grid-column: span 12;
       aspect-ratio: 383 / 203;
     }

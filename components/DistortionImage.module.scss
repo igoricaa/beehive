@@ -1,0 +1,9 @@
+.distortionImageWrapper {
+  aspect-ratio: 2560 / 894;
+}
+
+@media screen and (max-width: 768px) {
+  .distortionImageWrapper {
+    aspect-ratio: 1;
+  }
+}

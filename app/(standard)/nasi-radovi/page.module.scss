@@ -136,6 +136,9 @@ $gridRowGap: 3rem;
 }
 
 @media screen and (max-width: 1024px) {
+  .main {
+    padding: 3.5rem 0 0;
+  }
   .heroSection {
     padding-bottom: 5rem;
 
@@ -194,8 +197,13 @@ $gridRowGap: 3rem;
 @media screen and (max-width: 680px) {
   $gridGap: 1.5rem;
 
+  .main {
+    padding-top: 2.1rem;
+  }
+
   .heroSection {
     padding-bottom: 2rem;
+    column-gap: 0;
 
     h2 {
       font-size: 2rem;

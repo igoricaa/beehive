@@ -24,13 +24,13 @@
     top: 85vh;
     left: 2rem;
     z-index: 1000;
-    opacity: 1;
-    visibility: visible;
+    opacity: 0;
+    visibility: hidden;
     transition: all 0.5s ease;
 
-    &.atBorder {
-      opacity: 0;
-      visibility: hidden;
+    &.visible {
+      opacity: 1;
+      visibility: visible;
     }
   }
 
@@ -133,6 +133,5 @@
 
 @media screen and (max-width: 680px) {
   .button {
-   
   }
 }
