@@ -169,14 +169,14 @@ export default function Header({ theme = 'dark' }) {
                     <p>gde zujimo:</p>
                     <div className={styles.socials}>
                       {socials.map((social, index) => (
-                        <Link
+                        <a
                           key={index}
                           href={social.link}
                           className={styles.social}
                           target='_blank'
                         >
                           <span>{social.text}</span>
-                        </Link>
+                        </a>
                       ))}
                     </div>
                   </div>

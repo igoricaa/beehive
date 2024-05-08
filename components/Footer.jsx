@@ -20,20 +20,18 @@ export const Footer = () => {
             <p>gde zujimo:</p>
             <div>
               {socials.map((social, index) => (
-                <Link
+                <a
                   key={index}
                   href={social.link}
                   className={styles.social}
                   target='_blank'
                 >
                   <span>{social.text}</span>
-                </Link>
+                </a>
               ))}
             </div>
           </div>
-          {/* <div className={styles.menuWrapper}> */}
           <MenuItems />
-          {/* </div> */}
         </div>
       </div>
       <div className={styles.footerBottom}>

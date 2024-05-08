@@ -56,15 +56,6 @@ export default function ContactForm() {
       </div>
       <div>
         <p>Odgovor možeš očekivati u najkraćem mogućem roku.</p>
-        {/* <button type='submit'>
-          <div className={styles.innerWrapper}>
-            <span ref={overlayRef} className={styles.overlay}></span>
-            <div className={styles.textWrapper}>
-              <span>Pošalji poruku</span>
-              <span>I proveri spam za svaki slučaj</span>
-            </div>
-          </div>
-        </button> */}
         <ContactFormButton />
       </div>
     </form>

@@ -1,5 +1,3 @@
-import * as React from 'react';
-
 export const EmailTemplate = ({ name, message }) => (
   <div>
     <h1>Mejl sa kontakt forme sajta</h1>

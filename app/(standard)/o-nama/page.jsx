@@ -84,7 +84,7 @@ export default function AboutUs() {
         <div>
           <p>Da li ste znali da:</p>
           <ul>
-            <li>Su pčele radoholici</li>
+            <li>Su pčele radoholici!</li>
             <li>
               {' '}
               Komuniciraju{' '}

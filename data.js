@@ -205,7 +205,7 @@ export const footerBottomLinks = [
 
 export const socials = [
   {
-    link: 'https://www.instagram.com/beehiveagency/',
+    link: 'https://www.instagram.com/beehivebelgrade',
     text: 'Instagram',
   },
   {

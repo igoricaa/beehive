@@ -33,7 +33,7 @@ export default function Home() {
             <span className={styles.blinking}>_</span>.
           </span>
           <br />
-          Ukratko - zujimo po svim digitalnim aktivnostima kojesu vama potrebne.
+          Ukratko - zujimo po svim digitalnim aktivnostima koje su Vama potrebne.
         </h3>
       </section>
 
