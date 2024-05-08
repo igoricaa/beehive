@@ -1,20 +1,18 @@
 .contactForm {
   grid-column: 2 / 7;
   margin-top: 1.5rem;
-  > div {
+
+  .rowWrapper {
     display: flex;
     gap: 2rem;
-
-    &:not(:first-of-type) {
-      margin-top: 1.25rem;
-    }
 
     &:last-of-type {
       justify-content: space-between;
       align-items: center;
+      margin-top: 1.25rem;
     }
 
-    p {
+    .note {
       font-size: 22px;
       line-height: 2.5rem;
       color: #626262;
@@ -46,6 +44,39 @@
 
   textarea {
     resize: none;
+    margin-top: 1.25rem;
+
+    &.error {
+      margin-top: 0.5rem;
+    }
+  }
+
+  .errorsWrapper {
+    background-color: #fff6f6;
+    width: 100%;
+    border: 1px solid #ff0000;
+    border-radius: 6px;
+    padding: 0.5rem 1rem;
+    margin-top: 0.5rem;
+
+    .errorMessage {
+      color: #ff0000;
+
+      font-size: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+
+      &::before {
+        content: ' ';
+        background-image: url('/warning-icon.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 14px;
+        height: 14px;
+        display: block;
+      }
+    }
   }
 
   button {
@@ -98,7 +129,7 @@
 
 @media screen and (max-width: 680px) {
   .contactForm {
-    > div {
+    .rowWrapper {
       gap: 1rem;
 
       &:last-of-type {
