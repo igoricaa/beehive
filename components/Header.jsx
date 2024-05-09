@@ -58,16 +58,26 @@ export default function Header() {
     if (typeof window === 'undefined') return;
 
     const currentPosition = window.scrollY;
-
     setPosition(currentPosition);
 
     if (currentPosition < 100) {
       setIsAtTop(true);
+      setIsHidden(false);
     } else {
       setIsAtTop(false);
+      setIsHidden(true);
+    }
+  };
+
+  const handleScrollEnd = () => {
+    if (typeof window === 'undefined') return;
+
+    const currentPosition = window.scrollY;
+    if (currentPosition < 100) {
+      setIsAtTop(true);
     }
 
-    setIsHidden(true);
+    setIsHidden(false);
   };
 
   useEffect(() => {
@@ -82,7 +92,7 @@ export default function Header() {
 
     if (isDesktopCurr) {
       window.addEventListener('scroll', handleStickyHeader);
-      window.addEventListener('scrollend', () => setIsHidden(false));
+      window.addEventListener('scrollend', handleScrollEnd);
     }
 
     if (!isDesktopCurr) {
@@ -98,7 +108,7 @@ export default function Header() {
 
       if (isDesktop) {
         window.removeEventListener('scroll', handleStickyHeader);
-        window.removeEventListener('scrollend', setIsHidden);
+        window.removeEventListener('scrollend', handleScrollEnd);
       }
     };
   }, [, isDesktop, position]);
