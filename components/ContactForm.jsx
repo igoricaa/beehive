@@ -24,8 +24,6 @@ export default function ContactForm() {
         email: formData.email,
         message: formData.message,
       }),
-    }).then(() => {
-      console.log('Your email message has been sent successfully');
     });
 
     reset();

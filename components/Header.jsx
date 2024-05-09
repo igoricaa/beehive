@@ -8,9 +8,8 @@ import { routes, socials } from '@/data';
 import CleanLogo from '@/public/logos/BeehiveCleanLogo';
 import FullLogo from '@/public/logos/BeehiveCreativeAgencyLogo';
 import BurgerIcon from './BurgerIcon';
-import path from 'path';
 
-export default function Header({ theme = 'dark' }) {
+export default function Header() {
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -19,6 +18,9 @@ export default function Header({ theme = 'dark' }) {
   const menuRef = useRef(null);
   const [isDesktop, setIsDesktop] = useState(false);
   const [headerTransformed, setHeaderTransformed] = useState(false);
+  const [isHidden, setIsHidden] = useState(false);
+  const [position, setPosition] = useState(window.scrollY);
+  const [isAtTop, setIsAtTop] = useState(true);
   const [isAtFooter, setIsAtFooter] = useState(false);
 
   const handleClickOutside = useCallback(
@@ -64,6 +66,20 @@ export default function Header({ theme = 'dark' }) {
     }
   };
 
+  const handleStickyHeader = () => {
+    const currentPosition = window.scrollY;
+
+    setPosition(currentPosition);
+
+    if (currentPosition < 100) {
+      setIsAtTop(true);
+    } else {
+      setIsAtTop(false);
+    }
+
+    setIsHidden(true);
+  };
+
   useEffect(() => {
     setMounted(true);
 
@@ -71,6 +87,11 @@ export default function Header({ theme = 'dark' }) {
     if (typeof window !== 'undefined') setIsDesktop(isDesktopCurr);
 
     document.addEventListener('mousedown', handleClickOutside);
+
+    if (isDesktopCurr) {
+      window.addEventListener('scroll', handleStickyHeader);
+      window.addEventListener('scrollend', () => setIsHidden(false));
+    }
 
     if (!isDesktopCurr) {
       window.addEventListener('scroll', hideAtFooter);
@@ -82,15 +103,31 @@ export default function Header({ theme = 'dark' }) {
         window.removeEventListener('scroll', transformHeader);
         window.removeEventListener('scroll', hideAtFooter);
       }
+
+      if (isDesktop) {
+        window.removeEventListener('scroll', handleStickyHeader);
+        window.removeEventListener('scrollend', setIsHidden);
+      }
       document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [handleClickOutside, isDesktop]);
+  }, [handleClickOutside, isDesktop, position]);
 
   if (!mounted) {
     return null;
   }
 
-  const toggleMenu = () => {
+  const toggleMenu = (isFromSticky) => {
+    if (isFromSticky) {
+      if (!menuRef.current.classList.contains(styles.isFromSticky)) {
+        menuRef.current.classList.remove(styles.isFromSticky);
+      }
+      menuRef.current.classList.add(styles.isFromSticky);
+    } else {
+      // setTimeout(() => {
+      //   menuRef.current.classList.remove(styles.isFromSticky);
+      // }, 1000);
+    }
+
     setMenuOpen(!menuOpen);
 
     if (!menuOpen) {
@@ -104,9 +141,15 @@ export default function Header({ theme = 'dark' }) {
 
   return (
     <>
-      <header className={[styles.header, styles[theme]].join(' ')}>
+      <header
+        className={[
+          styles.header,
+          !isAtTop ? styles.sticky : '',
+          isHidden ? styles.hidden : '',
+        ].join(' ')}
+      >
         <Link href='/' className={styles.logoWrapper}>
-          {isDesktop ? <FullLogo theme={theme} /> : <CleanLogo theme={theme} />}
+          {isDesktop ? <FullLogo /> : <CleanLogo />}
         </Link>
         <nav
           className={[styles.navMenu, menuOpen ? styles.active : ''].join(' ')}
@@ -135,16 +178,12 @@ export default function Header({ theme = 'dark' }) {
                 isSticky={false}
                 active={menuOpen}
                 burgerRef={burgerRef}
-                onClickHandler={toggleMenu}
+                onClickHandler={() => toggleMenu(false)}
               />
 
               <div className={styles.mobileMenu} ref={menuRef}>
                 <Link href='/' className={styles.logoWrapper}>
-                  {isDesktop ? (
-                    <FullLogo theme={'dark'} />
-                  ) : (
-                    <CleanLogo theme={'dark'} />
-                  )}
+                  {isDesktop ? <FullLogo /> : <CleanLogo />}
                 </Link>
                 <ul>
                   {routes.map((route, index) => (
@@ -158,7 +197,7 @@ export default function Header({ theme = 'dark' }) {
                           : ''
                       }
                     >
-                      <Link href={route.path} onClick={toggleMenu}>
+                      <Link href={route.path} onClick={() => toggleMenu(false)}>
                         {route.name}
                       </Link>
                     </li>
@@ -183,7 +222,7 @@ export default function Header({ theme = 'dark' }) {
                   {headerTransformed && (
                     <div
                       className={styles.closeMenuButton}
-                      onClick={toggleMenu}
+                      onClick={() => toggleMenu(true)}
                     >
                       <div className={styles.bar}></div>
                       <div className={styles.bar}></div>
@@ -205,14 +244,14 @@ export default function Header({ theme = 'dark' }) {
           ].join(' ')}
         >
           <Link href='/' className={styles.logoWrapper}>
-            <CleanLogo theme='dark' />
+            <CleanLogo />
           </Link>
 
           <BurgerIcon
             burgerRef={stickyBurgerRef}
             isSticky={true}
             active={menuOpen}
-            onClickHandler={toggleMenu}
+            onClickHandler={() => toggleMenu(true)}
           />
         </div>
       )}

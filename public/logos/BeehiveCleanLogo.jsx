@@ -1,5 +1,5 @@
-const CleanLogo = ({ theme }) => {
-  const color = theme === 'dark' ? '#000' : '#fff';
+const CleanLogo = () => {
+  const color = '#000';
 
   return (
     <svg

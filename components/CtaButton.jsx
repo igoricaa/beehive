@@ -10,6 +10,7 @@ export default function CtaButton({
   subText,
   specialClass,
   floating,
+  isExternalLink,
 }) {
   const buttonRef = useRef(null);
   const overlayRef = useRef(null);
@@ -65,22 +66,45 @@ export default function CtaButton({
   };
 
   return (
-    <Link
-      className={[
-        styles.button,
-        specialClass ? styles[specialClass] : '',
-        floating ? styles.floating : '',
-        isVisible ? styles.visible : '',
-      ].join(' ')}
-      href={href}
-    >
-      <div ref={buttonRef} className={styles.innerWrapper}>
-        <span ref={overlayRef} className={styles.overlay}></span>
-        <div className={styles.textWrapper}>
-          <span>{mainText}</span>
-          <span>{subText}</span>
-        </div>
-      </div>
-    </Link>
+    <>
+      {isExternalLink ? (
+        <a
+          className={[
+            styles.button,
+            specialClass ? styles[specialClass] : '',
+            floating ? styles.floating : '',
+            isVisible ? styles.visible : '',
+          ].join(' ')}
+          href={href}
+          target='_blank'
+        >
+          <div ref={buttonRef} className={styles.innerWrapper}>
+            <span ref={overlayRef} className={styles.overlay}></span>
+            <div className={styles.textWrapper}>
+              <span>{mainText}</span>
+              <span>{subText}</span>
+            </div>
+          </div>
+        </a>
+      ) : (
+        <Link
+          className={[
+            styles.button,
+            specialClass ? styles[specialClass] : '',
+            floating ? styles.floating : '',
+            isVisible ? styles.visible : '',
+          ].join(' ')}
+          href={href}
+        >
+          <div ref={buttonRef} className={styles.innerWrapper}>
+            <span ref={overlayRef} className={styles.overlay}></span>
+            <div className={styles.textWrapper}>
+              <span>{mainText}</span>
+              <span>{subText}</span>
+            </div>
+          </div>
+        </Link>
+      )}
+    </>
   );
 }

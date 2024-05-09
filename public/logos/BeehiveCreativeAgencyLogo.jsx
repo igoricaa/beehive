@@ -1,5 +1,5 @@
-const FullLogo = ({ theme }) => {
-  const color = theme === 'dark' ? '#000' : '#fff';
+const FullLogo = () => {
+  const color = '#000';
 
   return (
     <svg

@@ -1,5 +1,7 @@
+import CalElement from '@/components/CalElement';
 import styles from './page.module.scss';
 import ContactForm from '@/components/ContactForm';
+import CtaButton from '@/components/CtaButton';
 import EyeAnimation from '@/components/EyeAnimation';
 import RoughNotationWrapper from '@/components/RoughNotationWrapper';
 
@@ -40,6 +42,30 @@ const Contact = () => {
           naše <span>🐝</span> <span>🐝</span> su uvek dostupne.
         </h2>
         <ContactForm />
+
+        <div className={styles.calWrapper}>
+          <h2>
+            Ili zakaži{' '}
+            <RoughNotationWrapper
+              type='circle'
+              color='#FF6B00'
+              iterations={3}
+              strokeWidth={3}
+            >
+              odmah
+            </RoughNotationWrapper>{' '}
+            sastanak/razgovor
+            <br />
+            sa našim timom!
+          </h2>
+          <CtaButton
+            href='https://cal.com/beehive/discovery-session-w-beehive-agency'
+            isExternalLink={true}
+            mainText='Datum / vreme'
+            subText='Sve na jedan klik'
+          />
+          <CalElement />
+        </div>
       </section>
     </main>
   );
