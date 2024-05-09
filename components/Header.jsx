@@ -1,7 +1,7 @@
 'use client';
 
 import styles from './Header.module.scss';
-import { useCallback, useEffect, useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'next-view-transitions';
 import { usePathname } from 'next/navigation';
 import { routes, socials } from '@/data';
@@ -13,30 +13,17 @@ export default function Header() {
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
+  const [bottomMenuOpen, setBottomMenuOpen] = useState(false);
   const burgerRef = useRef(null);
   const stickyBurgerRef = useRef(null);
   const menuRef = useRef(null);
+  const bottomMenuRef = useRef(null);
   const [isDesktop, setIsDesktop] = useState(false);
   const [headerTransformed, setHeaderTransformed] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const [position, setPosition] = useState(0);
   const [isAtTop, setIsAtTop] = useState(true);
   const [isAtFooter, setIsAtFooter] = useState(false);
-
-  const handleClickOutside = useCallback(
-    (event) => {
-      if (
-        menuOpen &&
-        menuRef.current &&
-        !menuRef.current.contains(event.target) &&
-        !burgerRef.current.contains(event.target) &&
-        !stickyBurgerRef.current.contains(event.target)
-      ) {
-        setMenuOpen(false);
-      }
-    },
-    [menuOpen, menuRef, burgerRef]
-  );
 
   const hideAtFooter = () => {
     const floatingBorderElement = document.getElementById('footerTop');
@@ -56,8 +43,9 @@ export default function Header() {
   };
 
   const transformHeader = () => {
-    const scrolled = document.documentElement.scrollTop;
-    // TODO: table/mobile
+    if (typeof window === 'undefined') return;
+    const scrolled = window.scrollY;
+    // TODO: tablet/mobile
     const breakpoint = 67;
     if (scrolled > breakpoint) {
       setHeaderTransformed(true);
@@ -92,8 +80,6 @@ export default function Header() {
     const isDesktopCurr = window.matchMedia('(min-width: 680px)').matches;
     setIsDesktop(isDesktopCurr);
 
-    document.addEventListener('mousedown', handleClickOutside);
-
     if (isDesktopCurr) {
       window.addEventListener('scroll', handleStickyHeader);
       window.addEventListener('scrollend', () => setIsHidden(false));
@@ -114,35 +100,30 @@ export default function Header() {
         window.removeEventListener('scroll', handleStickyHeader);
         window.removeEventListener('scrollend', setIsHidden);
       }
-      document.removeEventListener('mousedown', handleClickOutside);
     };
-  }, [handleClickOutside, isDesktop, position]);
+  }, [, isDesktop, position]);
 
   if (!mounted) {
     return null;
   }
 
-  const toggleMenu = (isFromSticky) => {
-    if (isFromSticky) {
-      if (menuRef.current.classList.contains(styles.isFromSticky)) {
-        menuRef.current.classList.remove(styles.isFromSticky);
-      } else {
-        menuRef.current.classList.add(styles.isFromSticky);
-      }
-    } else {
-      // setTimeout(() => {
-      //   menuRef.current.classList.remove(styles.isFromSticky);
-      // }, 1000);
-    }
-
+  const toggleMenu = () => {
     setMenuOpen(!menuOpen);
 
     if (!menuOpen) {
-      document.body.classList.add('stopScrolling');
-      document.documentElement.classList.add('stopScrolling');
+      document.body.classList.toggle('noscroll');
     } else {
-      document.body.classList.remove('stopScrolling');
-      document.documentElement.classList.remove('stopScrolling');
+      document.body.classList.toggle('noscroll');
+    }
+  };
+
+  const toggleBottomMenu = () => {
+    setBottomMenuOpen(!bottomMenuOpen);
+
+    if (!bottomMenuOpen) {
+      document.body.classList.toggle('noscroll');
+    } else {
+      document.body.classList.toggle('noscroll');
     }
   };
 
@@ -159,7 +140,11 @@ export default function Header() {
           {isDesktop ? <FullLogo /> : <CleanLogo />}
         </Link>
         <nav
-          className={[styles.navMenu, menuOpen ? styles.active : ''].join(' ')}
+          className={[
+            styles.navMenu,
+            menuOpen ? styles.active : '',
+            bottomMenuOpen ? styles.activeBottom : '',
+          ].join(' ')}
         >
           {isDesktop && (
             <ul>
@@ -183,9 +168,9 @@ export default function Header() {
             <>
               <BurgerIcon
                 isSticky={false}
-                active={menuOpen}
+                active={menuOpen || bottomMenuOpen}
                 burgerRef={burgerRef}
-                onClickHandler={() => toggleMenu(false)}
+                onClickHandler={toggleMenu}
               />
 
               <div className={styles.mobileMenu} ref={menuRef}>
@@ -204,7 +189,53 @@ export default function Header() {
                           : ''
                       }
                     >
-                      <Link href={route.path} onClick={() => toggleMenu(false)}>
+                      <Link href={route.path} onClick={toggleMenu}>
+                        {route.name}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+                <div className={styles.menuFooter}>
+                  <div className={styles.socialsWrapper}>
+                    <p>gde zujimo:</p>
+                    <div className={styles.socials}>
+                      {socials.map((social, index) => (
+                        <a
+                          key={index}
+                          href={social.link}
+                          className={styles.social}
+                          target='_blank'
+                        >
+                          <span>{social.text}</span>
+                        </a>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                className={[styles.bottomMobileMenu, styles.mobileMenu].join(
+                  ' '
+                )}
+                ref={bottomMenuRef}
+              >
+                <Link href='/' className={styles.logoWrapper}>
+                  <CleanLogo />
+                </Link>
+                <ul>
+                  {routes.map((route, index) => (
+                    <li
+                      key={index}
+                      className={
+                        pathname == route.path ||
+                        (route.path !== '/' &&
+                          pathname.slice(1).includes(route.path.slice(1)))
+                          ? styles.active
+                          : ''
+                      }
+                    >
+                      <Link href={route.path} onClick={toggleMenu}>
                         {route.name}
                       </Link>
                     </li>
@@ -229,7 +260,7 @@ export default function Header() {
                   {headerTransformed && (
                     <div
                       className={styles.closeMenuButton}
-                      onClick={() => toggleMenu(true)}
+                      onClick={toggleBottomMenu}
                     >
                       <div className={styles.bar}></div>
                       <div className={styles.bar}></div>
@@ -248,6 +279,7 @@ export default function Header() {
             styles.navbarMobileScrolled,
             headerTransformed && !isAtFooter ? styles.visible : '',
             menuOpen ? styles.active : '',
+            bottomMenuOpen ? styles.activeBottom : '',
           ].join(' ')}
         >
           <Link href='/' className={styles.logoWrapper}>
@@ -257,8 +289,8 @@ export default function Header() {
           <BurgerIcon
             burgerRef={stickyBurgerRef}
             isSticky={true}
-            active={menuOpen}
-            onClickHandler={() => toggleMenu(true)}
+            active={menuOpen || bottomMenuOpen}
+            onClickHandler={toggleBottomMenu}
           />
         </div>
       )}

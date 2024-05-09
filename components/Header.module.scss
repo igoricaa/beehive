@@ -155,14 +155,15 @@
       }
     }
 
-    &.active {
+    &.active,
+    &.activeBottom {
       visibility: hidden;
       opacity: 0;
 
       .mobileMenu {
         opacity: 1;
         visibility: visible;
-        transition: 0.5s all ease;
+        transition: 0.75s all ease;
       }
     }
   }
@@ -183,28 +184,13 @@
     .navMenu {
       position: relative;
 
-      &.active {
-        .mobileMenu {
-          opacity: 1;
-          visibility: visible;
-          -webkit-clip-path: circle(150% at 100% 0);
-          clip-path: circle(150% at 100% 0);
-
-          &.isFromSticky {
-            -webkit-clip-path: circle(150% at 100% 100%);
-            clip-path: circle(150% at 100% 100%);
-          }
-        }
-      }
-
       .mobileMenu {
         opacity: 1;
         visibility: hidden;
         position: fixed;
         width: 100vw;
         height: 100vh;
-        top: 0;
-        right: 0;
+        inset: 0;
         background: rgba(255, 255, 255, 0.98);
         box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.1);
         z-index: 100;
@@ -215,8 +201,9 @@
         transition: 0.75s all ease;
         -webkit-clip-path: circle(0 at 100% 0);
         clip-path: circle(0 at 100% 0);
+        overflow-y: scroll;
 
-        &.isFromSticky {
+        &.bottomMobileMenu {
           -webkit-clip-path: circle(0 at 100% 100%);
           clip-path: circle(0 at 100% 100%);
         }
@@ -303,7 +290,6 @@
             .bar {
               width: 18px;
               height: 1.5px;
-              // border-radius: 15px;
               background-color: #fff;
               transition: 0.2s all ease;
 
@@ -315,6 +301,31 @@
               }
             }
           }
+        }
+      }
+
+      &.active {
+        .mobileMenu {
+          opacity: 1;
+          visibility: visible;
+          -webkit-clip-path: circle(150% at 100% 0);
+          clip-path: circle(150% at 100% 0);
+
+          &.bottomMobileMenu {
+            -webkit-clip-path: circle(0 at 100% 100%);
+            clip-path: circle(0 at 100% 100%);
+            opacity: 0;
+            visibility: hidden;
+          }
+        }
+      }
+
+      &.activeBottom {
+        .bottomMobileMenu {
+          opacity: 1;
+          visibility: visible;
+          -webkit-clip-path: circle(150% at 100% 100%);
+          clip-path: circle(150% at 100% 100%);
         }
       }
     }
