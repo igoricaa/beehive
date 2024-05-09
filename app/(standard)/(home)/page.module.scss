@@ -156,22 +156,4 @@ $gridGap: 2rem;
       line-height: 2rem;
     }
   }
-
-  .servicesSection {
-    margin: 3rem 0;
-    gap: $gridGap;
-
-    .imageWrapper {
-      grid-column: span 12;
-      aspect-ratio: 383 / 203;
-    }
-
-    .servicesInfoWrapper {
-      grid-column: span 12;
-
-      section {
-        margin-top: 10px;
-      }
-    }
-  }
 }

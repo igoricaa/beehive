@@ -3,33 +3,24 @@
 import Image from 'next/image';
 import styles from './SliderItem.module.scss';
 import { useEffect, useRef } from 'react';
+import { calculateOverlayPosition } from '../utils/utils';
 
 export default function SliderItem({ content }) {
   const slideRef = useRef(null);
   const overlayRef = useRef(null);
 
-  const calculacteOverlayPosition = (event) => {
-    if (!event) return;
-    const slide = slideRef.current;
-    const x = event.pageX - slide.getBoundingClientRect().left;
-    const y = event.pageY - slide.getBoundingClientRect().top - window.scrollY;
-
-    overlayRef.current.style.top = `${y}px`;
-    overlayRef.current.style.left = `${x}px`;
-  };
-
   useEffect(() => {
     if (content.hoverText) {
       const slide = slideRef.current;
       slide.addEventListener('mouseenter', (e) => {
-        calculacteOverlayPosition(e);
+        calculateOverlayPosition(e, slide, overlayRef.current);
       });
       slide.addEventListener('mouseout', (e) => {
-        calculacteOverlayPosition(e);
+        calculateOverlayPosition(e, slide, overlayRef.current);
       });
       return () => {
-        slide.removeEventListener('mouseenter', calculacteOverlayPosition());
-        slide.removeEventListener('mouseleave', calculacteOverlayPosition());
+        slide.removeEventListener('mouseenter', calculateOverlayPosition());
+        slide.removeEventListener('mouseleave', calculateOverlayPosition());
       };
     }
   }, [content.hoverText]);

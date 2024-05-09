@@ -61,6 +61,7 @@
     .textWrapper {
       display: flex;
       flex-direction: column;
+
       span:first-of-type {
         color: #fff;
         font-size: 1rem;
@@ -97,36 +98,8 @@
 
     &.ctaLinkMobile {
       grid-column: span 12;
-      margin: 10px auto 0;
-
-      .innerWrapper {
-        position: relative;
-        z-index: 1;
-
-        .textWrapper {
-          display: flex;
-          flex-direction: column;
-
-          span:first-of-type {
-            color: #fff;
-            font-size: 1rem;
-            font-weight: 500;
-          }
-
-          span:last-of-type {
-            color: #fff;
-            font-size: 12px;
-            font-weight: 300;
-          }
-        }
-      }
-
-      &::after {
-        content: ' ';
-        background-image: url('/arrow-right.svg');
-        width: 28px;
-        height: 1rem;
-      }
+      margin: 0 auto;
+      display: flex;
     }
   }
 }

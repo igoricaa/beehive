@@ -1,14 +1,25 @@
 'use client';
 
-import styles from './ContactFormButton.module.scss';
+import { getCalApi } from '@calcom/embed-react';
 import { useEffect, useRef } from 'react';
 import { calculateOverlayPosition } from '../utils/utils';
+import styles from './CtaButton.module.scss';
 
-export default function ContactFormButton() {
+export default function CalButton() {
   const buttonRef = useRef(null);
   const overlayRef = useRef(null);
 
   useEffect(() => {
+    (async function () {
+      const cal = await getCalApi({});
+      cal('ui', {
+        theme: 'light',
+        styles: { branding: { brandColor: '#000000' } },
+        hideEventTypeDetails: false,
+        layout: 'month_view',
+      });
+    })();
+
     if (!buttonRef.current) return;
     const button = buttonRef.current;
     button.addEventListener('mouseenter', (e) => {
@@ -25,12 +36,18 @@ export default function ContactFormButton() {
   }, []);
 
   return (
-    <button className={styles.button} type='submit'>
+    <button
+      className={styles.button}
+      data-cal-namespace=''
+      data-cal-link='beehive/discovery-session-w-beehive-agency'
+      data-cal-config='{"layout":"month_view"}'
+      style={{ outline: 'none', border: 'none', cursor: 'pointer' }}
+    >
       <div ref={buttonRef} className={styles.innerWrapper}>
         <span ref={overlayRef} className={styles.overlay}></span>
         <div className={styles.textWrapper}>
-          <span>Pošalji poruku</span>
-          <span>I proveri spam za svaki slučaj</span>
+          <span>Datum / vreme</span>
+          <span>Sve na jedan klik</span>
         </div>
       </div>
     </button>

@@ -3,6 +3,7 @@
 import { Link } from 'next-view-transitions';
 import styles from './CtaButton.module.scss';
 import { useEffect, useRef, useState } from 'react';
+import { calculateOverlayPosition } from '../utils/utils';
 
 export default function CtaButton({
   href,
@@ -16,30 +17,20 @@ export default function CtaButton({
   const overlayRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
-  const calculacteOverlayPosition = (event) => {
-    if (!event) return;
-    const button = buttonRef.current;
-    const x = event.pageX - button.getBoundingClientRect().left;
-    const y = event.pageY - button.getBoundingClientRect().top - window.scrollY;
-
-    overlayRef.current.style.top = `${y}px`;
-    overlayRef.current.style.left = `${x}px`;
-  };
-
   useEffect(() => {
     if (!buttonRef.current) return;
     const button = buttonRef.current;
     button.addEventListener('mouseenter', (e) => {
-      calculacteOverlayPosition(e);
+      calculateOverlayPosition(e, button, overlayRef.current);
     });
     button.addEventListener('mouseout', (e) => {
-      calculacteOverlayPosition(e);
+      calculateOverlayPosition(e, button, overlayRef.current);
     });
 
     if (floating) window.addEventListener('scroll', toggleVisibility);
     return () => {
-      button.removeEventListener('mouseenter', calculacteOverlayPosition());
-      button.removeEventListener('mouseleave', calculacteOverlayPosition());
+      button.removeEventListener('mouseenter', calculateOverlayPosition());
+      button.removeEventListener('mouseleave', calculateOverlayPosition());
       if (floating) window.removeEventListener('scroll', toggleVisibility);
     };
   }, [floating]);
