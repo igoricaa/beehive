@@ -19,7 +19,7 @@ export default function Header() {
   const [isDesktop, setIsDesktop] = useState(false);
   const [headerTransformed, setHeaderTransformed] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
-  const [position, setPosition] = useState(window.scrollY);
+  const [position, setPosition] = useState(0);
   const [isAtTop, setIsAtTop] = useState(true);
   const [isAtFooter, setIsAtFooter] = useState(false);
 
@@ -67,6 +67,8 @@ export default function Header() {
   };
 
   const handleStickyHeader = () => {
+    if (typeof window === 'undefined') return;
+
     const currentPosition = window.scrollY;
 
     setPosition(currentPosition);
@@ -83,8 +85,12 @@ export default function Header() {
   useEffect(() => {
     setMounted(true);
 
+    if (typeof window === 'undefined') {
+      return;
+    }
+
     const isDesktopCurr = window.matchMedia('(min-width: 680px)').matches;
-    if (typeof window !== 'undefined') setIsDesktop(isDesktopCurr);
+    setIsDesktop(isDesktopCurr);
 
     document.addEventListener('mousedown', handleClickOutside);
 
@@ -118,10 +124,11 @@ export default function Header() {
 
   const toggleMenu = (isFromSticky) => {
     if (isFromSticky) {
-      if (!menuRef.current.classList.contains(styles.isFromSticky)) {
+      if (menuRef.current.classList.contains(styles.isFromSticky)) {
         menuRef.current.classList.remove(styles.isFromSticky);
+      } else {
+        menuRef.current.classList.add(styles.isFromSticky);
       }
-      menuRef.current.classList.add(styles.isFromSticky);
     } else {
       // setTimeout(() => {
       //   menuRef.current.classList.remove(styles.isFromSticky);
