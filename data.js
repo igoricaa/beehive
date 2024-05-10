@@ -94,7 +94,7 @@ export const portfolioSectionContent = {
 export const team = [
   {
     listImage: '/team/darja-babovic.jpg',
-    subtitle: 'founder',
+    subtitle: 'the founder',
     title: 'Darja Babović',
     hoverTextTitle: 'Dara 34 leta',
     hoverText: '“Više voli slano od slatkog.”',
@@ -120,16 +120,24 @@ export const team = [
     listImage: '/team/jelena-ristic.jpg',
     subtitle: 'the creative one',
     title: 'Jelena Ristić',
-    hoverTextTitle: 'Rista 32 leta',
-    hoverText: '“Ako ne zna, saznaće”',
+    hoverTextTitle: 'Rista 31 leta',
+    hoverText: '“Ako ne zna, saznaće.”',
+    hoverColor: '#ffd600',
+  },
+  {
+    listImage: '/team/djordje-cetkovic.png',
+    subtitle: 'the artistic one',
+    title: 'Đorđe Ćetković',
+    hoverTextTitle: 'Čađavac 32 leta',
+    hoverText: '“Rok se može probiti, ali slika na zidu mora biti prava."',
     hoverColor: '#ffd600',
   },
   {
     listImage: '/team/igor-stanisavljevic.jpg',
     subtitle: 'the techy one',
     title: 'Igor Stanisavljević',
-    hoverTextTitle: 'Igorica 32 leta',
-    hoverText: '“Rešava"',
+    hoverTextTitle: 'Igorica 29 leta',
+    hoverText: '“Rešava."',
     hoverColor: '#ffd600',
   },
   {
@@ -138,7 +146,16 @@ export const team = [
     title: 'Maja Simonović',
     hoverTextTitle: 'Joma 38 leta',
     hoverText:
-      '“Citat u dva , mozda tri reda hm hm dot dot i tako to sve u krug”',
+      '“Citat u dva , mozda tri reda hm hm dot dot i tako to sve u krug.”',
+    hoverColor: '#ffd600',
+  },
+  {
+    listImage: '/team/andja-nikolic.jpeg',
+    subtitle: 'creative and legal',
+    title: 'Anđa Nikolić',
+    hoverTextTitle: 'Andja 30 leta',
+    hoverText:
+      '“So, more, dobra knjiga i još bolja krempita.”',
     hoverColor: '#ffd600',
   },
 ];
