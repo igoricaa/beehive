@@ -5,6 +5,7 @@ import { Link } from 'next-view-transitions';
 import CtaButton from '@/components/CtaButton';
 import RoughNotationWrapper from '@/components/RoughNotationWrapper';
 import EyeAnimation from '@/components/EyeAnimation';
+import arrowDownOrange from '@/public/arrow-down-orange.svg';
 
 const Projects = () => {
   return (
@@ -40,10 +41,9 @@ const Projects = () => {
           detaljima studija
         </p>
         <Image
-          src='/arrow-down-orange.svg'
+          src={arrowDownOrange}
           alt='Arrow Direction'
-          width={30}
-          height={68}
+          priority
         />
         <EyeAnimation
           style={{

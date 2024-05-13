@@ -13,8 +13,6 @@ $gridGap: 2rem;
     box-shadow: 0 5px 15px 0px rgba(0, 0, 0, 0.6);
     transform: translate(0px, 0px);
     animation: floatY 6s ease-in-out infinite;
-    aspect-ratio: 667 / 819;
-    position: relative;
     display: block;
   }
 
@@ -45,7 +43,6 @@ $gridGap: 2rem;
   .servicesSection {
     picture {
       grid-column: span 12;
-      aspect-ratio: 383 / 203;
     }
 
     .servicesInfoWrapper {

@@ -4,6 +4,7 @@ import headerBg from '@/public/about-us-header-bg.png';
 import { coreValues } from '@/data';
 import IntersectingHeading from '@/components/IntersectingHeading';
 import RoughNotationWrapper from '@/components/RoughNotationWrapper';
+import aboutUsBgImage from '@/public/about-us-bg.png';
 
 export default function AboutUs() {
   return (
@@ -25,13 +26,7 @@ export default function AboutUs() {
       </h1>
 
       <div className={styles.headerImgWrapper}>
-        <Image
-          src={headerBg}
-          fill
-          sizes='100vw'
-          alt='Beehive - Belgrade Sunset'
-          priority
-        />
+        <Image src={headerBg} alt='Beehive - Belgrade Sunset' priority />
       </div>
       <section className={styles.aboutUsSection}>
         <h2>O nama:</h2>
@@ -57,6 +52,25 @@ export default function AboutUs() {
                 height={
                   index === 0 ? 130 : index === 1 ? 85 : index === 2 ? 110 : 101
                 }
+                style={{
+                  maxHeight:
+                    index === 0
+                      ? 130
+                      : index === 1
+                      ? 85
+                      : index === 2
+                      ? 110
+                      : 101,
+
+                  maxWidth:
+                    index === 0
+                      ? 108
+                      : index === 1
+                      ? 49
+                      : index === 2
+                      ? 100
+                      : 97,
+                }}
               />
               <h3>{coreValue.title}</h3>
               <p>{coreValue.description}</p>
@@ -68,13 +82,7 @@ export default function AboutUs() {
       <section className={styles.breakSection}>
         <IntersectingHeading text='buzzing with ideas!' />
         <div className={styles.imgWrapper}>
-          <Image
-            id='bgImage'
-            src='/about-us-bg.png'
-            alt='Beehive - About Us'
-            fill
-            sizes='70vw'
-          />
+          <Image id='bgImage' src={aboutUsBgImage} alt='Beehive - About Us' />
         </div>
         <IntersectingHeading text='buzzing with ideas!' />
       </section>

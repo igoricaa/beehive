@@ -9,9 +9,9 @@ export const Footer = () => {
     <footer id='footer' className={styles.footer}>
       <div id='footerTop' className={styles.footerTop}>
         <div className={styles.innerWrapper}>
-          <a href='/' className={styles.logoWrapper}>
+          <Link href='/' className={styles.logoWrapper}>
             <CleanLogo />
-          </a>
+          </Link>
           <div className={styles.socialsWrapper}>
             <p>gde zujimo:</p>
             <div>

@@ -1,6 +1,10 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
 import Link from 'next/link';
+import pranaHeader from '@/public/prana-header.png';
+import imageFloatingLeft from '@/public/our-work/prana-floating-img-left.png';
+import imageFloatingRight from '@/public/our-work/prana-floating-img-right.png';
+import breakBg from '@/public/our-work/prana-break-bg.png';
 
 const categories = ['Branding', 'Web Design', 'Development'];
 const socials = [
@@ -22,7 +26,7 @@ const Project = () => {
         </div>
       </div>
       <div className={styles.imageWrapper}>
-        <Image src='/prana-header.png' alt='Prana' sizes='95vw' fill priority />
+        <Image src={pranaHeader} alt='Prana' priority />
       </div>
 
       <section className={styles.contentSection}>
@@ -55,18 +59,14 @@ const Project = () => {
       <section className={styles.gallerySection}>
         <div className={styles.imgWrapper}>
           <Image
-            src='/our-work/prana-floating-img-left.png'
+            src={imageFloatingLeft}
             alt='Prana'
-            sizes='25vw'
-            fill
           />
         </div>
         <div className={styles.imgWrapper}>
           <Image
-            src='/our-work/prana-floating-img-right.png'
+            src={imageFloatingRight}
             alt='Prana'
-            sizes='25vw'
-            fill
           />
         </div>
       </section>
@@ -92,10 +92,8 @@ const Project = () => {
 
       <section className={styles.breakSection}>
         <Image
-          src='/our-work/prana-break-bg.png'
+          src={breakBg}
           alt='Beehive Prana Project'
-          fill
-          sizes='100vw'
           quality={90}
         />
       </section>

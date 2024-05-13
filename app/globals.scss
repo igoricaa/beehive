@@ -67,6 +67,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
 main {
   padding-left: var(--site-padding);
   padding-right: var(--site-padding);

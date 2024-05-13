@@ -4,8 +4,6 @@ $gridGap: 2rem;
   padding-top: 3.75rem;
 
   .headerImgWrapper {
-    position: relative;
-    aspect-ratio: 1654 / 592;
     margin-top: 3.75rem;
 
     img {
@@ -128,14 +126,7 @@ $gridGap: 2rem;
     }
 
     .imgWrapper {
-      position: relative;
-      aspect-ratio: 1088 / 443;
       grid-column: 3 / 11;
-      width: 100%;
-
-      img {
-        z-index: -1;
-      }
     }
   }
 
@@ -297,6 +288,10 @@ $gridGap: 2rem;
     .headerImgWrapper {
       margin-top: 1.5rem;
       aspect-ratio: 1 / 1;
+
+      img {
+        height: 100%;
+      }
     }
 
     .aboutUsSection {
@@ -344,7 +339,6 @@ $gridGap: 2rem;
       }
 
       .imgWrapper {
-        aspect-ratio: 1088 / 443;
         grid-column: 1 / 13;
       }
     }
