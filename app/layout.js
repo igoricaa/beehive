@@ -2,6 +2,7 @@ import { Poppins, Source_Serif_4 } from 'next/font/google';
 import './globals.scss';
 import { Footer } from '@/components/Footer';
 import { ViewTransitions } from 'next-view-transitions';
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -30,6 +31,7 @@ export default function RootLayout({ children }) {
         <body className={`${poppins.variable} ${sourceSerif4.variable}`}>
           {children}
           <Footer />
+          <SpeedInsights />
         </body>
       </html>
     </ViewTransitions>
