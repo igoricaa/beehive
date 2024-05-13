@@ -199,7 +199,7 @@ export default function Header() {
                           : ''
                       }
                     >
-                      <Link href={route.path} onClick={toggleMenu}>
+                      <Link href={route.path} onClick={(toggleMenu)}>
                         {route.name}
                       </Link>
                     </li>
@@ -245,7 +245,7 @@ export default function Header() {
                           : ''
                       }
                     >
-                      <Link href={route.path} onClick={toggleMenu}>
+                      <Link href={route.path} onClick={toggleBottomMenu}>
                         {route.name}
                       </Link>
                     </li>
