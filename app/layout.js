@@ -3,6 +3,7 @@ import './globals.scss';
 import { Footer } from '@/components/Footer';
 import { ViewTransitions } from 'next-view-transitions';
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react"
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -32,6 +33,7 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
           <SpeedInsights />
+          <Analytics />
         </body>
       </html>
     </ViewTransitions>

@@ -11,6 +11,7 @@
   "dependencies": {
     "@calcom/embed-react": "^1.5.0",
     "@lottiefiles/react-lottie-player": "^3.5.3",
+    "@vercel/analytics": "^1.2.2",
     "@vercel/speed-insights": "^1.0.10",
     "embla-carousel-react": "^8.0.2",
     "hover-effect": "^1.2.1",
