@@ -16,8 +16,11 @@ export default function CtaButton({
   const buttonRef = useRef(null);
   const overlayRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    setIsMobile(window.matchMedia('(max-width: 1024px)').matches);
+
     if (!buttonRef.current) return;
     const button = buttonRef.current;
     button.addEventListener('mouseenter', (e) => {
@@ -83,17 +86,20 @@ export default function CtaButton({
             styles.button,
             specialClass ? styles[specialClass] : '',
             floating ? styles.floating : '',
+            floating && isMobile ? styles.mobile : '',
             isVisible ? styles.visible : '',
           ].join(' ')}
           href={href}
         >
-          <div ref={buttonRef} className={styles.innerWrapper}>
-            <span ref={overlayRef} className={styles.overlay}></span>
-            <div className={styles.textWrapper}>
-              <span>{mainText}</span>
-              <span>{subText}</span>
+          {!(floating && isMobile) && (
+            <div ref={buttonRef} className={styles.innerWrapper}>
+              <span ref={overlayRef} className={styles.overlay}></span>
+              <div className={styles.textWrapper}>
+                <span>{mainText}</span>
+                <span>{subText}</span>
+              </div>
             </div>
-          </div>
+          )}
         </Link>
       )}
     </>
