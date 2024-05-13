@@ -22,6 +22,7 @@ export default function AccordionItem({
           <button
             className={styles.accordionButton}
             onClick={() => handleClick(index)}
+            aria-label='Accordion Button'
           >
             <span className={styles.horizontalLine}></span>
             <span className={styles.verticalLine}></span>

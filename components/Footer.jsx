@@ -9,7 +9,7 @@ export const Footer = () => {
     <footer id='footer' className={styles.footer}>
       <div id='footerTop' className={styles.footerTop}>
         <div className={styles.innerWrapper}>
-          <Link href='/' className={styles.logoWrapper}>
+          <Link href='/' className={styles.logoWrapper} aria-label="Beehive Agency Logo">
             <CleanLogo />
           </Link>
           <div className={styles.socialsWrapper}>
