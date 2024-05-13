@@ -199,7 +199,7 @@ export default function Header() {
                           : ''
                       }
                     >
-                      <Link href={route.path} onClick={(toggleMenu)}>
+                      <Link href={route.path} onClick={toggleMenu}>
                         {route.name}
                       </Link>
                     </li>
@@ -291,16 +291,16 @@ export default function Header() {
             menuOpen ? styles.active : '',
             bottomMenuOpen ? styles.activeBottom : '',
           ].join(' ')}
+          onClick={toggleBottomMenu}
         >
-          <Link href='/' className={styles.logoWrapper}>
+          <div className={styles.logoWrapper}>
             <CleanLogo />
-          </Link>
+          </div>
 
           <BurgerIcon
             burgerRef={stickyBurgerRef}
             isSticky={true}
             active={menuOpen || bottomMenuOpen}
-            onClickHandler={toggleBottomMenu}
           />
         </div>
       )}

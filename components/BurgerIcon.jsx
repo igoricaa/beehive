@@ -1,10 +1,6 @@
 import styles from './BurgerIcon.module.scss';
 
 const BurgerIcon = ({ burgerRef, isSticky, active, onClickHandler }) => {
-  const clickHandler = () => {
-    onClickHandler();
-  };
-
   return (
     <div
       ref={burgerRef}
@@ -13,7 +9,7 @@ const BurgerIcon = ({ burgerRef, isSticky, active, onClickHandler }) => {
         isSticky ? styles.sticky : '',
         active ? styles.active : '',
       ].join(' ')}
-      onClick={clickHandler}
+      onClick={onClickHandler ? onClickHandler : () => {}}
     >
       <svg
         xmlns='https://www.w3.org/2000/svg'

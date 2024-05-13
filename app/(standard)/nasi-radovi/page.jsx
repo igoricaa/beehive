@@ -119,6 +119,7 @@ const Projects = () => {
                     alt={project.title}
                     fill
                     style={{ objectFit: 'cover' }}
+                    priority={index === 0}
                   />
                 </Link>
               ) : (
@@ -128,6 +129,7 @@ const Projects = () => {
                     alt={project.title}
                     fill
                     style={{ objectFit: 'cover' }}
+                    priority={index === 0}
                   />
                 </div>
               )}
