@@ -6,7 +6,8 @@
     list-style: none;
     transition: color 0.3s ease;
     width: 100%;
-    text-align: end;
+    display: flex;
+    justify-content: flex-end;
 
     &:nth-of-type(even) {
       margin-top: 1rem;
@@ -24,7 +25,6 @@
     }
 
     &.active {
-      display: flex;
       align-items: center;
       gap: 0.5rem;
 

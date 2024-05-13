@@ -66,7 +66,7 @@ export default function AboutUs() {
       </section>
 
       <section className={styles.breakSection}>
-        <IntersectingHeading text='uzzing with ideas!' />
+        <IntersectingHeading text='buzzing with ideas!' />
         <div className={styles.imgWrapper}>
           <Image
             id='bgImage'
@@ -76,7 +76,7 @@ export default function AboutUs() {
             sizes='70vw'
           />
         </div>
-        <IntersectingHeading text='uzzing with ideas!' />
+        <IntersectingHeading text='buzzing with ideas!' />
       </section>
 
       <section className={styles.aboutBeesSection}>

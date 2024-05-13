@@ -1,8 +1,8 @@
 export const projectsPreview = [
   {
-    listImage: '/our-work/la-cantina-home.png',
+    listImage: '/our-work/la-canntina-home.png',
     subtitle: 'klijent:',
-    title: 'La Cantina',
+    title: 'La Canntina',
     categories: ['branding', 'social media', 'marketing'],
   },
   {
@@ -18,9 +18,9 @@ export const projectsPreview = [
     categories: ['branding', 'social media', 'marketing'],
   },
   {
-    listImage: '/our-work/la-cantina-home.png',
+    listImage: '/our-work/la-canntina-home.png',
     subtitle: 'klijent:',
-    title: 'La Cantina',
+    title: 'La Canntina',
     categories: ['branding', 'social media', 'marketing'],
   },
   {
@@ -39,13 +39,13 @@ export const projectsPreview = [
 
 export const projects = [
   {
-    title: 'La Cantina',
-    slug: 'la-cantina',
+    title: 'La Canntina',
+    slug: 'la-canntina',
     description:
       'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
     description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
-    featuredImage: '/our-work/la-cantina.png',
-    listImage: '/our-work/la-cantina-home.png',
+    featuredImage: '/our-work/la-canntina.png',
+    listImage: '/our-work/la-canntina-home.png',
     categories: ['branding', 'social media', 'marketing'],
     subtitle: 'klijent:',
     backgroundColor: '#fff',
@@ -83,8 +83,7 @@ export const projects = [
 ];
 
 export const portfolioSectionContent = {
-  copyTextMain:
-    'jaka pčelinja zajednica u toku dana može oprašiti do 3 miliona cvetova.',
+  copyTextMain: 'sa kim zujimo?',
   ctaLink: '/kontakt',
   ctaTextMain: 'Imate projekat?',
   ctaTextSub: 'Hajde da se ispričamo',
@@ -96,67 +95,65 @@ export const team = [
     listImage: '/team/darja-babovic.jpg',
     subtitle: 'the founder',
     title: 'Darja Babović',
-    hoverTextTitle: 'Dara 34 leta',
-    hoverText: '“Više voli slano od slatkog.”',
+    hoverTextTitle: 'Di, 34 leta',
+    hoverText: 'Više voli slano od slatkog.',
     hoverColor: '#ffd600',
   },
   {
     listImage: '/team/tara-dinic.jpg',
     subtitle: 'the smart one',
     title: 'Tara Dinić',
-    hoverTextTitle: 'Tara 32 leta',
-    hoverText: '“Odlučna, ali prijatna (New Business Director).',
-    hoverColor: '#ffd600',
+    hoverTextTitle: 'Tara, 32 leta',
+    hoverText: 'Odlučna, ali prijatna (New Business Director).',
+    hoverColor: '#FF0000',
   },
   {
     listImage: '/team/andjela-zivic.jpeg',
     subtitle: 'the good one',
     title: 'Anđela Živić',
-    hoverTextTitle: 'Anđela 26 leta',
-    hoverText: '“Lepa kao lutka, dobra kao hleb.',
-    hoverColor: '#ffd600',
+    hoverTextTitle: 'Anhel, 26 leta',
+    hoverText: 'Lepa kao lutka, dobra kao hleb.',
+    hoverColor: '#a238ff',
   },
   {
     listImage: '/team/jelena-ristic.jpg',
     subtitle: 'the creative one',
     title: 'Jelena Ristić',
-    hoverTextTitle: 'Rista 31 leta',
-    hoverText: '“Ako ne zna, saznaće.”',
+    hoverTextTitle: 'Riki, 31 leta',
+    hoverText: 'Ako ne zna, saznaće.',
     hoverColor: '#ffd600',
   },
   {
     listImage: '/team/djordje-cetkovic.png',
     subtitle: 'the artistic one',
     title: 'Đorđe Ćetković',
-    hoverTextTitle: 'Čađavac 32 leta',
+    hoverTextTitle: 'Čađavac, 32 leta',
     hoverText: '“Rok se može probiti, ali slika na zidu mora biti prava."',
-    hoverColor: '#ffd600',
+    hoverColor: '#FF0000',
   },
   {
     listImage: '/team/igor-stanisavljevic.jpg',
     subtitle: 'the techy one',
     title: 'Igor Stanisavljević',
-    hoverTextTitle: 'Igorica 29 leta',
-    hoverText: '“Rešava."',
-    hoverColor: '#ffd600',
+    hoverTextTitle: 'Igorica, 30 leta',
+    hoverText: 'Rešava.',
+    hoverColor: '#a238ff',
   },
   {
     listImage: '/team/maja-simeunovic.jpg',
     subtitle: 'the visual one',
     title: 'Maja Simonović',
-    hoverTextTitle: 'Joma 38 leta',
-    hoverText:
-      '“Citat u dva , mozda tri reda hm hm dot dot i tako to sve u krug.”',
+    hoverTextTitle: 'Maki, ima leta',
+    hoverText: 'Sa njom uvek neki šokovi.',
     hoverColor: '#ffd600',
   },
   {
     listImage: '/team/andja-nikolic.jpeg',
-    subtitle: 'creative and legal',
+    subtitle: 'the detail-oriented one',
     title: 'Anđa Nikolić',
-    hoverTextTitle: 'Andja 30 leta',
-    hoverText:
-      '“So, more, dobra knjiga i još bolja krempita.”',
-    hoverColor: '#ffd600',
+    hoverTextTitle: 'Anđa, 35 leta',
+    hoverText: '“So, more, dobra knjiga i još bolja krempita.”',
+    hoverColor: '#FF0000',
   },
 ];
 
@@ -228,10 +225,6 @@ export const socials = [
   {
     link: 'https://www.linkedin.com/company/beehiveagency/',
     text: 'LinkedIn',
-  },
-  {
-    link: 'https://www.twitter.com/beehiveagency/',
-    text: 'X / Twitter',
   },
 ];
 
