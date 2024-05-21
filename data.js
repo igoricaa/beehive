@@ -1,42 +1,3 @@
-export const projectsPreview = [
-  {
-    listImage: '/our-work/la-canntina-home.png',
-    subtitle: 'klijent:',
-    title: 'La Canntina',
-    categories: ['branding', 'social media', 'marketing'],
-  },
-  {
-    listImage: '/our-work/bistro-grad-home.png',
-    subtitle: 'klijent:',
-    title: 'Bistro grad',
-    categories: ['social media', 'marketing'],
-  },
-  {
-    listImage: '/our-work/prana-home.png',
-    subtitle: 'klijent:',
-    title: 'Prana',
-    categories: ['branding', 'social media', 'marketing'],
-  },
-  {
-    listImage: '/our-work/la-canntina-home.png',
-    subtitle: 'klijent:',
-    title: 'La Canntina',
-    categories: ['branding', 'social media', 'marketing'],
-  },
-  {
-    listImage: '/our-work/bistro-grad-home.png',
-    subtitle: 'klijent:',
-    title: 'Bistro grad',
-    categories: ['social media', 'marketing'],
-  },
-  {
-    listImage: '/our-work/prana-home.png',
-    subtitle: 'klijent:',
-    title: 'Prana',
-    categories: ['branding', 'social media', 'marketing'],
-  },
-];
-
 export const projects = [
   {
     title: 'La Canntina',
@@ -65,6 +26,48 @@ export const projects = [
     backgroundColor: '#000',
     textColor: '#fff',
     ready: false,
+  },
+  {
+    title: 'Prana',
+    slug: 'prana',
+    description:
+      'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
+    description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
+    featuredImage: '/our-work/prana.png',
+    listImage: '/our-work/prana-home.png',
+    categories: ['branding', 'social media', 'marketing'],
+    subtitle: 'klijent:',
+    backgroundColor: '#FFF7EC',
+    textColor: '#000',
+    ready: true,
+  },
+  {
+    title: 'Prana',
+    slug: 'prana',
+    description:
+      'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
+    description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
+    featuredImage: '/our-work/prana.png',
+    listImage: '/our-work/prana-home.png',
+    categories: ['branding', 'social media', 'marketing'],
+    subtitle: 'klijent:',
+    backgroundColor: '#FFF7EC',
+    textColor: '#000',
+    ready: true,
+  },
+  {
+    title: 'Prana',
+    slug: 'prana',
+    description:
+      'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
+    description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
+    featuredImage: '/our-work/prana.png',
+    listImage: '/our-work/prana-home.png',
+    categories: ['branding', 'social media', 'marketing'],
+    subtitle: 'klijent:',
+    backgroundColor: '#FFF7EC',
+    textColor: '#000',
+    ready: true,
   },
   {
     title: 'Prana',

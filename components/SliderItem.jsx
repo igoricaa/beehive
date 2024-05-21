@@ -35,15 +35,17 @@ export default function SliderItem({ content }) {
             style={{ backgroundColor: content.hoverColor }}
           ></span>
         )}
-        <div className={styles.imgWrapper}>
-          <Image
-            src={content.listImage}
-            alt={content.title}
-            fill
-            sizes='(max-width: 1024px) 50vw, 22.5vw'
-            style={{ objectFit: 'cover' }}
-          />
-        </div>
+        {content.listImage && (
+          <div className={styles.imgWrapper}>
+            <Image
+              src={content.listImage}
+              alt={content.title}
+              fill
+              sizes='(max-width: 1024px) 50vw, 22.5vw'
+              style={{ objectFit: 'cover' }}
+            />
+          </div>
+        )}
         {content.hoverText && (
           <div className={styles.hoverTextWrapper}>
             <span>{content.hoverTextTitle}</span>

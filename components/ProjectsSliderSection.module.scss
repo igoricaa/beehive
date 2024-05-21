@@ -1,0 +1,128 @@
+$gridGap: 2rem;
+
+.section {
+  display: grid;
+  grid-template-columns: repeat(12, minMax(0, 1fr));
+  gap: $gridGap;
+
+  .copyCtaWrapper {
+    grid-column: span 3;
+
+    h2 {
+      border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+      line-height: 6.875rem;
+      width: -moz-fit-content;
+      width: fit-content;
+      height: -moz-fit-content;
+      height: fit-content;
+      white-space: nowrap;
+      margin-bottom: 2rem;
+    }
+
+    .ctaLinkDesktop {
+      background-color: #000;
+      border-radius: 4rem;
+      padding: 12px 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      position: relative;
+      width: fit-content;
+      margin-top: 4rem;
+
+      div {
+        display: flex;
+        flex-direction: column;
+
+        span:first-of-type {
+          color: #fff;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+
+        span:last-of-type {
+          color: #fff;
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+
+      &::after {
+        content: ' ';
+        background-image: url('/arrow-right.svg');
+        width: 28px;
+        height: 1rem;
+      }
+    }
+  }
+
+  .ctaLinkMobile {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .section {
+    $gridGap: 1.5rem;
+    gap: $gridGap;
+
+    .copyCtaWrapper {
+      grid-column: span 12;
+      grid-row: 1;
+
+      .ctaLinkDesktop {
+        display: none;
+      }
+    }
+
+    .ctaLinkMobile {
+      grid-column: span 12;
+      background-color: #000;
+      border-radius: 4rem;
+      padding: 12px 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.5rem;
+      position: relative;
+      width: fit-content;
+      margin: 10px auto 0;
+
+      div {
+        display: flex;
+        flex-direction: column;
+
+        span:first-of-type {
+          color: #fff;
+          font-size: 1rem;
+          font-weight: 500;
+        }
+
+        span:last-of-type {
+          color: #fff;
+          font-size: 12px;
+          font-weight: 300;
+        }
+      }
+
+      &::after {
+        content: ' ';
+        background-image: url('/arrow-right.svg');
+        width: 28px;
+        height: 1rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .section {
+    .copyCtaWrapper {
+      h2 {
+        line-height: 56px;
+        margin-bottom: 1.5rem;
+      }
+    }
+  }
+}

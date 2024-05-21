@@ -5,6 +5,7 @@ import ServicesSection from '@/components/ServicesSection';
 import Typewriter from '@/components/Typewritter';
 import LogoWrapper from '@/public/logos/LogoWrapper';
 import DistortionImage from '@/components/DistortionImage';
+import ProjectsSliderSection from '@/components/ProjectsSliderSection';
 
 export default function Home() {
   return (
@@ -51,7 +52,7 @@ export default function Home() {
         </p>
       </section>
 
-      <SliderSection content={portfolioSectionContent} />
+      <ProjectsSliderSection content={portfolioSectionContent} />
 
       <ServicesSection />
 
