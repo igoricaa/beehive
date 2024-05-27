@@ -10,7 +10,8 @@
     "localeSwitcher": {
       "en": "En",
       "sr": "Sr"
-    }
+    },
+    "lang": "Jezik"
   },
   "notFoundPage": {
     "title": "404"

@@ -206,6 +206,11 @@
         &.bottomMobileMenu {
           -webkit-clip-path: circle(0 at 100% 100%);
           clip-path: circle(0 at 100% 100%);
+
+          .menuFooter {
+            flex-direction: row;
+            align-items: end;
+          }
         }
 
         .logoWrapper {
@@ -237,8 +242,18 @@
 
         .menuFooter {
           display: flex;
+          flex-direction: column;
           justify-content: space-between;
-          align-items: center;
+
+          .langSwitcherWrapper {
+            margin-bottom: 2rem;
+
+            p {
+              font-size: 14px;
+              color: var(--color_text_main);
+              margin-bottom: 0.25rem;
+            }
+          }
 
           .socialsWrapper {
             p {

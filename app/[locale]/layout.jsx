@@ -61,6 +61,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
       sr: t('localeSwitcher.sr'),
     },
     socialsTitle: t('socialsTitle'),
+    lang: t('lang'),
   };
 
   return (

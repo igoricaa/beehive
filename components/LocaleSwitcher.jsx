@@ -21,7 +21,7 @@ export default function LocaleSwitcher() {
   }
 
   return (
-    <label className={styles.label}>
+    <label className={styles.localeSwitcher}>
       <input
         type='checkbox'
         className={styles.checkbox}

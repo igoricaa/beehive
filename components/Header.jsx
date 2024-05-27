@@ -228,6 +228,10 @@ export default function Header({ routes, messages }) {
                   ))}
                 </ul>
                 <div className={styles.menuFooter}>
+                  <div className={styles.langSwitcherWrapper}>
+                    <p>{messages.lang}</p>
+                    <LocaleSwitcher messages={messages.locales} />
+                  </div>
                   <div className={styles.socialsWrapper}>
                     <p>{messages.socialsTitle}</p>
                     <div className={styles.socials}>
@@ -278,19 +282,25 @@ export default function Header({ routes, messages }) {
                   ))}
                 </ul>
                 <div className={styles.menuFooter}>
-                  <div className={styles.socialsWrapper}>
-                    <p>{messages.socialsTitle}</p>
-                    <div className={styles.socials}>
-                      {socials.map((social, index) => (
-                        <a
-                          key={index}
-                          href={social.link}
-                          className={styles.social}
-                          target='_blank'
-                        >
-                          <span>{social.text}</span>
-                        </a>
-                      ))}
+                  <div>
+                    <div className={styles.langSwitcherWrapper}>
+                      <p>{messages.lang}</p>
+                      <LocaleSwitcher messages={messages.locales} />
+                    </div>
+                    <div className={styles.socialsWrapper}>
+                      <p>{messages.socialsTitle}</p>
+                      <div className={styles.socials}>
+                        {socials.map((social, index) => (
+                          <a
+                            key={index}
+                            href={social.link}
+                            className={styles.social}
+                            target='_blank'
+                          >
+                            <span>{social.text}</span>
+                          </a>
+                        ))}
+                      </div>
                     </div>
                   </div>
                   {headerTransformed && (
