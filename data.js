@@ -2,13 +2,9 @@ export const projects = [
   {
     title: 'La Canntina',
     slug: 'la-canntina',
-    description:
-      'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
-    description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
     featuredImage: '/our-work/la-canntina.png',
     listImage: '/our-work/la-canntina-home.png',
     categories: ['branding', 'social media', 'marketing'],
-    subtitle: 'klijent:',
     backgroundColor: '#fff',
     textColor: '#000',
     ready: false,
@@ -16,27 +12,29 @@ export const projects = [
   {
     title: 'Bistro grad',
     slug: 'bistro-grad',
-    description:
-      'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
-    description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
     featuredImage: '/our-work/bistro-grad.png',
     listImage: '/our-work/bistro-grad-home.png',
     categories: ['social media', 'marketing'],
-    subtitle: 'klijent:',
     backgroundColor: '#000',
     textColor: '#fff',
-    ready: false,
+    ready: true,
   },
   {
     title: 'Prana',
     slug: 'prana',
-    description:
-      'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
-    description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
     featuredImage: '/our-work/prana.png',
     listImage: '/our-work/prana-home.png',
     categories: ['branding', 'social media', 'marketing'],
-    subtitle: 'klijent:',
+    backgroundColor: '#FFF7EC',
+    textColor: '#000',
+    ready: true,
+  },
+  {
+    title: 'ZLA ZLA',
+    slug: 'zla-zla',
+    featuredImage: '/our-work/zla-zla.jpg',
+    listImage: '/our-work/zla-zla-home.jpg',
+    categories: ['branding', 'social media', 'marketing'],
     backgroundColor: '#FFF7EC',
     textColor: '#000',
     ready: true,
@@ -44,13 +42,9 @@ export const projects = [
   {
     title: 'Prana',
     slug: 'prana',
-    description:
-      'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
-    description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
     featuredImage: '/our-work/prana.png',
     listImage: '/our-work/prana-home.png',
     categories: ['branding', 'social media', 'marketing'],
-    subtitle: 'klijent:',
     backgroundColor: '#FFF7EC',
     textColor: '#000',
     ready: true,
@@ -58,40 +52,14 @@ export const projects = [
   {
     title: 'Prana',
     slug: 'prana',
-    description:
-      'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
-    description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
     featuredImage: '/our-work/prana.png',
     listImage: '/our-work/prana-home.png',
     categories: ['branding', 'social media', 'marketing'],
-    subtitle: 'klijent:',
-    backgroundColor: '#FFF7EC',
-    textColor: '#000',
-    ready: true,
-  },
-  {
-    title: 'Prana',
-    slug: 'prana',
-    description:
-      'Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.',
-    description2: 'Rast pratilaca, i mali propratni info za detalje rezultata.',
-    featuredImage: '/our-work/prana.png',
-    listImage: '/our-work/prana-home.png',
-    categories: ['branding', 'social media', 'marketing'],
-    subtitle: 'klijent:',
     backgroundColor: '#FFF7EC',
     textColor: '#000',
     ready: true,
   },
 ];
-
-export const portfolioSectionContent = {
-  copyTextMain: 'sa kim zujimo?',
-  ctaLink: '/kontakt',
-  ctaTextMain: 'Imate projekat?',
-  ctaTextSub: 'Hajde da se ispričamo',
-  sliderContent: projects,
-};
 
 export const team = [
   {
@@ -127,7 +95,7 @@ export const team = [
     hoverColor: '#ffd600',
   },
   {
-    listImage: '/team/djordje-cetkovic.png',
+    listImage: '/team/djordje-cetkovic.jpg',
     subtitle: 'the artistic one',
     title: 'Đorđe Ćetković',
     hoverTextTitle: 'Čađavac, 32 leta',
@@ -160,16 +128,6 @@ export const team = [
   },
 ];
 
-export const teamSectionContent = {
-  copyTitle: 'naš tim:',
-  copyTextSub:
-    'Svaki član košnice je u svom polju dugi niz godina. Naše pčele stalno zuje kroz nove tehnologije i sa sobom donose veliko kolektivno znanje, kreativnost i disciplinu.',
-  ctaLink: '/kontakt',
-  ctaTextMain: 'Imate projekat?',
-  ctaTextSub: 'Hajde da se ispričamo',
-  sliderContent: team,
-};
-
 export const services = [
   {
     title: 'social media management',
@@ -201,25 +159,6 @@ export const services = [
   },
 ];
 
-export const footerBottomLinks = [
-  // {
-  //   href: '/cookie-policy',
-  //   text: 'Cookie policy',
-  // },
-  // {
-  //   href: '/privacy-policy',
-  //   text: 'Privacy policy',
-  // },
-  // {
-  //   href: '/legal',
-  //   text: 'Legal',
-  // },
-  {
-    href: '#',
-    text: 'c 2024 beehiveagency',
-  },
-];
-
 export const socials = [
   {
     link: 'https://www.instagram.com/beehivebelgrade',
@@ -231,35 +170,24 @@ export const socials = [
   },
 ];
 
-export const routes = [
-  { name: 'Početna', path: '/' },
-  { name: 'O nama', path: '/o-nama' },
-  { name: 'Naši radovi', path: '/nasi-radovi' },
-  { name: 'Kontakt', path: '/kontakt' },
-];
-
 export const coreValues = [
   {
-    title: 'Poštovanje',
-    description: 'Međusobnih potreba, vremena, znanja i profesionalnosti.',
+    title: 'respect',
     icon: '/coreValues/core-value-icon-1.svg',
     number: '01',
   },
   {
-    title: 'Poverenje',
-    description: 'Da ćemo jedni drugima pružiti svoj maksimum.',
+    title: 'trust',
     icon: '/coreValues/core-value-icon-2.svg',
     number: '02',
   },
   {
-    title: 'Radoznalost',
-    description: 'Da istražimo svaki pravac i nađemo najbolje rešenja za vas.',
+    title: 'curiosity',
     icon: '/coreValues/core-value-icon-3.svg',
     number: '03',
   },
   {
-    title: 'Sloboda',
-    description: 'Da budemo kreativni, odvažni, dosledni i iskreni.',
+    title: 'freedom',
     icon: '/coreValues/core-value-icon-4.svg',
     number: '04',
   },

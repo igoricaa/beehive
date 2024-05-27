@@ -1,6 +1,6 @@
 'use client';
 
-import { Link } from 'next-view-transitions';
+import Link from '@/components/Link';
 import styles from './CtaButton.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import { calculateOverlayPosition } from '../utils/utils';
@@ -8,7 +8,7 @@ import { calculateOverlayPosition } from '../utils/utils';
 export default function CtaButton({
   href,
   mainText,
-  subText,
+  secondaryText,
   specialClass,
   floating,
   isExternalLink,
@@ -76,7 +76,7 @@ export default function CtaButton({
             <span ref={overlayRef} className={styles.overlay}></span>
             <div className={styles.textWrapper}>
               <span>{mainText}</span>
-              <span>{subText}</span>
+              <span>{secondaryText}</span>
             </div>
           </div>
         </a>
@@ -96,7 +96,7 @@ export default function CtaButton({
               <span ref={overlayRef} className={styles.overlay}></span>
               <div className={styles.textWrapper}>
                 <span>{mainText}</span>
-                <span>{subText}</span>
+                <span>{secondaryText}</span>
               </div>
             </div>
           )}

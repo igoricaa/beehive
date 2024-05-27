@@ -42,7 +42,6 @@
     background-color: var(--color_yellow);
     transform: translate(-50%, -50%);
     border-radius: 50%;
-    opacity: 0.95;
     z-index: -1;
     transition: width 0.5s, height 0.5s;
   }
@@ -97,7 +96,7 @@
 
     &.floating {
       position: fixed;
-      
+
       &.mobile {
         border-radius: 50%;
         right: 0.5rem;

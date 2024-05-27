@@ -4,7 +4,7 @@ import Accordions from './Accordions';
 import servicesImage from '@/public/beehive-services.png';
 import servicesImageMobile from '@/public/beehive-services-mobile.webp';
 
-const ServicesSection = () => {
+const ServicesSection = ({messages}) => {
   return (
     <section className={styles.servicesSection}>
       <picture>
@@ -15,7 +15,7 @@ const ServicesSection = () => {
         <Image src={servicesImage} alt='Beehive Services' />
       </picture>
       <div className={styles.servicesInfoWrapper}>
-        <h2>naše usluge:</h2>
+        <h2>{messages.title}</h2>
         <Accordions />
       </div>
     </section>

@@ -11,7 +11,7 @@ const OPTIONS = {
   align: 'start',
 };
 
-export default function ProjectsSlider({ content }) {
+export default function ProjectsSlider({ projects, messages }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS, [
     Autoplay({ delay: 2000 }),
   ]);
@@ -20,8 +20,8 @@ export default function ProjectsSlider({ content }) {
     <section className={[styles.slider, styles.embla].join(' ')} data-axis='x'>
       <div className={styles.emblaViewport} ref={emblaRef}>
         <div className={styles.emblaContainer}>
-          {content.map((slideContent, index) => (
-            <ProjectsSliderItem key={index} content={slideContent} />
+          {projects.map((project, index) => (
+            <ProjectsSliderItem key={index} project={project} messages={messages} />
           ))}
         </div>
       </div>

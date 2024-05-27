@@ -5,7 +5,7 @@ import { useEffect, useRef } from 'react';
 import { calculateOverlayPosition } from '../utils/utils';
 import styles from './CtaButton.module.scss';
 
-export default function CalButton() {
+export default function CalButton({ messages }) {
   const buttonRef = useRef(null);
   const overlayRef = useRef(null);
 
@@ -46,8 +46,8 @@ export default function CalButton() {
       <div ref={buttonRef} className={styles.innerWrapper}>
         <span ref={overlayRef} className={styles.overlay}></span>
         <div className={styles.textWrapper}>
-          <span>Datum / vreme</span>
-          <span>Sve na jedan klik</span>
+          <span>{messages.textMain}</span>
+          <span>{messages.textSecondary}</span>
         </div>
       </div>
     </button>

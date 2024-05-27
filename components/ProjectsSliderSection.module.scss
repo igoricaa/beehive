@@ -19,6 +19,34 @@ $gridGap: 2rem;
       margin-bottom: 2rem;
     }
 
+    h3 {
+      position: relative;
+      width: fit-content;
+
+      &::after {
+        content: ' ';
+        display: inline-block;
+        background-image: url('/question-mark.svg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 20px;
+        height: 45px;
+      }
+
+      &::before {
+        content: ' ';
+        display: inline-block;
+        background-color: var(--color_yellow);
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        position: absolute;
+        right: -18px;
+        top: -6px;
+        z-index: -1;
+      }
+    }
+
     .ctaLinkDesktop {
       background-color: #000;
       border-radius: 4rem;
@@ -122,6 +150,21 @@ $gridGap: 2rem;
       h2 {
         line-height: 56px;
         margin-bottom: 1.5rem;
+      }
+
+      h3 {
+  
+        &::after {
+          width: 1rem;
+          height: 36px;
+        }
+  
+        &::before {
+          width: 3rem;
+          height: 3rem;
+          right: -15px;
+          top: -5px;
+        }
       }
     }
   }

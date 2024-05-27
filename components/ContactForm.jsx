@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 import styles from './ContactForm.module.scss';
 import ContactFormButton from './ContactFormButton';
 
-export default function ContactForm() {
+export default function ContactForm({ messages }) {
   const {
     register,
     handleSubmit,
@@ -33,19 +33,19 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
       <div className={styles.rowWrapper}>
         <input
-          placeholder='Ime'
+          placeholder={messages.namePlaceholder}
           {...register('name', {
-            required: { value: true, message: 'Ime je obavezno polje' },
+            required: { value: true, message: messages.nameReqError },
           })}
           className={errors.name ? styles.error : ''}
         />
         <input
-          placeholder='Mail'
+          placeholder={messages.emailPlaceholder}
           {...register('email', {
-            required: { value: true, message: 'Email je obavezno polje' },
+            required: { value: true, message: messages.emailReqError },
             pattern: {
               value: /^\S+@\S+$/i,
-              message: 'Unesite ispravnu email adresu',
+              message: messages.emailPatternError,
             },
           })}
           className={errors.email ? styles.error : ''}
@@ -65,10 +65,10 @@ export default function ContactForm() {
 
       <div className={styles.rowWrapper}>
         <textarea
-          placeholder='Poruka'
+          placeholder={messages.messagePlaceholder}
           rows={3}
           {...register('message', {
-            required: { value: true, message: 'Poruka je obavezno polje' },
+            required: { value: true, message: messages.messageReqError   },
           })}
           className={errors.message ? styles.error : ''}
         />
@@ -80,10 +80,8 @@ export default function ContactForm() {
       )}
 
       <div className={styles.rowWrapper}>
-        <p className={styles.note}>
-          Odgovor možeš očekivati u najkraćem mogućem roku.
-        </p>
-        <ContactFormButton />
+        <p className={styles.note}>{messages.subtitle}</p>
+        <ContactFormButton messages={messages.button} />
       </div>
     </form>
   );

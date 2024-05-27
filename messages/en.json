@@ -1,0 +1,378 @@
+{
+  "layout": {
+    "nav": {
+      "home": "Home",
+      "aboutUs": "About Us",
+      "projects": "Our Work",
+      "contact": "Contact"
+    },
+    "socialsTitle": "where we buzz:",
+    "localeSwitcher": {
+      "en": "En",
+      "sr": "Sr"
+    }
+  },
+  "notFoundPage": {
+    "title": "404"
+  },
+  "cta": {
+    "textMain": "Have a project?",
+    "textSecondary": "Let's talk."
+  },
+  "home": {
+    "statement": {
+      "partone": "We are Beehive. We can tell your brand's story",
+      "parttwo": "through",
+      "partthree": {
+        "design": "design",
+        "text": "text",
+        "video": "video",
+        "photography": "photography",
+        "programming": "programming"
+      },
+      "partfour": "Short and sweet - we are buzzing across all digital activities that you need."
+    },
+    "aboutUs": {
+      "title": "storytelling",
+      "text": "One of the oldest skills of mankind that has survived to this day. A good story satisfies our need for community, exchange, and understanding. We are a team of people who can build a bridge from your business to the needs of the people around us. Because everyone wants to hear a good story, and we're here to give it to them. Let the buzzing begin."
+    },
+    "projectsSlider": {
+      "title": "buzzing with",
+      "project": {
+        "categories": {
+          "branding": "branding",
+          "socialmedia": "social media",
+          "marketing": "marketing"
+        },
+        "client": "client:"
+      }
+    },
+    "ourServices": "our services",
+    "team": {
+      "title": "our team",
+      "description": "Each hive member has been in their field for many years. Besides bringing great collective knowledge, creativity, and discipline to the table, our bees are constantly buzzing through new technologies."
+    }
+  },
+  "aboutUs": {
+    "title": {
+      "partone": "All of us",
+      "parttwo": "are going to",
+      "partthree": "therapy"
+    },
+    "aboutBeehive": {
+      "title": "About beehive",
+      "description": "A strong and healthy bee colony can pollinate up to three million flowers in one day. Same here, only for digital.<br /><br />Us personally. Not these new robots."
+    },
+    "values": {
+      "respect": {
+        "title": "Respect",
+        "description": "Of mutual needs, time, knowledge and professionalism."
+      },
+      "trust": {
+        "title": "Trust",
+        "description": "That we will give our best to each other."
+      },
+      "curiosity": {
+        "title": "Curiosity",
+        "description": "To explore every direction and find the best solutions for you."
+      },
+      "freedom": {
+        "title": "Freedom",
+        "description": "To be creative, daring, consistent, and honest."
+      }
+    },
+    "aboutBees": {
+      "title": "about bees",
+      "subtitle": "Did you know that:",
+      "description": {
+        "one": "Bees are workaholics!",
+        "two": {
+          "partone": "They communicate through",
+          "parttwo": " dance",
+          "partthree": ", just like us."
+        },
+        "three": "Bees have five eyes, we certainly have more.",
+        "four": "They see colors.",
+        "five": "And they have personalities…",
+        "six": "They create jobs.",
+        "seven": "Bees rarely sleep. So do we",
+        "eight": "They remember faces, and…",
+        "nine": {
+          "partone": "They are attracted to",
+          "parttwo": "caffeine."
+        }  
+      },
+      "ending": {
+        "partone": "We relate to all of these statements, that is why we created our own ",
+        "parttwo": "hive."
+      }
+    }
+  },
+  "ourWork": {
+    "title": {
+      "partone": "Colaborating toward brave",
+      "parttwo": "goals"
+    },
+    "subtitle": "These are just some of our successful collaborations, you can find more details in the case study section.",
+    "ctaSection": {
+      "text": "Have a question? We can answer.",
+      "button": {
+        "textMain": "Schedule a consultation",
+        "textSecondary": "We are available for any pixel."
+      }
+    },
+    "projects": {
+      "comingSoon": "Coming soon",
+      "prana": {
+        "title": "Prana",
+        "description": {
+          "partone": "Prana is a family fusion restaurant, founded in 2022. Community-oriented, it carries the spirit of Italy, but also Hawaiian exoticism.",
+          "parttwo": "Follower growth, and a small accompanying info for the results."
+        }
+      },
+      "bistrograd": {
+        "title": "Bistro grad",
+        "description": {
+          "partone": "Prana is a family fusion restaurant, founded in 2022. Community-oriented, it carries the spirit of Italy, but also Hawaiian exoticism.",
+          "parttwo": "Follower growth, and a small accompanying info for the results."
+        }
+      },
+      "zlazla": {
+        "title": "ZLA-ZLA",
+        "description": {
+          "partone": "ZLA-ZLA is the biggest CBD shop in the Balkans. We're not kidding when we say the biggest. They have over 4000 products on their e-commerce site, have been around since 2004, and not only do they have CBD products, but they also have streetwear.",
+          "parttwo": "This is a needle-to-locomotive story, with an urban attitude and a reputation that is very well known."
+        }
+      },
+      "lacanntina": {
+        "title": "La Canntina",
+        "description": {
+          "partone": "Prana is a family fusion restaurant, founded in 2022. Community-oriented, it carries the spirit of Italy, but also Hawaiian exoticism.",
+          "parttwo": "Follower growth, and a small accompanying info for the results."
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": {
+      "partone": "Be sure ",
+      "parttwo": "to contact ",
+      "partthree": "us" 
+    },
+    "subtitle": "If you have an idea / proposal / question, <br />our <span>🐝</span> <span>🐝</span> are always available.",
+    "contactForm": {
+      "placeholders": {
+        "name": "Name",
+        "email": "Email",
+        "message": "Message"
+      },
+      "errors": {
+        "nameRequired": "Name is a required field",
+        "emailRequired": "Email is a required field",
+        "emailInvalid": "Please enter a valid email address",
+        "messageRequired": "Message is a required field"
+      },
+      "subtitle": "You can expect our answer in a short while.",
+      "button": {
+        "textMain": "Send message",
+        "textSecondary": "And check your spam folder, just in case."
+      }
+    },
+    "cal": {
+      "subtitle": {
+        "partone": "Or schedule",
+        "parttwo": "a meeting",
+        "partthree": "with our team",
+        "partfour": "right away!"
+      },
+      "button": {
+        "textMain": "Date / Time",
+        "textSecondary": "One click away"
+      }
+    }
+  },
+  "projects": {
+    "prana": {
+      "title": "Prana",
+      "categories": {
+        "branding": "branding",
+        "socialmedia": "social media",
+        "marketing": "marketing"
+      },
+      "about": {
+        "highlight": {
+          "subtitle": "About Prana",
+          "title": {
+            "partone": "From zero to hero"
+          }
+        },
+        "partone": "Prana is a family fusion restaurant, founded in 2022. A fun idea for a restaurant, to be community-oriented, to carry the spirit of Italy, but also Hawaiian exoticism. The idea behind this bright place at Hilandarska 6 and Kneginje Zorka 28 two years later is to serve food that increases life energy.",
+        "parttwo": "It is true, that food is very seductive in terms of marketing because it is inextricably linked with emotions, but the question arises: how to tell a tender, family story; make everyone feel at home; create an environment in which Prana is a favorite place in the neighborhood, which, along with an exceptional food offer, can also bring a ray of sunshine?",
+        "partthree": "This is exactly the story we were tasked to tell."
+      },
+      "challenge": {
+        "highlight": {
+          "subtitle": "The Challenge",
+          "title": {
+            "partone": "How to precisely mirror someone's vision through content?",
+            "parttwo": "Understand, research, learn and implement."
+          }
+        },
+        "description": "By creating content that is adequate for social networks, and based on the wishes and creative vision of the client, we have created a visual and communication tone that mirrors exactly what is inside Prana. With a carefully designed strategy, content testing, and listening to the audience, we achieved excellent results and successfully responded to the business challenge."
+      },
+      "solution": {
+        "subtitle": {
+          "partone": "Prana opening: ",
+          "parttwo": "March 2022."
+        },
+        "title": {
+          "main": "How to start telling this story?",
+          "subtitle": "Approach"
+        },
+        "description": "We organized a <span>pre-opening</span> event for friends of the house - <span>influencers, actors, friends, and partners,</span> they got a glimpse of what Prana will look like - through small bites of selected dishes, wine, friendly and family gathering, one spring Sunday morning. Before the bar opened, <span>Prana</span> already had 1000 organic followers, from the event itself and the announcement of something completely new and unique."
+      },
+      "info": {
+        "scope": {
+          "title": "Scope",
+          "one": "Content creation (video, photography)",
+          "two": "Copywriting",
+          "three": "Social media management",
+          "four": "Social media strategy",
+          "five": "PR",
+          "six": "Event management",
+          "seven": "Influencer marketing"
+        },
+        "stats": {
+          "title": "Statistics",
+          "followers": "Followers",
+          "budget": "Budget invested in advertising"
+        }
+      },
+      "socials" : {
+        "title": "Prana social networks"
+      }
+    },
+    "bistrograd": {
+      "title": "Bistro grad",
+      "categories": {
+        "branding": "brending",
+        "socialmedia": "društvene mreže",
+        "marketing": "marketing"
+      },
+      "about": {
+        "highlight": {
+          "subtitle": "About Bistro",
+          "title": "Tell a whole story in one sentence"
+        },
+        "text": "Belgrade Hometown bar and restaurant. Located in the heart of Belgrade, in Uzun Mirkova no. 5. The personification of an urban lifestyle. These are people who like to have fun, socialize, and throw amazing parties. Their menu is diverse, as is the clientele, there are many easter eggs in the bar itself, and there are a million ways they can be communicated on social media. So, how can we extract the essence of this place and present it as best as possible on digital channels?"
+      },
+      "challenge": {
+        "highlight": {
+          "subtitle": "The challenge?",
+          "title": {
+            "partone": "Build on the existing identity and tell the Bistro story in a fun, interactive, and exciting way."
+          }
+        },
+        "description": "We know that it is in the center of Belgrade, but the Bistro is a center in itself. A place where everything is possible, where fresh orange juice can be served at midnight, and a bottle of wine with breakfast. Where meat puree is made from chestnuts, bread according to Zuza's recipe, and the soup is said to be an actual medicine. The team that works has a lot of life experience, nice manners, amazing smiles, and good taste. A real modern inn, one would conclude from the eclectic interior, but still, it's not that - it can't really be caught just like that. Parties are not planned, they happen. And they happen. Bistro is Belgrade itself in a one corner of the Old Town - Belgrade in the right way."
+      },
+      "solution": {
+        "title": {
+          "main": "How did we respond to the task?",
+          "subtitle": "Approach"
+        },
+        "description": "We created a digital, imperfect Bistro reality program. We showed what happens when a dish is ordered, we captured moments of fun, laughter, and interesting stories. We introduced the audience to the employees and their character, we created the ambiance and a little more than that - we showed how different members of society sit in the same place, how synergy is achieved, how a party is created, how fresh food is arranged and what happens when the working hours' ring on Fridays. We did not invite people, but we conveyed to them the atmosphere, which they gladly wanted to become a part of. Everyone wants to be on the Bistro Instagram profile, and that's our biggest success.<br/><br/>We also improved communications through copywriting, which we wrote in an imaginative, fairy-tale way, sometimes inspired by anecdotes, and sometimes by urban legends."
+      },
+      "info": {
+        "scope": {
+          "title": "Scope",
+          "one": "Content creation (video, photography)",
+          "two": "Copywriting",
+          "three": "Social Media management",
+          "four": "Social Media strategy",
+          "five": "PR",
+          "six": "Influencer marketing",
+          "seven": "Advertising / Campaigns"
+        },
+        "stats": {
+          "title": "Statistics",
+          "followers": "followers",
+          "budget": "Invested in advertising",
+          "start": {
+            "title": "Beginning of cooperation: October 2022"
+          },
+          "currentDate": "May 2024"
+        }
+      },
+      "socials" : {
+        "title": "Bistro grad social networks"
+      }
+    },
+    "zlazla": {
+      "title": "ZLA-ZLA",
+      "categories": {
+        "branding": "brending",
+        "socialmedia": "društvene mreže",
+        "marketing": "marketing"
+      },
+      "about": {
+        "highlight": {
+          "subtitle": "About ZLA-ZLA",
+          "title": "Explaning “old school” to gen Z"
+        },
+        "text": "ZLA-ZLA is the biggest CBD shop in the Balkans. We're not kidding when we say the biggest. They have over 4000 products on their e-commerce site, have been around since 2004, and not only do they have CBD products, but they also have streetwear. This is a needle-to-locomotive story, with an urban attitude and a reputation that is very well known."
+      },
+      "challenge": {
+        "highlight": {
+          "subtitle": "Task and challenge?",
+          "first": {
+            "title": "1. Reach a younger audience.",
+            "description": "All old-school fans of underground hip-hop culture know about Zla Shtek. And what about the Gen Z population?"
+          },
+          "second": {
+            "title": "2. Present the entire range of products in an informative but also appealing way.",
+            "description": "In other words - to maintain the brand's coolness, while constantly informing the audience about what's in stock, what's on sale, how to order products online, etc."
+          }
+        },
+        "description": "Important information - social media does not allow advertising for CBD products so we achieved all results organically."
+      },
+      "solution": {
+        "title": {
+          "main": "How did we respond to the task?",
+          "subtitle": "Approach"
+        },
+        "description": {
+          "partone": "1. TikTok. We translated ZLA-ZLA's communication to the language of TikTok. We opened an account, and as we started the content, it seemed like everyone was waiting for Zla-Zla to get here. In just a few months we reached 10K followers, our posts went viral, and people were asking about the products. But unfortunately, we have no proof of this because our account was banned for violating TikTok guidelines. In any case, we achieved what we wanted - the presence on this platform led to an increase in foot traffic both in the store itself, as well as in orders on the website - we introduced the Zla brand to the Gen Z population.",
+          "parttwo": "2. Here we followed up on the first task. We used a TikTok-like format to display all informative news on the Instagram profile as well. Through short feed and story posts that are either well-designed or recorded in a direct way that is currently popular, we provided the audience with subtle information, while maintaining the brand's reputation."
+        }
+      },
+      "info": {
+        "scope": {
+          "title": "Scope",
+          "one": "Content creation (video, photography)",
+          "two": "Copywriting",
+          "three": "Social Media management",
+          "four": "Social Media strategy",
+          "five": "Influencer marketing"
+        },
+        "stats": {
+          "title": "Statistics",
+          "followers": {
+            "instagram": "new followers on Instagram",
+            "tiktok": "followers on TikTok"
+          },
+          "budget": "Invested in advertising",
+          "cooperation": {
+            "title": "Cooperation: November 2022 - February 2024"
+          }
+        }
+      },
+      "ending": {
+        "title": "Why did we stop cooperating?",
+        "description": "The recommendation for every client who has such a huge assortment in a specific industry is to start in-house work at some point. That's why ZLA-ZLA continued working on social media in-house, and we stop by sometimes for coffee and consultations."
+      },
+      "socials" : {
+        "title": "ZLA-ZLA social networks"
+      }
+    }
+  }
+}

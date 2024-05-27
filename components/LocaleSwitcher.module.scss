@@ -1,0 +1,58 @@
+.label {
+  width: 3.5rem;
+  height: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2px;
+  padding: 2px 9px;
+  border: 1px solid #e8e4d7;
+  border-radius: 64px;
+  position: relative;
+  cursor: pointer;
+
+  &::before,
+  &::after {
+    font-size: 12px;
+    transition: all 0.3s ease;
+  }
+
+  &::before {
+    content: 'En';
+    color: #030303;
+  }
+
+  &::after {
+    content: 'Sr';
+    color: #7b7b7c;
+  }
+
+  .switch {
+    background-color: #ffd600;
+    width: 50%;
+    border-radius: 20px;
+    height: 18px;
+    position: absolute;
+    z-index: -1;
+    left: 2px;
+    transition: all 0.3s ease;
+  }
+
+  &:has(.checkbox:checked) {
+    &::after {
+      color: #030303;
+    }
+
+    &::before {
+      color: #7b7b7c;
+    }
+
+    .switch {
+      left: calc(50% - 2px);
+    }
+  }
+
+  .checkbox {
+    display: none;
+  }
+}

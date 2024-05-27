@@ -2,14 +2,16 @@
 
 import styles from './Header.module.scss';
 import { useEffect, useRef, useState } from 'react';
-import { Link } from 'next-view-transitions';
-import { usePathname } from 'next/navigation';
-import { routes, socials } from '@/data';
-import CleanLogo from '@/public/logos/BeehiveCleanLogo';
-import FullLogo from '@/public/logos/BeehiveCreativeAgencyLogo';
+import Link from '@/components/Link';
+import { usePathname } from '../navigation';
+import { socials } from '@/data';
 import BurgerIcon from './BurgerIcon';
+import LocaleSwitcher from './LocaleSwitcher';
+import Image from 'next/image';
+import beehiveCreativeAgencyLogo from '@/public/logos/BeehiveCreativeAgencyLogo.svg';
+import beehiveCleanLogo from '@/public/logos/BeehiveCleanLogo.svg';
 
-export default function Header() {
+export default function Header({ routes, messages }) {
   const [mounted, setMounted] = useState(false);
   const pathname = usePathname();
   const [menuOpen, setMenuOpen] = useState(false);
@@ -147,7 +149,14 @@ export default function Header() {
         ].join(' ')}
       >
         <Link href='/' className={styles.logoWrapper}>
-          {isDesktop ? <FullLogo /> : <CleanLogo />}
+          <picture>
+            <source srcSet={beehiveCleanLogo.src} media='(max-width: 1024px)' />
+            <Image
+              src={beehiveCreativeAgencyLogo}
+              priority
+              alt='Beehive Agency Logo'
+            />
+          </picture>
         </Link>
         <nav
           className={[
@@ -162,16 +171,19 @@ export default function Header() {
                 <li
                   key={index}
                   className={
-                    pathname == route.path ||
-                    (route.path !== '/' &&
-                      pathname.slice(1).includes(route.path.slice(1)))
+                    pathname == route.href ||
+                    (route.href !== '/' &&
+                      pathname.slice(1).includes(route.href.slice(1)))
                       ? styles.active
                       : ''
                   }
                 >
-                  <Link href={route.path}>{route.name}</Link>
+                  <Link href={route.href}>{route.label}</Link>
                 </li>
               ))}
+              <li>
+                <LocaleSwitcher messages={messages.locales} />
+              </li>
             </ul>
           )}
           {!isDesktop && (
@@ -185,29 +197,39 @@ export default function Header() {
 
               <div className={styles.mobileMenu} ref={menuRef}>
                 <Link href='/' className={styles.logoWrapper}>
-                  {isDesktop ? <FullLogo /> : <CleanLogo />}
+                  <picture>
+                    <source
+                      srcSet={beehiveCleanLogo.src}
+                      media='(max-width: 1024px)'
+                    />
+                    <Image
+                      src={beehiveCreativeAgencyLogo}
+                      priority
+                      alt='Beehive Agency Logo'
+                    />
+                  </picture>
                 </Link>
                 <ul>
                   {routes.map((route, index) => (
                     <li
                       key={index}
                       className={
-                        pathname == route.path ||
-                        (route.path !== '/' &&
-                          pathname.slice(1).includes(route.path.slice(1)))
+                        pathname == route.href ||
+                        (route.href !== '/' &&
+                          pathname.slice(1).includes(route.href.slice(1)))
                           ? styles.active
                           : ''
                       }
                     >
-                      <Link href={route.path} onClick={toggleMenu}>
-                        {route.name}
+                      <Link href={route.href} onClick={toggleMenu}>
+                        {route.label}
                       </Link>
                     </li>
                   ))}
                 </ul>
                 <div className={styles.menuFooter}>
                   <div className={styles.socialsWrapper}>
-                    <p>gde zujimo:</p>
+                    <p>{messages.socialsTitle}</p>
                     <div className={styles.socials}>
                       {socials.map((social, index) => (
                         <a
@@ -231,29 +253,33 @@ export default function Header() {
                 ref={bottomMenuRef}
               >
                 <Link href='/' className={styles.logoWrapper}>
-                  <CleanLogo />
+                  <Image
+                    src={beehiveCleanLogo}
+                    priority
+                    alt='Beehive Agency Logo'
+                  />
                 </Link>
                 <ul>
                   {routes.map((route, index) => (
                     <li
                       key={index}
                       className={
-                        pathname == route.path ||
-                        (route.path !== '/' &&
-                          pathname.slice(1).includes(route.path.slice(1)))
+                        pathname == route.href ||
+                        (route.href !== '/' &&
+                          pathname.slice(1).includes(route.href.slice(1)))
                           ? styles.active
                           : ''
                       }
                     >
-                      <Link href={route.path} onClick={toggleBottomMenu}>
-                        {route.name}
+                      <Link href={route.href} onClick={toggleBottomMenu}>
+                        {route.label}
                       </Link>
                     </li>
                   ))}
                 </ul>
                 <div className={styles.menuFooter}>
                   <div className={styles.socialsWrapper}>
-                    <p>gde zujimo:</p>
+                    <p>{messages.socialsTitle}</p>
                     <div className={styles.socials}>
                       {socials.map((social, index) => (
                         <a
@@ -294,7 +320,7 @@ export default function Header() {
           onClick={toggleBottomMenu}
         >
           <div className={styles.logoWrapper}>
-            <CleanLogo />
+            <Image src={beehiveCleanLogo} priority alt='Beehive Agency Logo' />
           </div>
 
           <BurgerIcon

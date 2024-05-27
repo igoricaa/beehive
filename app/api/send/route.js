@@ -7,7 +7,6 @@ export async function POST(req) {
   const { name, email, message } = await req.json();
 
   try {
-    debugger;
     const data = await resend.emails.send({
       from: `Kontakt forma <contact@bhive.agency>`,
       to: ['igor@bhive.agency'],

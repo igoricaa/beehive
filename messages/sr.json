@@ -1,0 +1,378 @@
+{
+  "layout": {
+    "nav": {
+      "home": "Početna",
+      "aboutUs": "O nama",
+      "projects": "Naši radovi",
+      "contact": "Kontakt"
+    },
+    "socialsTitle": "gde zujimo:",
+    "localeSwitcher": {
+      "en": "En",
+      "sr": "Sr"
+    }
+  },
+  "notFoundPage": {
+    "title": "404"
+  },
+  "cta": {
+    "textMain": "Imate projekat?",
+    "textSecondary": "Hajde da se ispričamo"
+  },
+  "home": {
+    "statement": {
+      "partone": "Mi smo Beehive. Umemo da ispričamo priču vašeg brenda",
+      "parttwo": "kroz",
+      "partthree": {
+        "design": "dizajn",
+        "text": "tekst",
+        "video": "video",
+        "photography": "fotografiju",
+        "programming": "programiranje"
+      },
+      "partfour": "Ukratko - zujimo po svim digitalnim aktivnostima koje su Vama potrebne."
+    },
+    "aboutUs": {
+      "title": "pričanje priča",
+      "text": "Jedna od najstarijih veština čovečanstva koja se održala do danas. Dobra priča namiruje našu potrebu za zajedništvom, razmenom i razumevanjem. Mi smo tim ljudi koji upravo zajedništvom, razmenom i razumevanjem može da od vašeg biznisa napravi most do potreba ljudi oko nas. Svi žele da čuju dobru priču, mi smo tu da im to damo. Neka zujanje počne."
+    },
+    "projectsSlider": {
+      "title": "sa kim zujimo",
+      "project": {
+        "categories": {
+          "branding": "brending",
+          "socialmedia": "društvene mreže",
+          "marketing": "marketing"
+        },
+        "client": "klijent:"
+      }
+    },
+    "ourServices": "naše usluge",
+    "team": {
+      "title": "naš tim",
+      "description": "Svaki član košnice je u svom polju dugi niz godina. Naše pčele stalno zuje kroz nove tehnologije i sa sobom donose veliko kolektivno znanje, kreativnost i disciplinu."
+    }
+  },
+  "aboutUs": {
+    "title": {
+      "partone": "Svi",
+      "parttwo": " idemo na ",
+      "partthree": "terapiju"
+    },
+    "aboutBeehive": {
+      "title": "O nama",
+      "description": "Jaka i zdrava pčelinja zajednica u toku jednog dana može oprašiti do tri miliona cvetova. Mi sve isto, samo za digital.<br /><br />Lično mi. Ne ovi novi roboti."
+    },
+    "values": {
+      "respect": {
+        "title": "Poštovanje",
+        "description": "Međusobnih potreba, vremena, znanja i profesionalnosti."
+      },
+      "trust": {
+        "title": "Poverenje",
+        "description": "Da ćemo jedni drugima pružiti svoj maksimum."
+      },
+      "curiosity": {
+        "title": "Radoznalost",
+        "description": "Da istražimo svaki pravac i nađemo najbolje rešenja za vas."
+      },
+      "freedom": {
+        "title": "Sloboda",
+        "description": "Da budemo kreativni, odvažni, dosledni i iskreni."
+      }
+    },
+    "aboutBees": {
+      "title": "O pčelama",
+      "subtitle": "Da li ste znali da:",
+      "description": {
+        "one": "Su pčele radoholici!",
+        "two": {
+          "partone": "Komuniciraju",
+          "parttwo": " plesom",
+          "partthree": ", kao i mi."
+        },
+        "three": "Pčele imaju petoro očiju, mi sigurno imamo više.",
+        "four": "Vide boje.",
+        "five": "I imaju ličnost…",
+        "six": "Stvaraju poslove.",
+        "seven": "Pčele retko spavaju. To je slučaj i sa nama.",
+        "eight": "Pamte lica i…",
+        "nine": {
+          "partone": "Privlači ih",
+          "parttwo": "kofein."
+        }
+      },
+      "ending": {
+        "partone": "Mi smo se svuda pronašli. Zato smo i stvorili ",
+        "parttwo": "košnicu."
+      }
+    }
+  },
+  "ourWork": {
+    "title": {
+      "partone": "Sarađujemo sa vama za hrabre",
+      "parttwo": "ciljeve"
+    },
+    "subtitle": "Ovo su samo neke od naših uspešnih saradnji, više informacija u detaljima studija",
+    "ctaSection": {
+      "text": "Pitanje, nedoumica? Dostupni smo za svaku potrebu",
+      "button": {
+        "textMain": "Zakažite konsultacije",
+        "textSecondary": "Dostupni smo za svaki piksel."
+      }
+    },
+    "projects": {
+      "comingSoon": "Coming soon",
+      "prana": {
+        "title": "Prana",
+        "description": {
+          "partone": "Prana je porodični fusion restoran, osnovan2022. godine. Community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku.",
+          "parttwo": "Rast pratilaca, i mali propratni info za detalje rezultata."
+        }
+      },
+      "bistrograd": {
+        "title": "Bistro grad",
+        "description": {
+          "partone": "Prana is a family fusion restaurant, founded in 2022. Community-oriented, it carries the spirit of Italy, but also Hawaiian exoticism.",
+          "parttwo": "Follower growth, and a small accompanying info for the results."
+        }
+      },
+      "zlazla": {
+        "title": "ZLA-ZLA",
+        "description": {
+          "partone": "ZLA-ZLA je najveći CBD shop na Balkanu. Ne šalimo se kad kažemo najveći. Oni imaju preko 4000 proizvoda na svoj e-commerce sajtu, postoje od 2004. godine i ne samo da imaju CBD proizvode, već imaju i svoj streetwear.",
+          "parttwo": "Ovo je priča od igle do lokomotive, sa urbaniim stavom i reputacijom koja je vrlo dobro poznata."
+        }
+      },
+      "lacanntina": {
+        "title": "La Canntina",
+        "description": {
+          "partone": "Prana is a family fusion restaurant, founded in 2022. Community-oriented, it carries the spirit of Italy, but also Hawaiian exoticism.",
+          "parttwo": "Follower growth, and a small accompanying info for the results."
+        }
+      }
+    }
+  },
+  "contact": {
+    "title": {
+      "partone": "Obavezno ",
+      "parttwo": "nas",
+      "partthree": "kontaktiraj"
+    },
+    "subtitle": "Ako imaš ideju / predlog / pitanje, <br />naše <span>🐝</span> <span>🐝</span> su uvek dostupne.",
+    "contactForm": {
+      "placeholders": {
+        "name": "Ime",
+        "email": "Email",
+        "message": "Poruka"
+      },
+      "errors": {
+        "nameRequired": "Ime je obavezno polje",
+        "emailRequired": "Email je obavezno polje",
+        "emailInvalid": "Unesite ispravnu email adresu",
+        "messageRequired": "Poruka je obavezno polje"
+      },
+      "subtitle": "Odgovor možeš očekivati u najkraćem mogućem roku.",
+      "button": {
+        "textMain": "Pošalji poruku",
+        "textSecondary": "I proveri spam za svaki slučaj"
+      }
+    },
+    "cal": {
+      "subtitle": {
+        "partone": "Ili zakaži",
+        "parttwo": "odmah",
+        "partthree": "sastanak/razgovor",
+        "partfour": "sa našim timom!"
+      },
+      "button": {
+        "textMain": "Datum / vreme",
+        "textSecondary": "Sve na jedan klik"
+      }
+    }
+  },
+  "projects": {
+    "prana": {
+      "title": "Prana",
+      "categories": {
+        "branding": "brending",
+        "socialmedia": "društvene mreže",
+        "marketing": "marketing"
+      },
+      "about": {
+        "highlight": {
+          "subtitle": "O Prani",
+          "title": {
+            "partone": "Od 0 do 100"
+          }
+        },
+        "partone": "Prana je porodični fusion restoran, osnovan 2022. godine. Zabavna ideja za restoran, da bude community orijentisan, da u sebi nosi duh italije, ali i havajsku egzotiku. Ideja koja nosi ovo svetlo mesto u Hilandarskoj 6 i dve godine kasnije Kneginje Zorke 28, je da se služi hrana koja povećava životnu energiju.",
+        "parttwo": "Istina je, hrana je marketinški vrlo zavodljiva jer je neraskidivo povezana sa emocijama, ali, postavlja se pitanje: kako ispričati jednu nežnu, porodičnu priču; učiniti da se svi osećaju kao kod kuće; stvoriti ambijent u kojem je Prana omiljeno mesto u komšiluku, koja, uz izuzetnu ponudu hrane, može da donese i zrak sunca?",
+        "partthree": "Upravo je to priča koju smo imali zadatak da ispričamo."
+      },
+      "challenge": {
+        "highlight": {
+          "subtitle": "Zadatak i izazov?",
+          "title": {
+            "partone": "Kako precizno preslikati nečiju viziju kroz sadržaj?",
+            "parttwo": "Razumeti, istražiti, naučiti i sprovesti."
+          }
+        },
+        "description": "Stvaranjem sadržaja koji je adekvatan za društvene mreže, a koji je baziran na željama ikreativnoj vizijij klienta, stvorili smo vizuelni i komunikacioni ton koji preslikava baš onaj koji se nalazi unutar <span> Prane</span>. Pažljivo iskrojenom strategijom, testiranjem sadržaja i osluškivanjem publike, došli smo do odličnih rezultata i uspešno odgovorili na poslovni izazov."
+      },
+      "solution": {
+        "subtitle": {
+          "partone": "Otvaranje lokala:",
+          "parttwo": "Mart 2022."
+        },
+        "title": {
+          "main": "Sa čime započeti ovu priču?",
+          "subtitle": "Pristup"
+        },
+        "description": " Organizovali smo <span>pre-opening</span> event zaprijatelje kuće - <span>influenseri, glumci, prijatelji i partneri,</span> dobili su uvid u to kako će Prana izgledati - kroz male zalogaje odabranih jela, vina, prijateljskog i porodičnog druženja, jedne prolećne nedelje ujutru. Pre nego što je otvoren lokal, <span>Prana</span> je već imala organskih 1000 pratilaca, od samog događaja i najave nečeg potpuno novog i jedinstvenog."
+      },
+      "info": {
+        "scope": {
+          "title": "Usluge",
+          "one": "Content creation (video, photography)",
+          "two": "Copywriting",
+          "three": "Social Media management",
+          "four": "Social Media strategy",
+          "five": "PR",
+          "six": "Event management",
+          "seven": "Influencer marketing"
+        },
+        "stats": {
+          "title": "Statistika",
+          "followers": "Pratioci",
+          "budget": "Uloženi budžet"
+        }
+      },
+      "socials": {
+        "title": "Prana društvene mreže"
+      }
+    },
+    "bistrograd": {
+      "title": "Bistro grad",
+      "categories": {
+        "branding": "brending",
+        "socialmedia": "društvene mreže",
+        "marketing": "marketing"
+      },
+      "about": {
+        "highlight": {
+          "subtitle": "O Bistrou",
+          "title": "Ispričati priču u jednoj rečenici"
+        },
+        "text": "Beogradski Hometown bar i restoran. Lociran u samom centru, u Uzun MIrkovoj broj 5. Slika i prilika urbanog načina života. Ljudi koji vole da se zabavljaju, druže i bacaju dobre fore. Njihov meni je raznovrstan, kao i klijentela, u samom lokalu postoji mnoštvo easter egg-ova, a pravaca komunikacije na mrežama može biti mali milion. Kako izvući esenciju ovog lokala i prikazati je najbolje moguće na digitalnim kanalima?"
+      },
+      "challenge": {
+        "highlight": {
+          "subtitle": "Zadatak i izazov?",
+          "title": {
+            "partone": "Nadovezati se na postojeći identitet i ispričati Bistro priču na zabavan, interaktivan i uzbudljiv način."
+          }
+        },
+        "description": "Znamo da je u centru Beograda ali Bistro je centar za sebe. Mesto gde je sve moguće, gde ceđena može da se služi u ponoć, a flaša vina uz doručak. Gde se pire za meso pravi od kestenja, hleb po Zuzinom receptu, a za supu kažu da je infuzija. Ekipa koja radi ima dosta posloženog životnog iskustva, lepe manire, osmehe i dobar ukus. Prava moderna gostionica, zaključio bi neko ko eklektičnom enterijeru, ali ipak, nije to to - ne može baš da se uhvati tek tako. Žurke se ne planiraju, one se dešavaju. A dešavaju se. Bistro je veliki Beograd u jednom odličnom ćošku Starog Grada - Beograd na pravi način."
+      },
+      "solution": {
+        "title": {
+          "main": "Kako smo odgovorili na zadatak?",
+          "subtitle": "Pristup"
+        },
+        "description": "Napravili smo jedan digitalni, nesavršeni <span>Bistro reality program</span>. Prikazali smo šta se dešava kada se jelo poruči, hvatali momente zabave, smeha, zanimljivih priča. <span>Upoznali smo publiku sa zaposlenima</span>, njihovim karakterom, dočarali smo ambijent i malo više od toga - prikazali smo <span>kako različita društva sede na istom mestu</span>, kako se stvara sinergija i kako nastaje žurka, kako se slažu sveže namirnice i šta se dešava kada odzvoni radno vreme petkom. Nismo pozivali ljude već smo im <span>preneli atmosferu</span>, čiji su deo rado želeli da postanu. <span>Svi žele da budu na Bistro storiju, i to je naš najveći uspeh</span>.<br/><br/>Unapredili smo komunikacije i kroz <span>copywriting</span> koji je pisan na maštovit, bajkovit način, nekada inspirisan anegdotama, a nekada gradskim legendama."
+      },
+      "info": {
+        "scope": {
+          "title": "Usluge",
+          "one": "Content creation (video, photography)",
+          "two": "Copywriting",
+          "three": "Social Media management",
+          "four": "Social Media strategy",
+          "five": "PR",
+          "six": "Influencer marketing",
+          "seven": "Advertising / Campaigns"
+        },
+        "stats": {
+          "title": "Statistika",
+          "followers": "pratilaca",
+          "budget": "Uloženi budžet",
+          "start": {
+            "title": "Početak saradnje: oktobar 2022."
+          },
+          "currentDate": "Maj 2024."
+        }
+      },
+      "socials": {
+        "title": "Bistro grad društvene mreže"
+      }
+    },
+    "zlazla": {
+      "title": "ZLA-ZLA",
+      "categories": {
+        "branding": "brending",
+        "socialmedia": "društvene mreže",
+        "marketing": "marketing"
+      },
+      "about": {
+        "highlight": {
+          "subtitle": "O ZLA-ZLA",
+          "title": "Objasniti staru školu generaciji Z"
+        },
+        "text": "ZLA-ZLA je najveći CBD shop na Balkanu. Ne šalimo se kad kažemo najveći. Oni imaju preko 4000 proizvoda na svoj e-commerce sajtu, postoje od 2004. godine i ne samo da imaju CBD proizvode, već imaju i svoj streetwear. Ovo je priča od igle do lokomotive, sa urbanim stavom i reputacijom koja je vrlo dobro poznata."
+      },
+      "challenge": {
+        "highlight": {
+          "subtitle": "Zadatak i izazov?",
+          "first": {
+            "title": "1. Doći do mlađe publike.",
+            "description": "Svi oldschool uživaoci underground hip-hop kulture znaju za Zla shtek. A šta je sa gen Z populacijom?"
+          },
+          "second": {
+            "title": "2. Predstaviti ceo asortiman proizvoda na informativan ali i dopadljiv način.",
+            "description": "Drugim rečima - održati coolness brenda, uz stalno informisanje publike šta sve postoji u shteku, šta je sve na akciji,  kako da naruče proizvode online, i sl."
+          }
+        },
+        "description": "Važna stavka - društvene mreže ne dozvoljavaju oglašavanje za CBD proizvode tako da smo sve rezultate postigli organskim putem."
+      },
+      "solution": {
+        "title": {
+          "main": "Kako smo odgovorili na zadatak?",
+          "subtitle": "Pristup"
+        },
+        "description": {
+          "partone": "1. TikTok. Ukalupili smo Zla Shtek u način komunikacije na ovoj platformi. Otvorili smo nalog i kako smo krenuli sa sadržajem izgledalo je kao da su svi čekali ZLA-ZLA da dođe ovde. Za samo par meseci došli smo do 10K pratilaca, objave su nam bile viralne, ljudi su se raspitivali za proizvode. Ali nažalost, nemamo dokaz za ovo jer su nam nalog banovali zbog kršenja TikTok guidelines-a. U svakom slučaju, postigli smo ono što smo hteli - prisustvo na ovoj platformi je dovelo do povećanja foot traffic-a i u samoj radnji, kao i u porudžbinama na sajtu - upoznali smo Zla brend sa Gen Z populacijom.",
+          "parttwo": "2. Ovde smo se nadovezali na prvi zadatak. Koristili smo TikTok-ičan format da prikažemo sve informativne vesti i na Instagram profilu. Kroz kratke feed i story objave koje su ili dobro dizajnirane, ili snimljene na neposredan način koji je trenutno popularan, pružili smo publici nenametljive informacije, uz održavanje reputacije brenda."
+        }
+      },
+      "info": {
+        "scope": {
+          "title": "Usluge",
+          "one": "Content creation (video, photography)",
+          "two": "Copywriting",
+          "three": "Social Media management",
+          "four": "Social Media strategy",
+          "five": "Influencer marketing"
+        },
+        "stats": {
+          "title": "Statistika",
+          "followers": {
+            "instagram": "novih pratilaca na Instagram-u",
+            "tiktok": "pratilaca na TikTok-u"
+          },
+          "budget": "Uloženi budžet",
+          "cooperation": {
+            "title": "Saradnja: novembar 2022. - februar 2024."
+          }
+        }
+      },
+      "ending": {
+        "title": "Zašto smo prestali da sarađujemo?",
+        "description": "Preporuka za svakog klijenta koji ima ovako ogroman asortiman u specifičnoj industriji je da u nekom momentu krene sa in-house radom. Zato je ZLA-ZLA nastavio rad na mrežama unutar svoje organizacije, a mi im povremeno svratimo na kafu i konsultacije."
+      },
+      "socials": {
+        "title": "ZLA-ZLA društvene mreže"
+      }
+    }
+  }
+}

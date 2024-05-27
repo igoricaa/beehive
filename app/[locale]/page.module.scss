@@ -1,0 +1,134 @@
+$gridGap: 2rem;
+
+.main {
+  padding-top: 5rem;
+  overflow: hidden;
+
+  .statementSection {
+    margin-bottom: 2.5rem;
+    h1 {
+      span {
+        display: inline-flex;
+        position: relative;
+      }
+    }
+
+    h3 {
+      font-weight: 400;
+      margin-top: 1.5rem;
+
+      br {
+        &:first-of-type {
+          display: none;
+        }
+      }
+
+      span {
+        white-space: nowrap;
+
+        span {
+          font-family: var(--font-source-serif-4);
+          font-size: 38px;
+
+          &.blinking {
+            animation: blink 1s infinite;
+          }
+
+          @keyframes blink {
+            0% {
+              opacity: 0;
+            }
+            50% {
+              opacity: 1;
+            }
+            100% {
+              opacity: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.aboutUsSection {
+  display: grid;
+  grid-template-columns: repeat(12, minMax(0, 1fr));
+  padding: 4rem 0 8.375rem;
+  gap: $gridGap;
+
+  h2 {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.6);
+    grid-column: span 3;
+    line-height: 6.875rem;
+    width: fit-content;
+    height: fit-content;
+    white-space: nowrap;
+    margin-top: -1.5rem;
+  }
+
+  p {
+    grid-column: span 9;
+    font-size: 1.3rem;
+    line-height: 2.7rem;
+  }
+}
+
+@media screen and (max-width: 1750px) {
+  .aboutUsSection {
+    h2 {
+      grid-row: 1;
+      margin-top: 0;
+    }
+
+    p {
+      grid-row: 2;
+      grid-column: 3 / 12;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .main {
+    padding-top: 4rem;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  $gridGap: 1.5rem;
+  .main {
+    padding-top: 2.1rem;
+    .statementSection {
+      h3 {
+        margin-top: 1rem;
+        br {
+          &:first-of-type {
+            display: block;
+          }
+        }
+        span {
+          white-space: normal;
+
+          span {
+            font-size: 29px;
+          }
+        }
+      }
+    }
+  }
+
+  .aboutUsSection {
+    padding: 3rem 0;
+    gap: $gridGap;
+
+    h2 {
+      line-height: 56px;
+    }
+
+    p {
+      grid-column: span 12;
+      font-size: 1rem;
+      line-height: 2rem;
+    }
+  }
+}

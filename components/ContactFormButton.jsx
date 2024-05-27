@@ -4,7 +4,7 @@ import styles from './ContactFormButton.module.scss';
 import { useEffect, useRef } from 'react';
 import { calculateOverlayPosition } from '../utils/utils';
 
-export default function ContactFormButton() {
+export default function ContactFormButton({ messages }) {
   const buttonRef = useRef(null);
   const overlayRef = useRef(null);
 
@@ -29,8 +29,8 @@ export default function ContactFormButton() {
       <div ref={buttonRef} className={styles.innerWrapper}>
         <span ref={overlayRef} className={styles.overlay}></span>
         <div className={styles.textWrapper}>
-          <span>Pošalji poruku</span>
-          <span>I proveri spam za svaki slučaj</span>
+          <span>{messages.textMain}</span>
+          <span>{messages.textSecondary}</span>
         </div>
       </div>
     </button>

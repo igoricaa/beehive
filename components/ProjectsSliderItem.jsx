@@ -1,46 +1,56 @@
 import Image from 'next/image';
 import styles from './ProjectsSliderItem.module.scss';
+import Link from './Link';
 
-export default function ProjectsSliderItem({ content }) {
+export default function ProjectsSliderItem({ project, messages }) {
   return (
     <article className={[styles.emblaSlide, 'card'].join(' ')}>
-      <div className={styles.innerWrapper}>
-        {content.listImage && (
-          <div className={styles.imgWrapper}>
-            <Image
-              src={content.listImage}
-              alt={content.title}
-              fill
-              sizes='(max-width: 1024px) 50vw, 22.5vw'
-              style={{ objectFit: 'cover' }}
-            />
-          </div>
-        )}
-        {content.listVideo && (
-          <div className={styles.videoWrapper}>
-            <video
-              autoPlay
-              loop
-              muted
-              playsInline
-              src={content.listVideo}
-            ></video>
-          </div>
-        )}
-      </div>
-      <div className={styles.infoWrapper}>
-        {content.categories && (
-          <div className={styles.categoriesWrapper}>
-            {content.categories.map((category) => (
-              <span key={category}>{category}</span>
-            ))}
-          </div>
-        )}
-        <div className={styles.titleWrapper}>
-          <span>{content.subtitle}</span>
-          <h5>{content.title}</h5>
+      <Link
+        href={`/our-work/${project.slug}`}
+        style={{
+          pointerEvents: project.ready ? 'auto' : 'none',
+        }}
+      >
+        <div className={styles.innerWrapper}>
+          {project.listImage && (
+            <div className={styles.imgWrapper}>
+              <Image
+                src={project.listImage}
+                alt={project.title}
+                fill
+                sizes='(max-width: 1024px) 50vw, 22.5vw'
+                style={{ objectFit: 'cover' }}
+              />
+            </div>
+          )}
+          {project.listVideo && (
+            <div className={styles.videoWrapper}>
+              <video
+                autoPlay
+                loop
+                muted
+                playsInline
+                src={project.listVideo}
+              ></video>
+            </div>
+          )}
         </div>
-      </div>
+        <div className={styles.infoWrapper}>
+          {project.categories && (
+            <div className={styles.categoriesWrapper}>
+              {project.categories.map((category) => (
+                <span key={category}>
+                  {messages.categories[category.replace(/\s/g, '')]}
+                </span>
+              ))}
+            </div>
+          )}
+          <div className={styles.titleWrapper}>
+            <span>{messages.client}</span>
+            <h5>{project.title}</h5>
+          </div>
+        </div>
+      </Link>
     </article>
   );
 }

@@ -1,19 +1,24 @@
 import styles from './Footer.module.scss';
-import { Link } from 'next-view-transitions';
-import { footerBottomLinks, socials } from '@/data';
-import CleanLogo from '@/public/logos/BeehiveCleanLogo';
+import Link from '@/components/Link';
+import { socials } from '@/data';
 import MenuItems from './MenuItems';
+import Image from 'next/image';
+import beehiveCleanLogo from '@/public/logos/BeehiveCleanLogo.svg';
 
-export const Footer = () => {
+const Footer = ({ routes, message }) => {
   return (
     <footer id='footer' className={styles.footer}>
       <div id='footerTop' className={styles.footerTop}>
         <div className={styles.innerWrapper}>
-          <Link href='/' className={styles.logoWrapper} aria-label="Beehive Agency Logo">
-            <CleanLogo />
+          <Link
+            href='/'
+            className={styles.logoWrapper}
+            aria-label='Beehive Agency Logo'
+          >
+            <Image src={beehiveCleanLogo} priority alt='Beehive Agency Logo' />
           </Link>
           <div className={styles.socialsWrapper}>
-            <p>gde zujimo:</p>
+            <p>{message}</p>
             <div>
               {socials.map((social, index) => (
                 <a
@@ -27,16 +32,14 @@ export const Footer = () => {
               ))}
             </div>
           </div>
-          <MenuItems />
+          <MenuItems routes={routes} />
         </div>
       </div>
       <div className={styles.footerBottom}>
-        {footerBottomLinks.map((link, index) => (
-          <Link key={index} href={link.href}>
-            {link.text}
-          </Link>
-        ))}
+        <p>c 2024 beehiveagency</p>
       </div>
     </footer>
   );
 };
+
+export default Footer;

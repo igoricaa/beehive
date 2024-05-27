@@ -1,27 +1,28 @@
 import styles from './ProjectsSliderSection.module.scss';
 import ProjectsSlider from './ProjectsSlider';
 import CtaButton from './CtaButton';
+import { projects } from '@/data';
 
-export default function ProjectsSliderSection({ content }) {
+export default function ProjectsSliderSection({ messages }) {
   return (
     <section className={styles.section}>
       <div className={styles.copyCtaWrapper}>
-        {content.copyTitle && <h2>{content.copyTitle}</h2>}
-        {content.copyTextMain && <h3>{content.copyTextMain}</h3>}
-        {content.copyTextSub && <h5>{content.copyTextSub}</h5>}
+        <h3>
+          {messages.title} <span></span>
+        </h3>
 
         <CtaButton
-          href={content.ctaLink}
-          mainText={content.ctaTextMain}
-          subText={content.ctaTextSub}
+          href='/kontakt'
+          mainText={messages.cta.textMain}
+          secondaryText={messages.cta.textSecondary}
           specialClass='ctaLinkDesktop'
         />
       </div>
-      <ProjectsSlider content={content.sliderContent} />
+      <ProjectsSlider projects={projects} messages={messages.project} />
       <CtaButton
-        href={content.ctaLink}
-        mainText={content.ctaTextMain}
-        subText={content.ctaTextSub}
+        href='/kontakt'
+        mainText={messages.cta.textMain}
+        secondaryText={messages.cta.textSecondary}
         specialClass='ctaLinkMobile'
       />
     </section>

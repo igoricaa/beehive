@@ -17,13 +17,15 @@
     "embla-carousel-react": "^8.0.2",
     "hover-effect": "^1.2.1",
     "next": "14.2.3",
+    "next-intl": "^3.14.0",
     "next-view-transitions": "^0.1.1",
     "react": "^18",
     "react-dom": "^18",
     "react-hook-form": "^7.51.3",
     "react-intersection-observer": "^9.10.1",
     "react-rough-notation": "^1.0.5",
-    "resend": "^3.2.0"
+    "resend": "^3.2.0",
+    "sharp": "^0.33.4"
   },
   "devDependencies": {
     "@types/node": "20.12.7",

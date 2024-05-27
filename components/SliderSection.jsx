@@ -2,26 +2,25 @@ import styles from './SliderSection.module.scss';
 import Slider from './Slider';
 import CtaButton from './CtaButton';
 
-export default function SliderSection({ content }) {
+export default function SliderSection({ content, messages }) {
   return (
     <section className={styles.section}>
       <div className={styles.copyCtaWrapper}>
-        {content.copyTitle && <h2>{content.copyTitle}</h2>}
-        {content.copyTextMain && <h3>{content.copyTextMain}</h3>}
-        {content.copyTextSub && <h5>{content.copyTextSub}</h5>}
+        <h2>{messages.title}</h2>
+        <h5>{messages.description}</h5>
 
         <CtaButton
-          href={content.ctaLink}
-          mainText={content.ctaTextMain}
-          subText={content.ctaTextSub}
+          href="/kontakt"
+          mainText={messages.cta.textMain}
+          secondaryText={messages.cta.textSecondary}
           specialClass='ctaLinkDesktop'
         />
       </div>
-      <Slider content={content.sliderContent} />
+      <Slider content={content} />
       <CtaButton
-        href={content.ctaLink}
-        mainText={content.ctaTextMain}
-        subText={content.ctaTextSub}
+        href="/kontakt"
+        mainText={messages.cta.textMain}
+        secondaryText={messages.cta.textSecondary}
         specialClass='ctaLinkMobile'
       />
     </section>
