@@ -1,22 +1,12 @@
 export const projects = [
   {
-    title: 'La Canntina',
-    slug: 'la-canntina',
-    featuredImage: '/our-work/la-canntina.png',
-    listImage: '/our-work/la-canntina-home.png',
-    categories: ['branding', 'social media', 'marketing'],
-    backgroundColor: '#fff',
-    textColor: '#000',
-    ready: false,
-  },
-  {
     title: 'Bistro grad',
     slug: 'bistro-grad',
     featuredImage: '/our-work/bistro-grad.png',
     listImage: '/our-work/bistro-grad-home.png',
     categories: ['social media', 'marketing'],
-    backgroundColor: '#000',
-    textColor: '#fff',
+    backgroundColor: '#F286B7',
+    textColor: '#000',
     ready: true,
   },
   {
@@ -35,28 +25,8 @@ export const projects = [
     featuredImage: '/our-work/zla-zla.jpg',
     listImage: '/our-work/zla-zla-home.jpg',
     categories: ['branding', 'social media', 'marketing'],
-    backgroundColor: '#FFF7EC',
-    textColor: '#000',
-    ready: true,
-  },
-  {
-    title: 'Prana',
-    slug: 'prana',
-    featuredImage: '/our-work/prana.png',
-    listImage: '/our-work/prana-home.png',
-    categories: ['branding', 'social media', 'marketing'],
-    backgroundColor: '#FFF7EC',
-    textColor: '#000',
-    ready: true,
-  },
-  {
-    title: 'Prana',
-    slug: 'prana',
-    featuredImage: '/our-work/prana.png',
-    listImage: '/our-work/prana-home.png',
-    categories: ['branding', 'social media', 'marketing'],
-    backgroundColor: '#FFF7EC',
-    textColor: '#000',
+    backgroundColor: '#000',
+    textColor: '#fff',
     ready: true,
   },
 ];
@@ -130,32 +100,29 @@ export const team = [
 
 export const services = [
   {
-    title: 'social media management',
-    description: {
-      __html:
-        '<ul><li>Monthly Social Media Plan creation</li><li>Community Management</li><li>Posting content across social media accounts</li><li>Content Creation</li><li>Copywriting</li></ul><ul><li>Reporting and optimization</li><li>Research on current benchmark trends</li><li>Advertising on Social Media</li><li>Influencer management</li></ul>',
-    },
+    title: 'digital marketing strategy',
+    description:
+      'Producing content and running ads is our greatest love, but it the final step to a comprehensive digital marketing strategy. We develop, produce and execute your story to get what you need. We do it with our hearts, knowledge and numbers.',
   },
   {
-    title: 'marketing and communications',
-    description: {
-      __html:
-        '<ul><li>Brand Name & Slogan - Tagline</li><li>Brand Strategy and Planning</li><li>Brand Book Creation</li><li>PR</li><li>Event Production</li><li>E-mail</li></ul>',
-    },
+    title: 'social media marketing',
+    description:
+      'We recreate the digital reality of your business to make your story count. Whether you are after brand awareness, sales or presentation, we will make sure your story is heard, remembered and spread.',
+  },
+  {
+    title: 'content production',
+    description:
+      'Good thing about having about 50 years of combined experience in the business is that we cherry picked the best photographers and videographers to write your story visually. For every budget range — we got you. ',
   },
   {
     title: 'design',
-    description: {
-      __html:
-        '<ul><li>Logo creation</li><li>Graphic Design</li><li>Web Design</li><li>UX</li><li>UI</li></ul>',
-    },
+    description:
+      'Producing content and running ads is our greatest love, but it the final step to a comprehensive digital marketing strategy. We develop, produce and execute your story to get what you need. We do it with our hearts, knowledge and numbers.',
   },
   {
     title: 'web & app development',
-    description: {
-      __html:
-        '<ul><li>Web Development</li><li>eCommerce</li><li>App Development</li></ul>',
-    },
+    description:
+      'Producing content and running ads is our greatest love, but it the final step to a comprehensive digital marketing strategy. We develop, produce and execute your story to get what you need. We do it with our hearts, knowledge and numbers.',
   },
 ];
 

@@ -2,7 +2,6 @@ import Image from 'next/image';
 import styles from './page.module.scss';
 import headerBg from '@/public/about-us-header-bg.png';
 import { coreValues } from '@/data';
-import IntersectingHeading from '@/components/IntersectingHeading';
 import RoughNotationWrapper from '@/components/RoughNotationWrapper';
 import aboutUsBgImage from '@/public/about-us-bg.png';
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -84,11 +83,11 @@ export default function AboutUs({ params: { locale } }) {
       </section>
 
       <section className={styles.breakSection}>
-        <IntersectingHeading text='buzzing with ideas!' />
+        <h1>buzzing with ideas!</h1>
+        <h1>buzzing with ideas!</h1>
         <div className={styles.imgWrapper}>
           <Image id='bgImage' src={aboutUsBgImage} alt='Beehive - About Us' />
         </div>
-        <IntersectingHeading text='buzzing with ideas!' />
       </section>
 
       <section className={styles.aboutBeesSection}>
@@ -118,7 +117,7 @@ export default function AboutUs({ params: { locale } }) {
             <li>{t('aboutBees.description.seven')}</li>
             <li>{t('aboutBees.description.eight')}</li>
             <li>
-            {t('aboutBees.description.nine.partone')}{' '}
+              {t('aboutBees.description.nine.partone')}{' '}
               <RoughNotationWrapper
                 type='underline'
                 strokeWidth={3}

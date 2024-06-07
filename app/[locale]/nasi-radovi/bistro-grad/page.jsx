@@ -1,13 +1,19 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
-import pranaHeader from '@/public/prana-header.png';
-import imageFloatingLeft from '@/public/our-work/prana-floating-img-left.png';
-import imageFloatingRight from '@/public/our-work/prana-floating-img-right.png';
-import breakBg from '@/public/our-work/prana-break-bg.png';
+import Video from 'next-video';
+import videoHeader from '@/videos/bistro-grad-main.mp4';
+import imageFloatingRight from '@/public/our-work/bistro-floating-coffee.jpg';
+import videoFloatingLeft from '@/videos/bistro-grad-case-study-1.mov';
+import breakBg from '@/public/our-work/bistro-grad-break.png';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
-const categories = ['Branding', 'Web Design', 'Development'];
+const categories = [
+  'Social Media',
+  'Advertising',
+  'Content Creation',
+  'Copywriting',
+];
 const socials = [
   {
     name: 'Instagram',
@@ -29,8 +35,15 @@ const Project = ({ params: { locale } }) => {
           ))}
         </div>
       </div>
-      <div className={styles.imageWrapper}>
-        <Image src={pranaHeader} alt={t('title')} priority />
+      <div className={styles.headerWrapper}>
+        <Video
+          src={videoHeader}
+          autoplay
+          loop
+          muted
+          controls={false}
+          style={{ aspectRatio: 'auto' }}
+        />
       </div>
 
       <section className={styles.contentSection}>
@@ -41,7 +54,14 @@ const Project = ({ params: { locale } }) => {
 
       <section className={styles.gallerySection}>
         <div className={styles.imgWrapper}>
-          <Image src={imageFloatingLeft} alt={t('title')} />
+          <Video
+            src={videoFloatingLeft}
+            autoplay
+            loop
+            muted
+            controls={false}
+            style={{ aspectRatio: 'auto' }}
+          />
         </div>
         <div className={styles.imgWrapper}>
           <Image src={imageFloatingRight} alt={t('title')} />

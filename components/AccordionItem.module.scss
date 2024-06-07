@@ -3,35 +3,9 @@
   border-bottom: 1px solid #000;
   cursor: pointer;
 
-  &:first-of-type {
-    &.active {
-      .accordionBottom {
-        height: 16rem;
-      }
-    }
-  }
-
-  &:nth-of-type(2) {
-    &.active {
-      .accordionBottom {
-        height: 11rem;
-      }
-    }
-  }
-
-  &:nth-of-type(3) {
-    &.active {
-      .accordionBottom {
-        height: 9.5rem;
-      }
-    }
-  }
-
-  &:nth-of-type(4) {
-    &.active {
-      .accordionBottom {
-        height: 6.5rem;
-      }
+  &.active {
+    .accordionBottom {
+      max-height: 20rem;
     }
   }
 
@@ -40,12 +14,8 @@
       opacity: 1;
       visibility: visible;
       padding-bottom: 3rem;
-      padding-left: 2rem;
-
-      @media screen and (max-width: 1400px) {
-        height: 13.5rem;
-      }
     }
+
     .accordionButton {
       .verticalLine {
         transform: translateX(-50%) rotate(180deg);
@@ -63,9 +33,10 @@
   .accordionBottom {
     opacity: 0;
     visibility: hidden;
-    padding: 0;
+    padding: 0 0 0 2rem;
     transition: all 0.5s ease;
-    height: 0;
+    height: auto;
+    max-height: 0;
 
     p {
       display: flex;
@@ -121,37 +92,6 @@
       p {
         flex-direction: column;
         gap: 0;
-      }
-    }
-    &:first-of-type {
-      &.active {
-        .accordionBottom {
-          height: 19rem;
-        }
-      }
-    }
-
-    &:nth-of-type(2) {
-      &.active {
-        .accordionBottom {
-          height: 11rem;
-        }
-      }
-    }
-
-    &:nth-of-type(3) {
-      &.active {
-        .accordionBottom {
-          height: 9rem;
-        }
-      }
-    }
-
-    &:last-of-type {
-      &.active {
-        .accordionBottom {
-          height: 6rem;
-        }
       }
     }
   }

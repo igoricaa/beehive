@@ -30,7 +30,7 @@ export default function AccordionItem({
         </div>
 
         <div className={styles.accordionBottom}>
-          <span dangerouslySetInnerHTML={service.description}></span>
+          <span>{service.description}</span>
         </div>
       </div>
     </article>

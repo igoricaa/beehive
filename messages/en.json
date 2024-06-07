@@ -11,18 +11,18 @@
       "en": "En",
       "sr": "Sr"
     },
-    "lang": "Language"    
+    "lang": "Language"
   },
   "notFoundPage": {
     "title": "404"
   },
   "cta": {
-    "textMain": "Have a project?",
+    "textMain": "Need a hand?",
     "textSecondary": "Let's talk."
   },
   "home": {
     "statement": {
-      "partone": "We are Beehive. We can tell your brand's story",
+      "partone": "We are Beehive. We tell your brand's story",
       "parttwo": "through",
       "partthree": {
         "design": "design",
@@ -31,11 +31,11 @@
         "photography": "photography",
         "programming": "programming"
       },
-      "partfour": "Short and sweet - we are buzzing across all digital activities that you need."
+      "partfour": "Short and sweet - we are buzzing across all digital platforms that you need."
     },
     "aboutUs": {
       "title": "storytelling",
-      "text": "One of the oldest skills of mankind that has survived to this day. A good story satisfies our need for community, exchange, and understanding. We are a team of people who can build a bridge from your business to the needs of the people around us. Because everyone wants to hear a good story, and we're here to give it to them. Let the buzzing begin."
+      "text": "One of the oldest skills of mankind to date. A good story satisfies our need for community, exchange, and understanding. our team of highly qualified professionals / (“bees” buzz to) create and build bridges which connect businesses to the needs of potential and existing customers."
     },
     "projectsSlider": {
       "title": "buzzing with",
@@ -51,18 +51,18 @@
     "ourServices": "our services",
     "team": {
       "title": "our team",
-      "description": "Each hive member has been in their field for many years. Besides bringing great collective knowledge, creativity, and discipline to the table, our bees are constantly buzzing through new technologies."
+      "description": "Each hive member, having many years of experience in their professional field, helps to contribute to our Beehive in a multitude of ways. Like bees - we work together to produce a great honey jar of knowledge, creativity and discipline."
     }
   },
   "aboutUs": {
     "title": {
-      "partone": "All of us",
-      "parttwo": "are going to",
+      "partone": "We all",
+      "parttwo": "go to",
       "partthree": "therapy"
     },
     "aboutBeehive": {
-      "title": "About beehive",
-      "description": "A strong and healthy bee colony can pollinate up to three million flowers in one day. Same here, only for digital.<br /><br />Us personally. Not these new robots."
+      "title": "about beehive",
+      "description": "A strong and healthy bee colony can pollinate up to three million flowers in one day. Same here, applied to digital.<br /><br />Us personally. Not these new robots."
     },
     "values": {
       "respect": {
@@ -84,7 +84,7 @@
     },
     "aboutBees": {
       "title": "about bees",
-      "subtitle": "Did you know that:",
+      "subtitle": "Did you know:",
       "description": {
         "one": "Bees are workaholics!",
         "two": {
@@ -101,7 +101,7 @@
         "nine": {
           "partone": "They are attracted to",
           "parttwo": "caffeine."
-        }  
+        }
       },
       "ending": {
         "partone": "We relate to all of these statements, that is why we created our own ",
@@ -111,10 +111,10 @@
   },
   "ourWork": {
     "title": {
-      "partone": "Colaborating toward brave",
+      "partone": "Collaborating towards mutual",
       "parttwo": "goals"
     },
-    "subtitle": "These are just some of our successful collaborations, you can find more details in the case study section.",
+    "subtitle": "Have a look at some of our successful collaborations. You can find more details in the case study section. Hug.",
     "ctaSection": {
       "text": "Have a question? We can answer.",
       "button": {
@@ -144,13 +144,6 @@
           "partone": "ZLA-ZLA is the biggest CBD shop in the Balkans. We're not kidding when we say the biggest. They have over 4000 products on their e-commerce site, have been around since 2004, and not only do they have CBD products, but they also have streetwear.",
           "parttwo": "This is a needle-to-locomotive story, with an urban attitude and a reputation that is very well known."
         }
-      },
-      "lacanntina": {
-        "title": "La Canntina",
-        "description": {
-          "partone": "Prana is a family fusion restaurant, founded in 2022. Community-oriented, it carries the spirit of Italy, but also Hawaiian exoticism.",
-          "parttwo": "Follower growth, and a small accompanying info for the results."
-        }
       }
     }
   },
@@ -158,9 +151,9 @@
     "title": {
       "partone": "Be sure ",
       "parttwo": "to contact ",
-      "partthree": "us" 
+      "partthree": "us"
     },
-    "subtitle": "If you have an idea / proposal / question, <br />our <span>🐝</span> <span>🐝</span> are always available.",
+    "subtitle": "If you want to discuss an idea / proposal / question, <br />our <span>🐝</span> <span>🐝</span> are always available.",
     "contactForm": {
       "placeholders": {
         "name": "Name",
@@ -249,7 +242,7 @@
           "budget": "Budget invested in advertising"
         }
       },
-      "socials" : {
+      "socials": {
         "title": "Prana social networks"
       }
     },
@@ -304,7 +297,7 @@
           "currentDate": "May 2024"
         }
       },
-      "socials" : {
+      "socials": {
         "title": "Bistro grad social networks"
       }
     },
@@ -371,7 +364,7 @@
         "title": "Why did we stop cooperating?",
         "description": "The recommendation for every client who has such a huge assortment in a specific industry is to start in-house work at some point. That's why ZLA-ZLA continued working on social media in-house, and we stop by sometimes for coffee and consultations."
       },
-      "socials" : {
+      "socials": {
         "title": "ZLA-ZLA social networks"
       }
     }

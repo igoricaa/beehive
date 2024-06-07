@@ -127,6 +127,8 @@ $gridGap: 2rem;
 
     .imgWrapper {
       grid-column: 3 / 11;
+      mix-blend-mode: color-dodge;
+      backdrop-filter: invert(100%);
     }
   }
 

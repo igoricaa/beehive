@@ -1,13 +1,18 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
 import pranaHeader from '@/public/prana-header.png';
-import imageFloatingLeft from '@/public/our-work/prana-floating-img-left.png';
-import imageFloatingRight from '@/public/our-work/prana-floating-img-right.png';
+import imageFloatingLeft from '@/public/our-work/prana-case-study-1.png';
+import imageFloatingRight from '@/public/our-work/prana-case-study-2.png';
 import breakBg from '@/public/our-work/prana-break-bg.png';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
-const categories = ['Brand', 'Social Media Strategy'];
+const categories = [
+  'Social Media',
+  'Advertising',
+  'Content Creation',
+  'Copywriting',
+];
 const socials = [
   {
     name: 'Instagram',
@@ -35,9 +40,7 @@ const Project = ({ params: { locale } }) => {
 
       <section className={styles.contentSection}>
         <span>{t('about.highlight.subtitle')}</span>
-        <h2>
-          {t('about.highlight.title.partone')}
-        </h2>
+        <h2>{t('about.highlight.title.partone')}</h2>
         <p>{t('about.partone')}</p>
         <p>{t('about.parttwo')}</p>
         <p>{t('about.partthree')}</p>

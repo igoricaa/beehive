@@ -1,8 +1,9 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
 import zlazlaHeader from '@/public/our-work/zla-zla.jpg';
-import imageFloatingLeft from '@/public/our-work/prana-floating-img-left.png';
-import imageFloatingRight from '@/public/our-work/prana-floating-img-right.png';
+import Video from 'next-video';
+import videoCaseStudy from '@/videos/zla-zla-case-study.mp4';
+import imageFloatingRight from '@/public/our-work/zla-zla-case-study-2.jpg';
 import breakBg from '@/public/our-work/prana-break-bg.png';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
@@ -41,14 +42,23 @@ const Project = ({ params: { locale } }) => {
 
       <section className={styles.gallerySection}>
         <div className={styles.imgWrapper}>
-          <Image src={imageFloatingLeft} alt={t('title')} />
+          <Video
+            src={videoCaseStudy}
+            autoplay
+            loop
+            muted
+            controls={false}
+            style={{ aspectRatio: 'auto' }}
+          />
         </div>
         <div className={styles.imgWrapper}>
           <Image src={imageFloatingRight} alt={t('title')} />
         </div>
       </section>
 
-      <section className={[styles.contentSection, styles.challengesSection].join(' ')}>
+      <section
+        className={[styles.contentSection, styles.challengesSection].join(' ')}
+      >
         <span>{t('challenge.highlight.subtitle')}</span>
         <h2>{t('challenge.highlight.first.title')}</h2>
         <p>{t('challenge.highlight.first.description')}</p>

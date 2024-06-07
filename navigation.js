@@ -29,10 +29,10 @@ export const pathnames = {
     en: '/our-work/bistro-grad',
     sr: '/nasi-radovi/bistro-grad',
   },
-  '/nasi-radovi/la-canntina': {
-    en: '/our-work/la-canntina',
-    sr: '/nasi-radovi/la-canntina',
-  },
+  // '/nasi-radovi/la-canntina': {
+  //   en: '/our-work/la-canntina',
+  //   sr: '/nasi-radovi/la-canntina',
+  // },
   '/nasi-radovi/zla-zla': {
     en: '/our-work/zla-zla',
     sr: '/nasi-radovi/zla-zla',
