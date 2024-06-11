@@ -48,10 +48,72 @@
         "client": "klijent:"
       }
     },
-    "ourServices": "naše usluge",
+    "ourServices": {
+      "title": "naše usluge",
+      "services": {
+        "digital": {
+          "title": "digitalni marketing & strategija",
+          "description": "Proizvodnja sadržaja i kampanje su naša najveća ljubav, ali to je poslednji korak u izradi i egzekuciji strategije digitalnog marketinga. Mi razvijamo, proizvodimo i realizujemo vašu priču kako bismo doveli vaše ciljeve do finish linije. Radimo to znanjem, srcem i brojevima."
+        },
+        "social": {
+          "title": "oglašavanje na društvenim medijima",
+          "description": "Kreiramo i iznova komuniciramo digitalnu realnost vašeg brenda čineći vašu priču jasnom, glasnom i jedinstvenom. Osluškujemo ritam publike i nudimo im adekvatan način da čuju vaš brend. Bilo da želite da podignete svest o brendu, podstaknete prodaju ili prezentujete sebe publici, mi ćemo se pobrinuti da se vaša priča čuje, upamti i raširi."
+        },
+        "content": {
+          "title": "proizvodnja sadržaja",
+          "description": "Dobra stvar toga što imamo preko 50 godina zajedničkog iskustva u poslu je to što smo odabrali najbolje fotografe i videografe da vizuelno napišu vašu priču. Za svaki raspon budžeta — mi smo tu."
+        },
+        "design": {
+          "title": "dizajn",
+          "description": "Šta vizuelni identitet, odličan dizajn i brend identitet imaju zajedničko? Top of the game dizajnerski tim, koji umetnošću probudi svakodnevnicu. Njima je svaki detalj je važan."
+        },
+        "development": {
+          "title": "web & app development",
+          "description": "Producing content and running ads is our greatest love, but it the final step to a comprehensive digital marketing strategy. We develop, produce and execute your story to get what you need. We do it with our hearts, knowledge and numbers."
+        }
+      }
+    },
     "team": {
       "title": "naš tim",
-      "description": "Svaki član košnice je u svom polju dugi niz godina. Naše pčele stalno zuje kroz nove tehnologije i sa sobom donose veliko kolektivno znanje, kreativnost i disciplinu."
+      "description": "Svaki član košnice je u svom polju dugi niz godina. Naše pčele stalno zuje kroz nove tehnologije i sa sobom donose veliko kolektivno znanje, kreativnost i disciplinu.",
+      "hover": {
+        "darja": {
+          "title": "Di, 34 leta",
+          "text": "Više voli slano od slatkog."
+        },
+        "tara": {
+          "title": "Tara, 32 leta",
+          "text": "Odlučna, ali prijatna (New Business Director)."
+        },
+        "andjela": {
+          "title": "Anhel, 26 leta",
+          "text": "Lepa kao lutka, dobra kao hleb."
+        },
+        "jelena": {
+          "title": "Riki, 31 leto",
+          "text": "Ako ne zna, saznaće."
+        },
+        "djordje": {
+          "title": "Čađavac, 32 leta",
+          "text": "\"Rok se može probiti, ali slika na zidu mora biti prava.\""
+        },
+        "igor": {
+          "title": "Igorica, 30 leta",
+          "text": "Rešava."
+        },
+        "maja": {
+          "title": "Maki, ima leta",
+          "text": "Sa njom uvek neki šokovi."
+        },
+        "dea": {
+          "title": "Dea, 31 leto",
+          "text": "Biće do petka."
+        },
+        "andja": {
+          "title": "Anđa, 35 leta",
+          "text": "\"So, more, dobra knjiga i još bolja krempita.\""
+        }
+      }
     }
   },
   "aboutUs": {

@@ -5,36 +5,32 @@ import styles from './SliderItem.module.scss';
 import { useEffect, useRef } from 'react';
 import { calculateOverlayPosition } from '../utils/utils';
 
-export default function SliderItem({ content }) {
+export default function SliderItem({ content, messages }) {
   const slideRef = useRef(null);
   const overlayRef = useRef(null);
 
   useEffect(() => {
-    if (content.hoverText) {
-      const slide = slideRef.current;
-      slide.addEventListener('mouseenter', (e) => {
-        calculateOverlayPosition(e, slide, overlayRef.current);
-      });
-      slide.addEventListener('mouseout', (e) => {
-        calculateOverlayPosition(e, slide, overlayRef.current);
-      });
-      return () => {
-        slide.removeEventListener('mouseenter', calculateOverlayPosition());
-        slide.removeEventListener('mouseleave', calculateOverlayPosition());
-      };
-    }
-  }, [content.hoverText]);
+    const slide = slideRef.current;
+    slide.addEventListener('mouseenter', (e) => {
+      calculateOverlayPosition(e, slide, overlayRef.current);
+    });
+    slide.addEventListener('mouseout', (e) => {
+      calculateOverlayPosition(e, slide, overlayRef.current);
+    });
+    return () => {
+      slide.removeEventListener('mouseenter', calculateOverlayPosition());
+      slide.removeEventListener('mouseleave', calculateOverlayPosition());
+    };
+  }, []);
 
   return (
     <article className={[styles.emblaSlide, 'card'].join(' ')}>
       <div ref={slideRef} className={styles.innerWrapper}>
-        {content.hoverText && (
-          <span
-            ref={overlayRef}
-            className={styles.overlay}
-            style={{ backgroundColor: content.hoverColor }}
-          ></span>
-        )}
+        <span
+          ref={overlayRef}
+          className={styles.overlay}
+          style={{ backgroundColor: content.hoverColor }}
+        ></span>
         {content.listImage && (
           <div className={styles.imgWrapper}>
             <Image
@@ -46,12 +42,10 @@ export default function SliderItem({ content }) {
             />
           </div>
         )}
-        {content.hoverText && (
-          <div className={styles.hoverTextWrapper}>
-            <span>{content.hoverTextTitle}</span>
-            <p>{content.hoverText}</p>
-          </div>
-        )}
+        <div className={styles.hoverTextWrapper}>
+          <span>{messages.title}</span>
+          <p>{messages.text}</p>
+        </div>
       </div>
       <div className={styles.infoWrapper}>
         {content.categories && (

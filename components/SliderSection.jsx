@@ -16,7 +16,7 @@ export default function SliderSection({ content, messages }) {
           specialClass='ctaLinkDesktop'
         />
       </div>
-      <Slider content={content} />
+      <Slider content={content} messages={messages.hover} />
       <CtaButton
         href="/kontakt"
         mainText={messages.cta.textMain}

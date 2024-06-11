@@ -10,7 +10,7 @@ const OPTIONS = {
   align: 'start',
 };
 
-export default function Slider({ content }) {
+export default function Slider({ content, messages }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
 
   return (
@@ -18,7 +18,11 @@ export default function Slider({ content }) {
       <div className={styles.emblaViewport} ref={emblaRef}>
         <div className={styles.emblaContainer}>
           {content.map((slideContent, index) => (
-            <SliderItem key={index} content={slideContent} />
+            <SliderItem
+              key={index}
+              content={slideContent}
+              messages={messages[index]}
+            />
           ))}
         </div>
       </div>

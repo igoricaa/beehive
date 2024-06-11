@@ -33,12 +33,72 @@ export default function Home({ params: { locale } }) {
   };
 
   const servicesMessages = {
-    title: t('ourServices'),
+    title: t('ourServices.title'),
+    services: [
+      {
+        title: t('ourServices.services.digital.title'),
+        description: t('ourServices.services.digital.description'),
+      },
+      {
+        title: t('ourServices.services.social.title'),
+        description: t('ourServices.services.social.description'),
+      },
+      {
+        title: t('ourServices.services.content.title'),
+        description: t('ourServices.services.content.description'),
+      },
+      {
+        title: t('ourServices.services.design.title'),
+        description: t('ourServices.services.design.description'),
+      },
+      {
+        title: t('ourServices.services.development.title'),
+        description: t('ourServices.services.development.description'),
+      },
+    ],
   };
 
   const teamMessages = {
     title: t('team.title'),
     description: t('team.description'),
+    hover: [
+      {
+        title: t('team.hover.darja.title'),
+        text: t('team.hover.darja.text'),
+      },
+      {
+        title: t('team.hover.tara.title'),
+        text: t('team.hover.tara.text'),
+      },
+      {
+        title: t('team.hover.andjela.title'),
+        text: t('team.hover.andjela.text'),
+      },
+      {
+        title: t('team.hover.jelena.title'),
+        text: t('team.hover.jelena.text'),
+      },
+      {
+        title: t('team.hover.djordje.title'),
+        text: t('team.hover.djordje.text'),
+      },
+      {
+        title: t('team.hover.igor.title'),
+        text: t('team.hover.igor.text'),
+      },
+      {
+        title: t('team.hover.maja.title'),
+        text: t('team.hover.maja.text'),
+      },
+      {
+        title: t('team.hover.dea.title'),
+        text: t('team.hover.dea.text'),
+      },
+      {
+        title: t('team.hover.andja.title'),
+        text: t('team.hover.andja.text'),
+      },
+    ],
     cta: {
       textMain: t_cta('textMain'),
       textSecondary: t_cta('textSecondary'),

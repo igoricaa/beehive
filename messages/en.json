@@ -31,7 +31,7 @@
         "photography": "photography",
         "programming": "programming"
       },
-      "partfour": "Short and sweet - we are buzzing across all digital platforms that you need."
+      "partfour": "Short and sweet - we are buzzing across all digital platforms which you need."
     },
     "aboutUs": {
       "title": "storytelling",
@@ -48,10 +48,72 @@
         "client": "client:"
       }
     },
-    "ourServices": "our services",
+    "ourServices": {
+      "title": "our services",
+      "services": {
+        "digital": {
+          "title": "digital marketing strategy",
+          "description": "Producing content and running ads is our greatest love, but it the final step to a comprehensive digital marketing strategy. We develop, produce and execute your story to get what you need. We do it with our hearts, knowledge and numbers."
+        },
+        "social": {
+          "title": "social media marketing",
+          "description": "We recreate the digital reality of your business to make your story count. Whether you are after brand awareness, sales or presentation, we will make sure your story is heard, remembered and spread."
+        },
+        "content": {
+          "title": "content production",
+          "description": "The good thing about having approximately 50 years of combined experience in the industry is that we have cherry picked the best photographers and videographers to write your story visually. For every budget range — we got you."
+        },
+        "design": {
+          "title": "design",
+          "description": "Do you know what visual identity, great design and brand identity have in common? Top of the game design team, applying art to everyday life. To them, every detail matters."
+        },
+        "development": {
+          "title": "web & app development",
+          "description": "A heart for code, an eye for detail and a nose for improvement."
+        }
+      }
+    },
     "team": {
       "title": "our team",
-      "description": "Each hive member, having many years of experience in their professional field, helps to contribute to our Beehive in a multitude of ways. Like bees - we work together to produce a great honey jar of knowledge, creativity and discipline."
+      "description": "Each hive member, having many years of experience in their professional field, helps to contribute to our Beehive in a multitude of ways. Like bees - we work together to produce a great honey jar of knowledge, creativity and discipline.",
+      "hover": {
+        "darja": {
+          "title": "Di, 34 years of buzzing",
+          "text": "Prefers savoury to sweet (food)."
+        },
+        "tara": {
+          "title": "Tara, 32 years of buzzing",
+          "text": "Decisive yet kind (New Business Director)."
+        },
+        "andjela": {
+          "title": "Anhel, 26 years of buzzing",
+          "text": "Beautiful like a doll, sweet as honey."
+        },
+        "jelena": {
+          "title": "Riki, 31 years of buzzing",
+          "text": "If she doesn't know, she will find out."
+        },
+        "djordje": {
+          "title": "Čađavac, 32 years of buzzing",
+          "text": "\"We may be late, but the painting on the wall must stand straight.\""
+        },
+        "igor": {
+          "title": "Igorica, 30 years of buzzing",
+          "text": "Solves."
+        },
+        "maja": {
+          "title": "Maki, X years of buzzing",
+          "text": "Always a surprise with her."
+        },
+        "dea": {
+          "title": "Dea, 31 years of buzzing",
+          "text": "Will be done by friday. I swear."
+        },
+        "andja": {
+          "title": "Anđa, 35 years of buzzing",
+          "text": "\"Salt, sea, a good book and an even better mille-feuille.\""
+        }
+      }
     }
   },
   "aboutUs": {

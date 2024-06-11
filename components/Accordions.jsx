@@ -3,9 +3,8 @@
 import styles from './Accordions.module.scss';
 import { useState } from 'react';
 import AccordionItem from './AccordionItem';
-import { services } from '@/data';
 
-export default function Accordions() {
+export default function Accordions({ messages }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
   const handleToggle = (index) =>
@@ -13,12 +12,12 @@ export default function Accordions() {
 
   return (
     <section className={styles.accordions}>
-      {services.map((service, index) => {
+      {messages.map((message, index) => {
         const isActive = activeIndex === index ? true : false;
 
         return (
           <AccordionItem
-            service={service}
+            messages={message}
             index={index}
             isActive={isActive}
             handleToggle={handleToggle}

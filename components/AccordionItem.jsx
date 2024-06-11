@@ -1,7 +1,7 @@
 import styles from './AccordionItem.module.scss';
 
 export default function AccordionItem({
-  service,
+  messages,
   index,
   isActive,
   handleToggle,
@@ -18,7 +18,7 @@ export default function AccordionItem({
     >
       <div className={styles.accordion}>
         <div className={styles.accordionTop}>
-          <h3>{service.title}</h3>
+          <h3>{messages.title}</h3>
           <button
             className={styles.accordionButton}
             onClick={() => handleClick(index)}
@@ -30,7 +30,7 @@ export default function AccordionItem({
         </div>
 
         <div className={styles.accordionBottom}>
-          <span>{service.description}</span>
+          <span>{messages.description}</span>
         </div>
       </div>
     </article>
