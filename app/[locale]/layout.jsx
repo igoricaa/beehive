@@ -26,8 +26,39 @@ const sourceSerif4 = Source_Serif_4({
 });
 
 export const metadata = {
-  title: 'BeeHive Creative Agency',
-  description: 'BeeHive - Creative Agency from Belgrade, Serbia',
+  metadataBase: new URL('https://bhive.agency'),
+  title: {
+    default: 'BeeHive Creative Agency',
+    template: '%s | BeeHive Creative Agency',
+  },
+  description: 'BeeHive - Creative Agency from Belgrade, Serbia.',
+  openGraph: {
+    title: 'BeeHive Creative Agency',
+    description: 'BeeHive - Creative Agency from Belgrade, Serbia.',
+    url: 'https://bhive.agency',
+    siteName: 'BeeHive Creative Agency',
+    locale: 'en_US',
+    type: 'website',
+  },
+  twitter: {
+    title: 'BeeHive Creative Agency',
+    card: 'summary_large_image',
+  },
+  // robots: {
+  //   index: true,
+  //   follow: true,
+  //   googleBot: {
+  //     index: true,
+  //     follow: true,
+  //     'max-video-preview': -1,
+  //     'max-image-preview': 'large',
+  //     'max-snippet': -1,
+  //   },
+  // },
+  // verification: {
+  //   google: 'eZSdmzAXlLkKhNJzfgwDqWORghxnJ8qR9_CHdAh5-xw',
+  //   yandex: '14d2e73487fa6c71',
+  // },
 };
 
 // export async function generateMetadata({ params: { locale } }) {
