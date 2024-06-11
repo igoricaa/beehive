@@ -27,16 +27,14 @@ const sourceSerif4 = Source_Serif_4({
 
 export const metadata = {
   title: 'BeeHive Creative Agency',
-  description: 'Official website of BeeHive Creative Agency',
+  description: 'BeeHive - Creative Agency from Belgrade, Serbia',
 };
 
-// export async function generateMetadata({
-//   params: {locale}
-// }: Omit<Props, 'children'>) {
-//   const t = await getTranslations({locale, namespace: 'LocaleLayout'});
+// export async function generateMetadata({ params: { locale } }) {
+//   const t = await getTranslations({ locale, namespace: 'LocaleLayout' });
 
 //   return {
-//     title: t('title')
+//     title: t('title'),
 //   };
 // }
 
