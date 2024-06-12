@@ -19,6 +19,7 @@ $color_yellow: #ffd600;
 
 body {
   margin: 0;
+  cursor: none;
 }
 
 .noscroll {
@@ -43,6 +44,10 @@ p,
 a,
 span {
   color: $color_text_secondary;
+}
+
+a {
+  cursor: none !important;
 }
 
 h1 {
@@ -93,6 +98,17 @@ main {
     height: 94px;
     top: 0;
     right: 3px;
+  }
+}
+
+.cursor {
+  pointer-events: none;
+
+  &__ball {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1001;
   }
 }
 

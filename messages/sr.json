@@ -2,9 +2,9 @@
   "layout": {
     "nav": {
       "home": "Početna",
-      "aboutUs": "O nama",
-      "projects": "Naši radovi",
-      "contact": "Kontakt"
+      "oNama": "O nama",
+      "nasiRadovi": "Naši radovi",
+      "kontakt": "Kontakt"
     },
     "socialsTitle": "gde zujimo:",
     "localeSwitcher": {

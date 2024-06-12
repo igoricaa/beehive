@@ -58,12 +58,13 @@ export default function CtaButton({
       observer.observe(section);
     }
   };
-
+  
   return (
     <>
       {isExternalLink ? (
         <a
           className={[
+            'hoverable',
             styles.button,
             specialClass ? styles[specialClass] : '',
             floating ? styles.floating : '',

@@ -148,7 +148,7 @@ export default function Header({ routes, messages }) {
           isHidden ? styles.hidden : '',
         ].join(' ')}
       >
-        <Link href='/' className={styles.logoWrapper}>
+        <Link href='/' className={[styles.logoWrapper, 'hoverable'].join(' ')}>
           <picture>
             <source srcSet={beehiveCleanLogo.src} media='(max-width: 1024px)' />
             <Image

@@ -13,7 +13,11 @@ export default function AccordionItem({
   return (
     <article
       key={index}
-      className={[styles.article, isActive ? styles.active : ''].join(' ')}
+      className={[
+        'hoverable',
+        styles.article,
+        isActive ? styles.active : '',
+      ].join(' ')}
       onClick={() => handleClick(index)}
     >
       <div className={styles.accordion}>

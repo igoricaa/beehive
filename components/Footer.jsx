@@ -12,10 +12,10 @@ const Footer = ({ routes, message }) => {
         <div className={styles.innerWrapper}>
           <Link
             href='/'
-            className={styles.logoWrapper}
+            className={[styles.logoWrapper, 'hoverable'].join(' ')}
             aria-label='Beehive Agency Logo'
           >
-            <Image src={beehiveCleanLogo} priority alt='Beehive Agency Logo' />
+            <Image src={beehiveCleanLogo} alt='Beehive Agency Logo' />
           </Link>
           <div className={styles.socialsWrapper}>
             <p>{message}</p>
@@ -24,7 +24,7 @@ const Footer = ({ routes, message }) => {
                 <a
                   key={index}
                   href={social.link}
-                  className={styles.social}
+                  className={[styles.social, 'hoverable'].join(' ')}
                   target='_blank'
                 >
                   <span>{social.text}</span>

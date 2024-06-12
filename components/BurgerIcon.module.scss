@@ -1,6 +1,6 @@
 .burgerWrapper {
   position: relative;
-  z-index: 99999;
+  z-index: 1000;
   display: flex;
 
   &.sticky {

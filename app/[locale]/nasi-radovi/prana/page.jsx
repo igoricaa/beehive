@@ -123,7 +123,7 @@ const Project = ({ params: { locale } }) => {
             <a
               key={index}
               href={social.link}
-              className={styles.social}
+              className={[styles.social, 'hoverable'].join(' ')}
               target='_blank'
             >
               <span>{social.name}</span>

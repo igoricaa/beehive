@@ -7,9 +7,7 @@ export default function ProjectsSliderItem({ project, messages }) {
     <article className={[styles.emblaSlide, 'card'].join(' ')}>
       <Link
         href={`/our-work/${project.slug}`}
-        style={{
-          pointerEvents: project.ready ? 'auto' : 'none',
-        }}
+        className={project.ready ? 'hoverable' : ''}
       >
         <div className={styles.innerWrapper}>
           {project.listImage && (

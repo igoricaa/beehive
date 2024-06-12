@@ -10,7 +10,7 @@
   position: fixed;
   top: 0;
   width: calc(100% - 2 * var(--site-padding));
-  z-index: 1000;
+  z-index: 999;
   opacity: 1;
   visibility: visible;
   transition: 0.5s opacity ease, 0.5s visibility ease;

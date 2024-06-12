@@ -76,7 +76,7 @@ export const team = [
   },
   {
     listImage: '/team/dea-krzelj.jpeg',
-    subtitle: 'the visual one',
+    subtitle: 'the underground one',
     title: 'Dea Krželj',
     hoverColor: '#FF0000',
   },

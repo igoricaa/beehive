@@ -9,6 +9,7 @@ import { NextIntlClientProvider } from 'next-intl';
 import { useTranslations } from 'next-intl';
 import { locales } from '../../navigation';
 import { unstable_setRequestLocale } from 'next-intl/server';
+import CustomCursor from '@/components/CustomCursor';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -61,14 +62,6 @@ export const metadata = {
   // },
 };
 
-// export async function generateMetadata({ params: { locale } }) {
-//   const t = await getTranslations({ locale, namespace: 'LocaleLayout' });
-
-//   return {
-//     title: t('title'),
-//   };
-// }
-
 export function generateStaticParams() {
   return locales.map((locale) => ({ locale }));
 }
@@ -79,9 +72,9 @@ export default function LocaleLayout({ children, params: { locale } }) {
 
   const routes = [
     { href: '/', label: t('nav.home') },
-    { href: '/about-us', label: t('nav.aboutUs') },
-    { href: '/our-work', label: t('nav.projects') },
-    { href: '/contact', label: t('nav.contact') },
+    { href: '/o-nama', label: t('nav.oNama') },
+    { href: '/nasi-radovi', label: t('nav.nasiRadovi') },
+    { href: '/kontakt', label: t('nav.kontakt') },
   ];
 
   const headerMessages = {
@@ -104,6 +97,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
             <SpeedInsights />
             <Analytics />
           </NextIntlClientProvider>
+          <CustomCursor />
         </body>
       </html>
     </ViewTransitions>

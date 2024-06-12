@@ -69,64 +69,57 @@ const Projects = ({ params: { locale } }) => {
           const projectTitle = project.title.toLowerCase().replace(/\s/g, '');
 
           return (
-            <article
+            <Link
               key={projectTitle}
-              className={styles.project}
-              style={{
-                backgroundColor: project.backgroundColor,
-                color: project.textColor,
-              }}
+              href={`/nasi-radovi/${project.slug}`}
+              className={project.ready ? 'hoverable' : ''}
             >
-              <div className={styles.titleWrapper}>
-                <Link
-                  href={`/nasi-radovi/${project.slug}`}
-                  style={{ pointerEvents: project.ready ? 'auto' : 'none' }}
-                >
+              <article
+                className={styles.project}
+                style={{
+                  backgroundColor: project.backgroundColor,
+                  color: project.textColor,
+                }}
+              >
+                <div className={styles.titleWrapper}>
                   <h3 style={{ borderColor: project.textColor }}>
                     {t(`projects.${projectTitle}.title`)}:
                   </h3>
-                </Link>
-                {!project.ready && (
-                  <RoughNotationWrapper
-                    type='highlight'
-                    color='#FFD600'
-                    style={{ width: 'fit-content', display: 'block' }}
-                  >
-                    <span
-                      style={{
-                        display: 'block',
-                        fontSize: '1.5rem',
-                        marginTop: '2rem',
-                      }}
-                    >
-                      {t('projects.comingSoon')}
-                    </span>
-                  </RoughNotationWrapper>
-                )}
-              </div>
 
-              <div className={styles.projectContent}>
-                <p>{t(`projects.${projectTitle}.description.partone`)}</p>
-                <p>
-                  {t(
-                    `projects.${projectTitle}.description.parttwo`
+                  {!project.ready && (
+                    <RoughNotationWrapper
+                      type='highlight'
+                      color='#FFD600'
+                      style={{ width: 'fit-content', display: 'block' }}
+                    >
+                      <span
+                        style={{
+                          display: 'block',
+                          fontSize: '1.5rem',
+                          marginTop: '2rem',
+                        }}
+                      >
+                        {t('projects.comingSoon')}
+                      </span>
+                    </RoughNotationWrapper>
                   )}
-                </p>
-                <Link
-                  href={`/nasi-radovi/${project.slug}`}
-                  className={styles.projectImageWrapper}
-                  style={{ pointerEvents: project.ready ? 'auto' : 'none' }}
-                >
-                  <Image
-                    src={project.featuredImage}
-                    alt={project.title}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    priority={index === 0}
-                  />
-                </Link>
-              </div>
-            </article>
+                </div>
+
+                <div className={styles.projectContent}>
+                  <p>{t(`projects.${projectTitle}.description.partone`)}</p>
+                  <p>{t(`projects.${projectTitle}.description.parttwo`)}</p>
+                  <div className={[styles.projectImageWrapper].join(' ')}>
+                    <Image
+                      src={project.featuredImage}
+                      alt={project.title}
+                      fill
+                      style={{ objectFit: 'cover' }}
+                      priority={index === 0}
+                    />
+                  </div>
+                </div>
+              </article>
+            </Link>
           );
         })}
       </section>

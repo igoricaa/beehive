@@ -2,9 +2,9 @@
   "layout": {
     "nav": {
       "home": "Home",
-      "aboutUs": "About Us",
-      "projects": "Our Work",
-      "contact": "Contact"
+      "oNama": "About Us",
+      "nasiRadovi": "Our Work",
+      "kontakt": "Contact"
     },
     "socialsTitle": "where we buzz:",
     "localeSwitcher": {
