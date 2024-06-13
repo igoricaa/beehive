@@ -36,6 +36,10 @@
 .headerWrapper {
   grid-column: 2 / 12;
   margin-top: 1.5rem;
+
+  video {
+    width: 100%;
+  }
 }
 
 .contentSection {
@@ -76,9 +80,13 @@
   position: relative;
   height: calc(25vw * 730 / 487 + 5rem);
 
-  .imgWrapper {
+  .mediaWrapper {
     width: 25vw;
     position: absolute;
+
+    video {
+      width: 90%;
+    }
 
     &:first-of-type {
       right: 20vw;
@@ -241,8 +249,12 @@
     grid-column: 2 / 12;
     height: calc(25vw * 730 / 487 + 10rem);
 
-    .imgWrapper {
+    .mediaWrapper {
       width: 35vw;
+
+      video {
+        width: 100%;
+      }
 
       &:first-of-type {
         right: 30vw;

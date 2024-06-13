@@ -1,12 +1,10 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
-import Video from 'next-video';
-import videoHeader from '@/videos/bistro-grad-main.mp4';
 import imageFloatingRight from '@/public/our-work/bistro-floating-coffee.jpg';
-import videoFloatingLeft from '@/videos/bistro-grad-case-study-1.mov';
 import breakBg from '@/public/our-work/bistro-grad-break.png';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
+import MuxVideo from '@mux/mux-video-react';
 
 const categories = [
   'Social Media',
@@ -36,13 +34,13 @@ const Project = ({ params: { locale } }) => {
         </div>
       </div>
       <div className={styles.headerWrapper}>
-        <Video
-          src={videoHeader}
-          autoplay
-          loop
+        <MuxVideo
+          playbackId='DGUPWlW018vONSIgtXvdnD7xkm2pkMyRdYWfA5LQxQL4'
           muted
-          controls={false}
-          style={{ aspectRatio: 'auto' }}
+          loop
+          autoPlay
+          preload='auto'
+          placeholder={undefined}
         />
       </div>
 
@@ -53,17 +51,16 @@ const Project = ({ params: { locale } }) => {
       </section>
 
       <section className={styles.gallerySection}>
-        <div className={styles.imgWrapper}>
-          <Video
-            src={videoFloatingLeft}
-            autoplay
-            loop
+        <div className={styles.mediaWrapper}>
+          <MuxVideo
+            playbackId='yMdxWVCywCqbRuiD7vFrR1htRFkM4UunAJ6S6PlUADE'
             muted
-            controls={false}
-            style={{ aspectRatio: 'auto' }}
+            loop
+            autoPlay
+            placeholder={undefined}
           />
         </div>
-        <div className={styles.imgWrapper}>
+        <div className={styles.mediaWrapper}>
           <Image src={imageFloatingRight} alt={t('title')} />
         </div>
       </section>

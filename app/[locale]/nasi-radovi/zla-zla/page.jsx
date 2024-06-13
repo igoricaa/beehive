@@ -1,8 +1,7 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
 import zlazlaHeader from '@/public/our-work/zla-zla.jpg';
-import Video from 'next-video';
-import videoCaseStudy from '@/videos/zla-zla-case-study.mp4';
+import MuxVideo from '@mux/mux-video-react';
 import imageFloatingRight from '@/public/our-work/zla-zla-case-study-2.jpg';
 import breakBg from '@/public/our-work/prana-break-bg.png';
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -41,17 +40,16 @@ const Project = ({ params: { locale } }) => {
       </section>
 
       <section className={styles.gallerySection}>
-        <div className={styles.imgWrapper}>
-          <Video
-            src={videoCaseStudy}
-            autoplay
-            loop
+        <div className={styles.mediaWrapper}>
+          <MuxVideo
+            playbackId='qLFmnuk5hRd28S6YPIC4Z5g16ipHhm16DQ02QIREjyxw'
             muted
-            controls={false}
-            style={{ aspectRatio: 'auto' }}
+            loop
+            autoPlay
+            placeholder={undefined}
           />
         </div>
-        <div className={styles.imgWrapper}>
+        <div className={styles.mediaWrapper}>
           <Image src={imageFloatingRight} alt={t('title')} />
         </div>
       </section>
