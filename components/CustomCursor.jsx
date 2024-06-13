@@ -3,11 +3,9 @@
 import { useEffect } from 'react';
 import { gsap } from 'gsap';
 import { usePathname } from '@/navigation';
-import { useLocale } from 'next-intl';
 
 const CustomCursor = () => {
   const pathname = usePathname();
-  const locale = useLocale();
 
   function onMouseHover(target) {
     gsap.to(target, {
@@ -48,13 +46,16 @@ const CustomCursor = () => {
         onMouseMove(event, smallBall, bigBall)
       );
 
-      console.log('IMA LI GA:' + hoverablesInner.length);
       hoverablesInner.forEach((hoverable) => {
-        console.log('IMA GA:' + hoverable);
-        hoverable.addEventListener('mouseenter', () => onMouseHover(bigBall));
-        hoverable.addEventListener('mouseleave', () =>
-          onMouseHoverOut(bigBall)
-        );
+        hoverable.addEventListener('mouseenter', () => {
+          onMouseHover(bigBall);
+        });
+        hoverable.addEventListener('mouseleave', () => {
+          onMouseHoverOut(bigBall);
+        });
+        hoverable.addEventListener('click', () => {
+          onMouseHoverOut(bigBall);
+        });
       });
     }
     return () => {

@@ -10,7 +10,16 @@ const MenuItems = ({ routes }) => {
   return (
     <ul className={styles.menuItemsWrapper}>
       {routes.map((route, index) => (
-        <li key={index} className={pathname == route.href ? styles.active : ''}>
+        <li
+          key={index}
+          className={
+            pathname == route.href ||
+            (route.href !== '/' &&
+              pathname.slice(1).includes(route.href.slice(1)))
+              ? styles.active
+              : ''
+          }
+        >
           <Link href={route.href}>{route.label}</Link>
         </li>
       ))}
