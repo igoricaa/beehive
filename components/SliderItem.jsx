@@ -57,7 +57,7 @@ export default function SliderItem({ content, messages }) {
         )}
         <div className={styles.titleWrapper}>
           <span>{content.subtitle}</span>
-          <h5>{content.title}</h5>
+          <h4>{content.title}</h4>
         </div>
       </div>
     </article>

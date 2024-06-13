@@ -45,7 +45,7 @@ export default function ProjectsSliderItem({ project, messages }) {
           )}
           <div className={styles.titleWrapper}>
             <span>{messages.client}</span>
-            <h5>{project.title}</h5>
+            <h4>{project.title}</h4>
           </div>
         </div>
       </Link>

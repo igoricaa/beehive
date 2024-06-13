@@ -7,7 +7,7 @@ export default function SliderSection({ content, messages }) {
     <section className={styles.section}>
       <div className={styles.copyCtaWrapper}>
         <h2>{messages.title}</h2>
-        <h5>{messages.description}</h5>
+        <h4>{messages.description}</h4>
 
         <CtaButton
           href="/kontakt"
