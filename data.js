@@ -12,7 +12,7 @@ export const projects = [
   {
     title: 'Prana',
     slug: 'prana',
-    featuredImage: '/our-work/prana.png',
+    featuredImage: '/our-work/prana-our-work.png',
     listImage: '/our-work/prana-home.png',
     categories: ['branding', 'social media', 'marketing'],
     backgroundColor: '#FFF7EC',
@@ -22,7 +22,7 @@ export const projects = [
   {
     title: 'ZLA ZLA',
     slug: 'zla-zla',
-    featuredImage: '/our-work/zla-zla.jpg',
+    featuredImage: '/our-work/zla-zla-our-work.jpg',
     listImage: '/our-work/zla-zla-home.jpg',
     categories: ['branding', 'social media', 'marketing'],
     backgroundColor: '#000',
