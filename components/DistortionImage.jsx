@@ -7,6 +7,8 @@ import homeHero1 from '@/public/home-hero-1.webp';
 import homeHero2 from '@/public/home-hero-2.webp';
 import homeHeroMobile1 from '@/public/home-hero-mobile-1.webp';
 import homeHeroMobile2 from '@/public/home-hero-mobile-2.webp';
+import homeHeroTablet1 from '@/public/home-hero-tablet-1.webp';
+import homeHeroTablet2 from '@/public/home-hero-tablet-2.webp';
 import distortionImage from '@/public/distortions/ramen.webp';
 
 const DistortionImage = () => {
@@ -15,10 +17,21 @@ const DistortionImage = () => {
   useEffect(() => {
     if (!wrapperRef.current) return;
 
-    const isMobile = window.matchMedia('(max-width: 768px)').matches;
+    const isMobile = window.matchMedia('(max-width: 480px)').matches;
+    const isTablet = window.matchMedia(
+      '(min-width:480px) and (max-width:768px)'
+    ).matches;
 
-    const image1 = isMobile ? homeHeroMobile1 : homeHero1;
-    const image2 = isMobile ? homeHeroMobile2 : homeHero2;
+    const image1 = isMobile
+      ? homeHeroMobile1
+      : isTablet
+      ? homeHeroTablet1
+      : homeHero1;
+    const image2 = isMobile
+      ? homeHeroMobile2
+      : isTablet
+      ? homeHeroTablet2
+      : homeHero2;
     const imagesRatio = isMobile ? 1 : 894 / 2560;
 
     const animate = new hoverEffect({
