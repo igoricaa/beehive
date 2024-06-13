@@ -24,7 +24,7 @@ export default function SliderItem({ content, messages }) {
   }, []);
 
   return (
-    <article className={[styles.emblaSlide, 'card'].join(' ')}>
+    <article className={[styles.emblaSlide, 'card', 'hoverableDrag'].join(' ')}>
       <div ref={slideRef} className={styles.innerWrapper}>
         <span
           ref={overlayRef}

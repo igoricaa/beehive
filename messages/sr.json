@@ -11,7 +11,9 @@
       "en": "En",
       "sr": "Sr"
     },
-    "lang": "Jezik"
+    "lang": "Jezik",
+    "cursorViewHoverText": "Pogledaj",
+    "cursorDragHoverText": "Vuci"
   },
   "notFoundPage": {
     "title": "404"

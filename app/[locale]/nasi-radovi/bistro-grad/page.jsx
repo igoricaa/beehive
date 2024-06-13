@@ -53,7 +53,7 @@ const Project = ({ params: { locale } }) => {
       <section className={styles.gallerySection}>
         <div className={styles.mediaWrapper}>
           <MuxVideo
-            playbackId='yMdxWVCywCqbRuiD7vFrR1htRFkM4UunAJ6S6PlUADE'
+            playbackId='00wmZsjOwSElaQ6TRO1BnRBdmSSdT2N5sF9X8IhU4W9o'
             muted
             loop
             autoPlay

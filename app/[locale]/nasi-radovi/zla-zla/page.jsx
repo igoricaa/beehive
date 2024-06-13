@@ -1,9 +1,9 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
-import zlazlaHeader from '@/public/our-work/zla-zla.jpg';
+import zlazlaHeader from '@/public/our-work/zla-zla-header.png';
 import MuxVideo from '@mux/mux-video-react';
 import imageFloatingRight from '@/public/our-work/zla-zla-case-study-2.jpg';
-import breakBg from '@/public/our-work/prana-break-bg.png';
+import breakBg from '@/public/our-work/zla-zla-break-bg.png';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 

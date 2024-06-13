@@ -11,7 +11,9 @@
       "en": "En",
       "sr": "Sr"
     },
-    "lang": "Language"
+    "lang": "Language",
+    "cursorViewHoverText": "View",
+    "cursorDragHoverText": "Drag"
   },
   "notFoundPage": {
     "title": "404"

@@ -1,93 +1,168 @@
 'use client';
 
-import { useEffect } from 'react';
+import { useEffect, useState, useCallback } from 'react';
 import { gsap } from 'gsap';
 import { usePathname } from '@/navigation';
+import { useLocale } from 'next-intl';
 
-const CustomCursor = () => {
+const CustomCursor = ({ messages }) => {
   const pathname = usePathname();
+  const locale = useLocale();
+  const [isMobile, setIsMobile] = useState(false);
+  const [cursorText, setCursorText] = useState('');
 
-  function onMouseHover(target) {
-    gsap.to(target, {
+  function onMouseHover(bigBall, smallBall) {
+    gsap.to(bigBall, {
       duration: 0.3,
       scale: 4,
-      mixBlendMode: 'difference',
-    });
-  }
-  function onMouseHoverOut(target) {
-    gsap.to(target, {
-      duration: 0.3,
-      scale: 1,
-      mixBlendMode: 'normal',
-    });
-  }
-
-  function onMouseMove(e, smallBall, bigBall) {
-    gsap.to(bigBall, {
-      duration: 0.4,
-      x: e.pageX - 15,
-      y: e.pageY - 15,
+      opacity: 0.5,
     });
 
     gsap.to(smallBall, {
       duration: 0.1,
-      x: e.pageX - 5,
-      y: e.pageY - 12.5,
+      y: -50,
+    });
+  }
+  function onMouseHoverOut(bigBall, smallBall) {
+    gsap.to(bigBall, {
+      duration: 0.3,
+      scale: 1,
+      opacity: 1,
     });
   }
 
+  const onMouseMove = useCallback(
+    (e, smallBall, bigBall, cursorTextElement) => {
+      gsap.to(bigBall, {
+        duration: 0.4,
+        x: e.pageX - 15,
+        y: e.pageY - 15,
+      });
+
+      gsap.to(smallBall, {
+        duration: 0.1,
+        x: e.pageX - 5,
+        y: e.pageY - 12.5,
+      });
+
+      const cursorTextXTranslateAmount =
+        locale === 'sr' ? (cursorText === 'view' ? 40 : 18) : 18;
+
+      gsap.to(cursorTextElement, {
+        duration: 0,
+        x: e.pageX - cursorTextXTranslateAmount,
+        y: e.pageY - 21,
+      });
+    },
+    [cursorText, locale]
+  );
+
   useEffect(() => {
     if (typeof window !== 'undefined') {
+      const isMobileCurr = window.matchMedia('(max-width: 680px)').matches;
+      setIsMobile(isMobileCurr);
+
+      if (isMobileCurr) return;
+
       const bigBall = document.querySelector('.cursor__ball--big');
       const smallBall = document.querySelector('.cursor__ball--small');
-      const hoverablesInner = document.querySelectorAll('.hoverable');
+      const hoverables = document.querySelectorAll('.hoverable');
+      const hoverablesView = document.querySelectorAll('.hoverableView');
+      const hoverablesDrag = document.querySelectorAll('.hoverableDrag');
+      const cursorTextElement = document.querySelector('.cursorText');
 
       document.body.addEventListener('mousemove', (event) =>
-        onMouseMove(event, smallBall, bigBall)
+        onMouseMove(event, smallBall, bigBall, cursorTextElement)
       );
 
-      hoverablesInner.forEach((hoverable) => {
+      hoverables.forEach((hoverable) => {
         hoverable.addEventListener('mouseenter', () => {
+          onMouseHover(bigBall, smallBall);
+        });
+        hoverable.addEventListener('mouseleave', () => {
+          onMouseHoverOut(bigBall, smallBall);
+        });
+        hoverable.addEventListener('click', () => {
+          onMouseHoverOut(bigBall, smallBall);
+        });
+      });
+
+      hoverablesView.forEach((hoverable) => {
+        hoverable.addEventListener('mouseenter', () => {
+          setCursorText('view');
+          onMouseHover(bigBall, smallBall);
+        });
+        hoverable.addEventListener('mouseleave', () => {
+          setCursorText('');
+          onMouseHoverOut(bigBall, smallBall);
+        });
+        hoverable.addEventListener('click', () => {
+          setCursorText('');
+          onMouseHoverOut(bigBall, smallBall);
+        });
+      });
+
+      hoverablesDrag.forEach((hoverable) => {
+        hoverable.addEventListener('mouseenter', () => {
+          setCursorText('drag');
           onMouseHover(bigBall);
         });
         hoverable.addEventListener('mouseleave', () => {
+          setCursorText('');
           onMouseHoverOut(bigBall);
         });
         hoverable.addEventListener('click', () => {
+          setCursorText('');
           onMouseHoverOut(bigBall);
         });
       });
     }
+
     return () => {
+      if (isMobile) return;
+
       document.body.removeEventListener('mousemove', onMouseMove);
-      const hoverablesInner = document.querySelectorAll('a');
-      hoverablesInner.forEach((hoverable) => {
+      const hoverables = document.querySelectorAll('a');
+      hoverables.forEach((hoverable) => {
         hoverable.removeEventListener('mouseenter', onMouseHover);
         hoverable.removeEventListener('mouseleave', onMouseHoverOut);
       });
     };
-  }, [pathname]);
+  }, [isMobile, onMouseMove, pathname]);
 
   return (
-    <div className='cursor'>
-      <div className='cursor__ball cursor__ball--big '>
-        <svg height='30' width='30'>
-          <circle
-            cx='15'
-            cy='15'
-            r='12'
-            strokeWidth='0'
-            fill='#ffd600'
-          ></circle>
-        </svg>
-      </div>
+    !isMobile && (
+      <div className='cursor'>
+        <div className='cursor__ball cursor__ball--big '>
+          <svg height='30' width='30'>
+            <circle
+              cx='15'
+              cy='15'
+              r='12'
+              strokeWidth='0'
+              fill='#ffd600'
+            ></circle>
+          </svg>
+        </div>
+        <span
+          className='cursorText'
+          style={cursorText ? { display: 'block' } : { display: 'none' }}
+        >
+          {cursorText === 'view'
+            ? messages.viewHoverText
+            : messages.dragHoverText}
+        </span>
 
-      <div className='cursor__ball cursor__ball--small'>
-        <svg height='10' width='10'>
-          <circle cx='5' cy='5' r='4' strokeWidth='0' fill='#000'></circle>
-        </svg>
+        <div
+          className='cursor__ball cursor__ball--small'
+          style={cursorText ? { display: 'none' } : { display: 'block' }}
+        >
+          <svg height='10' width='10'>
+            <circle cx='5' cy='5' r='4' strokeWidth='0' fill='#000'></circle>
+          </svg>
+        </div>
       </div>
-    </div>
+    )
   );
 };
 

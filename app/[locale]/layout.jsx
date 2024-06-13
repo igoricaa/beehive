@@ -86,6 +86,11 @@ export default function LocaleLayout({ children, params: { locale } }) {
     lang: t('lang'),
   };
 
+  const cursorMessages = {
+    viewHoverText: t('cursorViewHoverText'),
+    dragHoverText: t('cursorDragHoverText'),
+  };
+
   return (
     <ViewTransitions>
       <html lang={locale}>
@@ -97,7 +102,7 @@ export default function LocaleLayout({ children, params: { locale } }) {
             <SpeedInsights />
             <Analytics />
           </NextIntlClientProvider>
-          <CustomCursor />
+          <CustomCursor messages={cursorMessages} />
         </body>
       </html>
     </ViewTransitions>

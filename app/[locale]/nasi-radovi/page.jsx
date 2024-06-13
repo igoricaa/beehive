@@ -72,7 +72,7 @@ const Projects = ({ params: { locale } }) => {
             <Link
               key={projectTitle}
               href={`/nasi-radovi/${project.slug}`}
-              className={project.ready ? 'hoverable' : ''}
+              className={project.ready ? 'hoverableView' : ''}
             >
               <article
                 className={styles.project}

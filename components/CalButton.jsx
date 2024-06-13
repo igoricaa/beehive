@@ -37,7 +37,7 @@ export default function CalButton({ messages }) {
 
   return (
     <button
-      className={styles.button}
+      className={['hoverable', styles.button].join(' ')}
       data-cal-namespace=''
       data-cal-link='beehive/discovery-session-w-beehive-agency'
       data-cal-config='{"layout":"month_view"}'

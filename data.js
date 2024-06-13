@@ -2,8 +2,8 @@ export const projects = [
   {
     title: 'Bistro grad',
     slug: 'bistro-grad',
-    featuredImage: '/our-work/bistro-grad.png',
-    listImage: '/our-work/bistro-grad-home.png',
+    featuredImage: '/our-work/bistro-grad-our-work.png',
+    listImage: '/our-work/bistro-grad-featured.png',
     categories: ['social media', 'marketing'],
     backgroundColor: '#F286B7',
     textColor: '#000',

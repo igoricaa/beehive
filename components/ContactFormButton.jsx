@@ -25,7 +25,7 @@ export default function ContactFormButton({ messages }) {
   }, []);
 
   return (
-    <button className={styles.button} type='submit'>
+    <button className={['hoverable', styles.button].join(' ')} type='submit'>
       <div ref={buttonRef} className={styles.innerWrapper}>
         <span ref={overlayRef} className={styles.overlay}></span>
         <div className={styles.textWrapper}>

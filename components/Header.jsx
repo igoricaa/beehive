@@ -170,13 +170,14 @@ export default function Header({ routes, messages }) {
               {routes.map((route, index) => (
                 <li
                   key={index}
-                  className={
+                  className={[
+                    'hoverable',
                     pathname == route.href ||
                     (route.href !== '/' &&
                       pathname.slice(1).includes(route.href.slice(1)))
                       ? styles.active
-                      : ''
-                  }
+                      : '',
+                  ].join(' ')}
                 >
                   <Link href={route.href}>{route.label}</Link>
                 </li>
@@ -213,13 +214,14 @@ export default function Header({ routes, messages }) {
                   {routes.map((route, index) => (
                     <li
                       key={index}
-                      className={
+                      className={[
+                        'hoverable',
                         pathname == route.href ||
                         (route.href !== '/' &&
                           pathname.slice(1).includes(route.href.slice(1)))
                           ? styles.active
-                          : ''
-                      }
+                          : '',
+                      ].join(' ')}
                     >
                       <Link href={route.href} onClick={toggleMenu}>
                         {route.label}
@@ -267,13 +269,14 @@ export default function Header({ routes, messages }) {
                   {routes.map((route, index) => (
                     <li
                       key={index}
-                      className={
+                      className={[
+                        'hoverable',
                         pathname == route.href ||
                         (route.href !== '/' &&
                           pathname.slice(1).includes(route.href.slice(1)))
                           ? styles.active
-                          : ''
-                      }
+                          : '',
+                      ].join(' ')}
                     >
                       <Link href={route.href} onClick={toggleBottomMenu}>
                         {route.label}
