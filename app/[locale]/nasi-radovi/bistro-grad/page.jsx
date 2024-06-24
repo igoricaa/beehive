@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
 import imageFloatingRight from '@/public/our-work/bistro-floating-coffee.jpg';
-import breakBg from '@/public/our-work/bistro-grad-break.png';
+import breakBg from '@/public/our-work/bistro-grad-break-bg.png';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 import MuxVideo from '@mux/mux-video-react';

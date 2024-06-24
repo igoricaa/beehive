@@ -87,10 +87,6 @@ export default function Home({ params: { locale } }) {
         text: t('team.hover.igor.text'),
       },
       {
-        title: t('team.hover.maja.title'),
-        text: t('team.hover.maja.text'),
-      },
-      {
         title: t('team.hover.dea.title'),
         text: t('team.hover.dea.text'),
       },

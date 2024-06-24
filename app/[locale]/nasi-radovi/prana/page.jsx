@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './page.module.scss';
-import pranaHeader from '@/public/prana-header.png';
+import pranaHeader from '@/public/our-work/prana-header.png';
 import imageFloatingLeft from '@/public/our-work/prana-case-study-1.png';
 import imageFloatingRight from '@/public/our-work/prana-case-study-2.png';
 import breakBg from '@/public/our-work/prana-break-bg.png';

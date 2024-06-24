@@ -66,11 +66,12 @@ const Projects = ({ params: { locale } }) => {
           floating
         />
         {projects.map((project, index) => {
-          const projectTitle = project.title.toLowerCase().replace(/\s/g, '');
+          // const projectTitle = project.title.toLowerCase().replace(/\s/g, '');
+          const projectSlug = project.slug;
 
           return (
             <Link
-              key={projectTitle}
+              key={projectSlug}
               href={`/nasi-radovi/${project.slug}`}
               className={project.ready ? 'hoverableView' : ''}
             >
@@ -83,7 +84,7 @@ const Projects = ({ params: { locale } }) => {
               >
                 <div className={styles.titleWrapper}>
                   <h3 style={{ borderColor: project.textColor }}>
-                    {t(`projects.${projectTitle}.title`)}:
+                    {t(`projects.${projectSlug}.title`)}:
                   </h3>
 
                   {!project.ready && (
@@ -106,8 +107,8 @@ const Projects = ({ params: { locale } }) => {
                 </div>
 
                 <div className={styles.projectContent}>
-                  <p>{t(`projects.${projectTitle}.description.partone`)}</p>
-                  <p>{t(`projects.${projectTitle}.description.parttwo`)}</p>
+                  <p>{t(`projects.${projectSlug}.description.partone`)}</p>
+                  <p>{t(`projects.${projectSlug}.description.parttwo`)}</p>
                   <div className={[styles.projectImageWrapper].join(' ')}>
                     <Image
                       src={project.featuredImage}

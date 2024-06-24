@@ -55,7 +55,7 @@
       "services": {
         "digital": {
           "title": "digital marketing strategy",
-          "description": "Producing content and running ads is our greatest love, but it the final step to a comprehensive digital marketing strategy. We develop, produce and execute your story to get what you need. We do it with our hearts, knowledge and numbers."
+          "description": "Producing content and running ads is our greatest love, but it is the final step to a comprehensive digital marketing strategy. We develop, produce and execute your story to get what you need. We do it with our hearts, knowledge and numbers."
         },
         "social": {
           "title": "social media marketing",
@@ -102,10 +102,6 @@
         "igor": {
           "title": "Igorica, 30 years of buzzing",
           "text": "Solves."
-        },
-        "maja": {
-          "title": "Maki, X years of buzzing",
-          "text": "Always a surprise with her."
         },
         "dea": {
           "title": "Dea, 31 years of buzzing",
@@ -195,14 +191,21 @@
           "parttwo": "The idea behind this bright place at Hilandarska 6 and Kneginje Zorka 28 two years later is to serve food that increases life energy."
         }
       },
-      "bistrograd": {
+      "roger-directors": {
+        "title": "Roger Directors Agency",
+        "description": {
+          "partone": "Roger is the brainchild of three industry veterans. And, just like all children… Roger is still finding its way in the world.",
+          "parttwo": "Yes, okay, we've broken one or two things - it's bound to happen when you're filled with awe, energy, and excitement. But we've created many things too - and all of it we're very proud of!"
+        }
+      },
+      "bistro-grad": {
         "title": "Bistro grad",
         "description": {
           "partone": "Belgrade Hometown bar and restaurant. Located in the heart of Belgrade, in Uzun Mirkova no. 5. The personification of an urban lifestyle. These are people who like to have fun, socialize, and throw amazing parties.",
           "parttwo": "Their menu is diverse, as is the clientele, there are many easter eggs in the bar itself, and there are a million ways they can be communicated on social media. So, how can we extract the essence of this place and present it as best as possible on digital channels?"
         }
       },
-      "zlazla": {
+      "zla-zla": {
         "title": "ZLA-ZLA",
         "description": {
           "partone": "ZLA-ZLA is the biggest CBD shop in the Balkans. We're not kidding when we say the biggest. They have over 4000 products on their e-commerce site, have been around since 2004, and not only do they have CBD products, but they also have streetwear.",
@@ -213,7 +216,7 @@
   },
   "contact": {
     "title": {
-      "partone": "Be sure ",
+      "partone": "Feel free ",
       "parttwo": "to contact ",
       "partthree": "us"
     },
@@ -240,7 +243,7 @@
       "subtitle": {
         "partone": "Or schedule",
         "parttwo": "a meeting",
-        "partthree": "with our team",
+        "partthree": "with our team ",
         "partfour": "right away!"
       },
       "button": {
@@ -310,7 +313,7 @@
         "title": "Prana social networks"
       }
     },
-    "bistrograd": {
+    "bistro-grad": {
       "title": "Bistro grad",
       "categories": {
         "branding": "brending",
@@ -365,7 +368,7 @@
         "title": "Bistro grad social networks"
       }
     },
-    "zlazla": {
+    "zla-zla": {
       "title": "ZLA-ZLA",
       "categories": {
         "branding": "brending",
@@ -430,6 +433,77 @@
       },
       "socials": {
         "title": "ZLA-ZLA social networks"
+      }
+    },
+    "roger-directors": {
+      "title": "Roger Directors Agency",
+      "categories": {
+        "development": "development"
+      },
+      "about": {
+        "highlight": {
+          "subtitle": "About Roger Directors",
+          "title": {
+            "partone": "From zero to hero"
+          }
+        },
+        "partone": "Roger.rs, a prominent provider of communication solutions, sought to elevate their digital presence through a sophisticated website. Specializing in interactive and web campaigns, film and video production, event management, research and insights analysis, and brand strategy development, Roger.rs needed a platform that could effectively represent their diverse capabilities.",
+        "parttwo": "They aimed for a website that not only showcased their portfolio but also provided an engaging and seamless user experience. BeeHive Agency was selected to handle the technical development, employing Next.js, Sanity CMS, and MUX for an optimal solution."
+      },
+      "challenge": {
+        "highlight": {
+          "subtitle": "The Challenge",
+          "title": {
+            "partone": "Building a Versatile Digital Platform"
+          }
+        },
+        "description": "Roger.rs faced the significant challenge of developing a cohesive digital identity that could encompass their wide range of services while delivering a high-quality user experience. The primary requirements included:",
+        "descBullet-1": "1. Performance and Speed: Ensuring the website was fast-loading and responsive across all devices to provide a seamless user experience.",
+        "descBullet-2": "2. Dynamic Content Management: Implementing a flexible CMS that allowed Roger.rs to easily manage and update content without needing technical expertise.",
+        "descBullet-3": "3. High-Quality Video Integration: Incorporating smooth and high-resolution video streaming to effectively showcase their video production work.",
+        "descBullet-4": "4. SEO and Accessibility: Optimizing the site for search engines to increase visibility and ensuring it was accessible to a broad audience.",
+        "desc-final": "BeeHive Agency's task was to develop a robust, high-performance website that met these demands, utilizing cutting-edge technologies and adhering to best practices in web development."
+      },
+      "approach": {
+        "title": {
+          "main": "Advanced Technical Implementation",
+          "subtitle": "Approach"
+        },
+        "descBullet-1": "1. Next.js Framework: Chosen for its powerful features, including server-side rendering and static site generation, which ensure fast load times and SEO-friendly pages.",
+        "descBullet-2": "2. Sanity CMS: Integrated for flexible and efficient content management, allowing Roger.rs to easily update and manage their website content.",
+        "descBullet-3": "3. MUX Video Integration: Implemented for high-quality video streaming, essential for showcasing Roger.rs's video production capabilities.",
+        "descBullet-4": "4. Responsive Design Implementation: Ensured the provided design was fully responsive and consistent across all devices."
+      },
+      "solution": {
+        "title": {
+          "main": "Delivering a Superior User Experience",
+          "subtitle": "Success Metrics"
+        },
+        "description": "We organized a <span>pre-opening</span> event for friends of the house - <span>influencers, actors, friends, and partners,</span> they got a glimpse of what Prana will look like - through small bites of selected dishes, wine, friendly and family gathering, one spring Sunday morning. Before the bar opened, <span>Prana</span> already had 1000 organic followers, from the event itself and the announcement of something completely new and unique.",
+        "descBullet-1": "1. Improved Load Times: Next.js framework resulted in significantly faster page loads.",
+        "descBullet-2": "2. Enhanced User Engagement: High-quality video content through MUX increased user interaction and time on site.",
+        "descBullet-3": "3. Efficient Content Management: Sanity CMS provided Roger.rs with the flexibility to manage and update content effortlessly.",
+        "descBullet-4": "4. Positive Client Feedback: Roger.rs praised the website's performance and seamless content and video integration."
+      },
+      "info": {
+        "scope": {
+          "title": "Scope",
+          "one": "Content creation (video, photography)",
+          "two": "Copywriting",
+          "three": "Social media management",
+          "four": "Social media strategy",
+          "five": "PR",
+          "six": "Event management",
+          "seven": "Influencer marketing"
+        },
+        "stats": {
+          "title": "Statistics",
+          "followers": "Followers",
+          "budget": "Budget invested in advertising"
+        }
+      },
+      "links": {
+        "title": "Roger Directors links"
       }
     }
   }

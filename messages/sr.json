@@ -71,7 +71,7 @@
         },
         "development": {
           "title": "web & app development",
-          "description": "Producing content and running ads is our greatest love, but it the final step to a comprehensive digital marketing strategy. We develop, produce and execute your story to get what you need. We do it with our hearts, knowledge and numbers."
+          "description": "Srce za kod, oko za detalje i nos za poboljšanje."
         }
       }
     },
@@ -102,10 +102,6 @@
         "igor": {
           "title": "Igorica, 30 leta",
           "text": "Rešava."
-        },
-        "maja": {
-          "title": "Maki, ima leta",
-          "text": "Sa njom uvek neki šokovi."
         },
         "dea": {
           "title": "Dea, 31 leto",
@@ -195,14 +191,14 @@
           "parttwo": "Ideja koja nosi ovo svetlo mesto u Hilandarskoj 6 i dve godine kasnije Kneginje Zorke 28, je da se služi hrana koja povećava životnu energiju."
         }
       },
-      "bistrograd": {
+      "bistro-grad": {
         "title": "Bistro grad",
         "description": {
           "partone": "Beogradski Hometown bar i restoran. Lociran u samom centru, u Uzun MIrkovoj broj 5. Slika i prilika urbanog načina života. Ljudi koji vole da se zabavljaju, druže i bacaju dobre fore.",
           "parttwo": "Njihov meni je raznovrstan, kao i klijentela, u samom lokalu postoji mnoštvo easter egg-ova, a pravaca komunikacije na mrežama može biti mali milion. Kako izvući esenciju ovog lokala i prikazati je najbolje moguće na digitalnim kanalima?"
         }
       },
-      "zlazla": {
+      "zla-zla": {
         "title": "ZLA-ZLA",
         "description": {
           "partone": "ZLA-ZLA je najveći CBD shop na Balkanu. Ne šalimo se kad kažemo najveći. Oni imaju preko 4000 proizvoda na svoj e-commerce sajtu, postoje od 2004. godine i ne samo da imaju CBD proizvode, već imaju i svoj streetwear.",
@@ -213,7 +209,7 @@
   },
   "contact": {
     "title": {
-      "partone": "Obavezno ",
+      "partone": "Slobodno ",
       "parttwo": "nas",
       "partthree": "kontaktiraj"
     },
@@ -310,7 +306,7 @@
         "title": "Prana društvene mreže"
       }
     },
-    "bistrograd": {
+    "bistro-grad": {
       "title": "Bistro grad",
       "categories": {
         "branding": "brending",
@@ -365,7 +361,7 @@
         "title": "Bistro grad društvene mreže"
       }
     },
-    "zlazla": {
+    "zla-zla": {
       "title": "ZLA-ZLA",
       "categories": {
         "branding": "brending",
