@@ -261,6 +261,7 @@ export default function Header({ routes, messages }) {
                 <Link href='/' className={styles.logoWrapper}>
                   <Image
                     src={beehiveCleanLogo}
+                    style={{ width: 'auto' }}
                     priority
                     alt='Beehive Agency Logo'
                   />
