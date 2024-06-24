@@ -45,7 +45,8 @@
         "categories": {
           "branding": "brending",
           "socialmedia": "društvene mreže",
-          "marketing": "marketing"
+          "marketing": "marketing",
+          "development": "development"
         },
         "client": "klijent:"
       }

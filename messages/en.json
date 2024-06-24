@@ -45,7 +45,8 @@
         "categories": {
           "branding": "branding",
           "socialmedia": "social media",
-          "marketing": "marketing"
+          "marketing": "marketing",
+          "development": "development"
         },
         "client": "client:"
       }

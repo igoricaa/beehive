@@ -25,10 +25,10 @@ export const pathnames = {
     en: '/our-work/prana',
     sr: '/nasi-radovi/prana',
   },
-  '/nasi-radovi/roger-directors': {
-    en: '/our-work/roger-directors',
-    sr: '/nasi-radovi/roger-directors',
-  },
+  // '/nasi-radovi/roger-directors': {
+  //   en: '/our-work/roger-directors',
+  //   sr: '/nasi-radovi/roger-directors',
+  // },
   '/nasi-radovi/bistro-grad': {
     en: '/our-work/bistro-grad',
     sr: '/nasi-radovi/bistro-grad',
