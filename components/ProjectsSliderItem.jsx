@@ -36,7 +36,7 @@ export default function ProjectsSliderItem({ project, messages }) {
         <div className={styles.infoWrapper}>
           {project.categories && (
             <div className={styles.categoriesWrapper}>
-              {project.categories.map((category) => (
+              {project.categories.slice(0, 2).map((category) => (
                 <span key={category}>
                   {messages.categories[category.replace(/\s/g, '')]}
                 </span>

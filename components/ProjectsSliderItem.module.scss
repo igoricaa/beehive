@@ -69,12 +69,11 @@
     min-width: 54vw;
   }
 
-  .projectInfoWrapper {
+  .infoWrapper {
     margin-top: 1rem;
+    flex-direction: column-reverse;
 
     .titleWrapper {
-      order: 1;
-
       span {
         color: var(--color_text_main);
         font-size: 12px;
@@ -86,7 +85,6 @@
       }
     }
     .categoriesWrapper {
-      order: 2;
       justify-content: flex-start;
       margin-top: 0.5rem;
       flex-wrap: wrap;
