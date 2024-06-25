@@ -21,6 +21,7 @@ export default function Slider({ content, messages }) {
             <SliderItem
               key={index}
               content={slideContent}
+              imageAlignment={[0, 4, 7].includes(index) ? 'top' : 'center'}
               messages={messages[index]}
             />
           ))}

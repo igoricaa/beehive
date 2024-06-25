@@ -5,7 +5,7 @@ import styles from './SliderItem.module.scss';
 import { useEffect, useRef } from 'react';
 import { calculateOverlayPosition } from '../utils/utils';
 
-export default function SliderItem({ content, messages }) {
+export default function SliderItem({ content, messages, imageAlignment }) {
   const slideRef = useRef(null);
   const overlayRef = useRef(null);
 
@@ -38,7 +38,7 @@ export default function SliderItem({ content, messages }) {
               alt={content.title}
               fill
               sizes='(max-width: 1024px) 50vw, 22.5vw'
-              style={{ objectFit: 'cover' }}
+              style={{ objectFit: 'cover', objectPosition: imageAlignment}}
             />
           </div>
         )}
