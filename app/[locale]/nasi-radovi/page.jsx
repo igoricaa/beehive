@@ -65,7 +65,7 @@ const Projects = ({ params: { locale } }) => {
           secondaryText={t_cta('textSecondary')}
           floating
         />
-        {projects.map((project, index) => {
+        {projects.slice(0, 3).map((project, index) => {
           // const projectTitle = project.title.toLowerCase().replace(/\s/g, '');
           const projectSlug = project.slug;
 
