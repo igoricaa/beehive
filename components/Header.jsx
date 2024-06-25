@@ -197,38 +197,40 @@ export default function Header({ routes, messages }) {
               />
 
               <div className={styles.mobileMenu} ref={menuRef}>
-                <Link href='/' className={styles.logoWrapper}>
-                  <picture>
-                    <source
-                      srcSet={beehiveCleanLogo.src}
-                      media='(max-width: 1024px)'
-                    />
-                    <Image
-                      src={beehiveCreativeAgencyLogo}
-                      priority
-                      alt='Beehive Agency Logo'
-                    />
-                  </picture>
-                </Link>
-                <ul>
-                  {routes.map((route, index) => (
-                    <li
-                      key={index}
-                      className={[
-                        'hoverable',
-                        pathname == route.href ||
-                        (route.href !== '/' &&
-                          pathname.slice(1).includes(route.href.slice(1)))
-                          ? styles.active
-                          : '',
-                      ].join(' ')}
-                    >
-                      <Link href={route.href} onClick={toggleMenu}>
-                        {route.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <div>
+                  <Link href='/' className={styles.logoWrapper}>
+                    <picture>
+                      <source
+                        srcSet={beehiveCleanLogo.src}
+                        media='(max-width: 1024px)'
+                      />
+                      <Image
+                        src={beehiveCreativeAgencyLogo}
+                        priority
+                        alt='Beehive Agency Logo'
+                      />
+                    </picture>
+                  </Link>
+                  <ul>
+                    {routes.map((route, index) => (
+                      <li
+                        key={index}
+                        className={[
+                          'hoverable',
+                          pathname == route.href ||
+                          (route.href !== '/' &&
+                            pathname.slice(1).includes(route.href.slice(1)))
+                            ? styles.active
+                            : '',
+                        ].join(' ')}
+                      >
+                        <Link href={route.href} onClick={toggleMenu}>
+                          {route.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <div className={styles.menuFooter}>
                   <div className={styles.langSwitcherWrapper}>
                     <p>{messages.lang}</p>
@@ -258,33 +260,35 @@ export default function Header({ routes, messages }) {
                 )}
                 ref={bottomMenuRef}
               >
-                <Link href='/' className={styles.logoWrapper}>
-                  <Image
-                    src={beehiveCleanLogo}
-                    style={{ width: 'auto' }}
-                    priority
-                    alt='Beehive Agency Logo'
-                  />
-                </Link>
-                <ul>
-                  {routes.map((route, index) => (
-                    <li
-                      key={index}
-                      className={[
-                        'hoverable',
-                        pathname == route.href ||
-                        (route.href !== '/' &&
-                          pathname.slice(1).includes(route.href.slice(1)))
-                          ? styles.active
-                          : '',
-                      ].join(' ')}
-                    >
-                      <Link href={route.href} onClick={toggleBottomMenu}>
-                        {route.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+                <div>
+                  <Link href='/' className={styles.logoWrapper}>
+                    <Image
+                      src={beehiveCleanLogo}
+                      style={{ width: 'auto' }}
+                      priority
+                      alt='Beehive Agency Logo'
+                    />
+                  </Link>
+                  <ul>
+                    {routes.map((route, index) => (
+                      <li
+                        key={index}
+                        className={[
+                          'hoverable',
+                          pathname == route.href ||
+                          (route.href !== '/' &&
+                            pathname.slice(1).includes(route.href.slice(1)))
+                            ? styles.active
+                            : '',
+                        ].join(' ')}
+                      >
+                        <Link href={route.href} onClick={toggleBottomMenu}>
+                          {route.label}
+                        </Link>
+                      </li>
+                    ))}
+                  </ul>
+                </div>
                 <div className={styles.menuFooter}>
                   <div>
                     <div className={styles.langSwitcherWrapper}>
