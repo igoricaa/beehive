@@ -114,6 +114,7 @@ const Projects = ({ params: { locale } }) => {
                       src={project.featuredImage}
                       alt={project.title}
                       fill
+                      sizes='(max-width: 1024px) 95vw, 75vw'
                       style={{ objectFit: 'cover' }}
                       priority={index === 0}
                     />
