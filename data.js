@@ -257,10 +257,10 @@ export const socials = [
     link: 'https://www.instagram.com/beehivebelgrade',
     text: 'Instagram',
   },
-  // {
-  //   link: 'https://www.linkedin.com/company/beehiveagency/',
-  //   text: 'LinkedIn',
-  // },
+  {
+    link: 'https://www.linkedin.com/company/beehive-digital-creative/',
+    text: 'LinkedIn',
+  },
 ];
 
 export const coreValues = [
