@@ -41,6 +41,7 @@ const Project = ({ params: { locale } }) => {
           autoPlay
           preload='auto'
           placeholder={undefined}
+          disablePictureInPicture
         />
       </div>
 
@@ -58,6 +59,7 @@ const Project = ({ params: { locale } }) => {
             loop
             autoPlay
             placeholder={undefined}
+            disablePictureInPicture
           />
         </div>
         <div className={styles.mediaWrapper}>
