@@ -192,7 +192,7 @@
           "parttwo": "Ideja koja nosi ovo svetlo mesto u Hilandarskoj 6 i dve godine kasnije Kneginje Zorke 28, je da se služi hrana koja povećava životnu energiju."
         }
       },
-      "bistro-grad": {
+      "bistrograd": {
         "title": "Bistro grad",
         "description": {
           "partone": "Beogradski Hometown bar i restoran. Lociran u samom centru, u Uzun MIrkovoj broj 5. Slika i prilika urbanog načina života. Ljudi koji vole da se zabavljaju, druže i bacaju dobre fore.",
@@ -307,7 +307,7 @@
         "title": "Prana društvene mreže"
       }
     },
-    "bistro-grad": {
+    "bistrograd": {
       "title": "Bistro grad",
       "categories": {
         "branding": "brending",

@@ -199,7 +199,7 @@
           "parttwo": "Yes, okay, we've broken one or two things - it's bound to happen when you're filled with awe, energy, and excitement. But we've created many things too - and all of it we're very proud of!"
         }
       },
-      "bistro-grad": {
+      "bistrograd": {
         "title": "Bistro grad",
         "description": {
           "partone": "Belgrade Hometown bar and restaurant. Located in the heart of Belgrade, in Uzun Mirkova no. 5. The personification of an urban lifestyle. These are people who like to have fun, socialize, and throw amazing parties.",
@@ -314,7 +314,7 @@
         "title": "Prana social networks"
       }
     },
-    "bistro-grad": {
+    "bistrograd": {
       "title": "Bistro grad",
       "categories": {
         "branding": "brending",
