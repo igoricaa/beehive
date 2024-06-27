@@ -199,14 +199,14 @@
           "parttwo": "Yes, okay, we've broken one or two things - it's bound to happen when you're filled with awe, energy, and excitement. But we've created many things too - and all of it we're very proud of!"
         }
       },
-      "bistrograd": {
+      "bistro-grad": {
         "title": "Bistro grad",
         "description": {
           "partone": "Belgrade Hometown bar and restaurant. Located in the heart of Belgrade, in Uzun Mirkova no. 5. The personification of an urban lifestyle. These are people who like to have fun, socialize, and throw amazing parties.",
           "parttwo": "Their menu is diverse, as is the clientele, there are many easter eggs in the bar itself, and there are a million ways they can be communicated on social media. So, how can we extract the essence of this place and present it as best as possible on digital channels?"
         }
       },
-      "zlazla": {
+      "zla-zla": {
         "title": "ZLA-ZLA",
         "description": {
           "partone": "ZLA-ZLA is the biggest CBD shop in the Balkans. We're not kidding when we say the biggest. They have over 4000 products on their e-commerce site, have been around since 2004, and not only do they have CBD products, but they also have streetwear.",
@@ -314,7 +314,7 @@
         "title": "Prana social networks"
       }
     },
-    "bistrograd": {
+    "bistro-grad": {
       "title": "Bistro grad",
       "categories": {
         "branding": "brending",
@@ -369,7 +369,7 @@
         "title": "Bistro grad social networks"
       }
     },
-    "zlazla": {
+    "zla-zla": {
       "title": "ZLA-ZLA",
       "categories": {
         "branding": "brending",

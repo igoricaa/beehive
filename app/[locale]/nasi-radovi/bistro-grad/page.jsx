@@ -21,7 +21,7 @@ const socials = [
 
 const Project = ({ params: { locale } }) => {
   unstable_setRequestLocale(locale);
-  const t = useTranslations('projects.bistrograd');
+  const t = useTranslations('projects.bistro-grad');
 
   return (
     <main className={styles.main}>
