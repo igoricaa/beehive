@@ -48,6 +48,7 @@ const Project = ({ params: { locale } }) => {
             autoPlay
             placeholder={undefined}
             disablePictureInPicture
+            playsInline
           />
         </div>
         <div className={styles.mediaWrapper}>
