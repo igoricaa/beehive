@@ -4,6 +4,7 @@ import Link from '@/components/Link';
 import styles from './CtaButton.module.scss';
 import { useEffect, useRef, useState } from 'react';
 import { calculateOverlayPosition } from '../utils/utils';
+import ArrowRight from './icons/ArrowRight';
 
 export default function CtaButton({
   href,
@@ -80,6 +81,9 @@ export default function CtaButton({
               <span>{secondaryText}</span>
             </div>
           </div>
+          <span className={styles.iconWrapper}>
+            <ArrowRight />
+          </span>
         </a>
       ) : (
         <Link
@@ -94,13 +98,18 @@ export default function CtaButton({
           href={href}
         >
           {!(floating && isMobile) && (
-            <div ref={buttonRef} className={styles.innerWrapper}>
-              <span ref={overlayRef} className={styles.overlay}></span>
-              <div className={styles.textWrapper}>
-                <span>{mainText}</span>
-                <span>{secondaryText}</span>
+            <>
+              <div ref={buttonRef} className={styles.innerWrapper}>
+                <span ref={overlayRef} className={styles.overlay}></span>
+                <div className={styles.textWrapper}>
+                  <span>{mainText}</span>
+                  <span>{secondaryText}</span>
+                </div>
               </div>
-            </div>
+              <span className={styles.iconWrapper}>
+                <ArrowRight />
+              </span>
+            </>
           )}
         </Link>
       )}

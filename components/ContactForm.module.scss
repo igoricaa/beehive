@@ -80,7 +80,7 @@
   }
 
   button {
-    border-radius: 24px;
+    border-radius: 4rem;
     background-color: #000;
     color: #fff;
     border: none;
@@ -129,6 +129,10 @@
 
 @media screen and (max-width: 680px) {
   .contactForm {
+    button {
+      width: 100%;
+      justify-content: space-between;
+    }
     .rowWrapper {
       gap: 1rem;
 
