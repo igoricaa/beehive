@@ -1,18 +1,18 @@
 .localeSwitcher {
-  width: 3.5rem;
-  height: 1.5rem;
+  width: 5rem;
+  height: 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2px;
-  padding: 2px 9px;
+  padding: 2px 12px;
   border: 1px solid #e8e4d7;
-  border-radius: 64px;
+  border-radius: 4rem;
   position: relative;
 
   &::before,
   &::after {
-    font-size: 12px;
+    font-size: 1rem;
     transition: all 0.3s ease;
   }
 
@@ -28,12 +28,12 @@
 
   .switch {
     background-color: #ffd600;
-    width: 50%;
+    width: 2.5rem;
+    height: 28px;
     border-radius: 20px;
-    height: 18px;
     position: absolute;
     z-index: -1;
-    left: 2px;
+    left: 1px;
     transition: all 0.3s ease;
   }
 
@@ -53,5 +53,30 @@
 
   .checkbox {
     display: none;
+  }
+}
+
+@media (max-width: 680px) {
+  .localeSwitcher {
+    width: 75px;
+    height: 34px;
+
+    &::before,
+    &::after {
+      font-size: 1rem;
+    }
+
+    .switch {
+      width: 38px;
+      height: 30px;
+      border-radius: 20px;
+    }
+
+
+  &:has(.checkbox:checked) {
+    .switch {
+      left: calc(50% - 3px);
+    }
+  }
   }
 }
