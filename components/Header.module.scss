@@ -120,6 +120,12 @@
         height: 39px;
       }
     }
+
+    .helperWrapper {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
   }
 
   .navbarMobileScrolled {

@@ -158,139 +158,82 @@ export default function Header({ routes, messages }) {
             />
           </picture>
         </Link>
-        <nav
-          className={[
-            styles.navMenu,
-            menuOpen ? styles.active : '',
-            bottomMenuOpen ? styles.activeBottom : '',
-          ].join(' ')}
-        >
-          {isDesktop && (
-            <ul>
-              {routes.map((route, index) => (
-                <li
-                  key={index}
-                  className={[
-                    'hoverable',
-                    pathname == route.href ||
-                    (route.href !== '/' &&
-                      pathname.slice(1).includes(route.href.slice(1)))
-                      ? styles.active
-                      : '',
-                  ].join(' ')}
-                >
-                  <Link href={route.href}>{route.label}</Link>
+        <div className={styles.helperWrapper}>
+          <LocaleSwitcher messages={messages.locales} />
+          <nav
+            className={[
+              styles.navMenu,
+              menuOpen ? styles.active : '',
+              bottomMenuOpen ? styles.activeBottom : '',
+            ].join(' ')}
+          >
+            {isDesktop && (
+              <ul>
+                {routes.map((route, index) => (
+                  <li
+                    key={index}
+                    className={[
+                      'hoverable',
+                      pathname == route.href ||
+                      (route.href !== '/' &&
+                        pathname.slice(1).includes(route.href.slice(1)))
+                        ? styles.active
+                        : '',
+                    ].join(' ')}
+                  >
+                    <Link href={route.href}>{route.label}</Link>
+                  </li>
+                ))}
+                <li>
+                  <LocaleSwitcher messages={messages.locales} />
                 </li>
-              ))}
-              <li>
-                <LocaleSwitcher messages={messages.locales} />
-              </li>
-            </ul>
-          )}
-          {!isDesktop && (
-            <>
-              <BurgerIcon
-                isSticky={false}
-                active={menuOpen || bottomMenuOpen}
-                burgerRef={burgerRef}
-                onClickHandler={toggleMenu}
-              />
+              </ul>
+            )}
+            {!isDesktop && (
+              <>
+                <BurgerIcon
+                  isSticky={false}
+                  active={menuOpen || bottomMenuOpen}
+                  burgerRef={burgerRef}
+                  onClickHandler={toggleMenu}
+                />
 
-              <div className={styles.mobileMenu} ref={menuRef}>
-                <div>
-                  <Link href='/' className={styles.logoWrapper}>
-                    <picture>
-                      <source
-                        srcSet={beehiveCleanLogo.src}
-                        media='(max-width: 1024px)'
-                      />
-                      <Image
-                        src={beehiveCreativeAgencyLogo}
-                        priority
-                        alt='Beehive Agency Logo'
-                      />
-                    </picture>
-                  </Link>
-                  <ul>
-                    {routes.map((route, index) => (
-                      <li
-                        key={index}
-                        className={[
-                          'hoverable',
-                          pathname == route.href ||
-                          (route.href !== '/' &&
-                            pathname.slice(1).includes(route.href.slice(1)))
-                            ? styles.active
-                            : '',
-                        ].join(' ')}
-                      >
-                        <Link href={route.href} onClick={toggleMenu}>
-                          {route.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className={styles.menuFooter}>
-                  <div className={styles.langSwitcherWrapper}>
-                    <p>{messages.lang}</p>
-                    <LocaleSwitcher messages={messages.locales} />
-                  </div>
-                  <div className={styles.socialsWrapper}>
-                    <p>{messages.socialsTitle}</p>
-                    <div className={styles.socials}>
-                      {socials.map((social, index) => (
-                        <a
-                          key={index}
-                          href={social.link}
-                          className={styles.social}
-                          target='_blank'
-                        >
-                          <span>{social.text}</span>
-                        </a>
-                      ))}
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className={[styles.bottomMobileMenu, styles.mobileMenu].join(
-                  ' '
-                )}
-                ref={bottomMenuRef}
-              >
-                <div>
-                  <Link href='/' className={styles.logoWrapper}>
-                    <Image
-                      src={beehiveCleanLogo}
-                      style={{ width: 'auto' }}
-                      priority
-                      alt='Beehive Agency Logo'
-                    />
-                  </Link>
-                  <ul>
-                    {routes.map((route, index) => (
-                      <li
-                        key={index}
-                        className={[
-                          'hoverable',
-                          pathname == route.href ||
-                          (route.href !== '/' &&
-                            pathname.slice(1).includes(route.href.slice(1)))
-                            ? styles.active
-                            : '',
-                        ].join(' ')}
-                      >
-                        <Link href={route.href} onClick={toggleBottomMenu}>
-                          {route.label}
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-                <div className={styles.menuFooter}>
+                <div className={styles.mobileMenu} ref={menuRef}>
                   <div>
+                    <Link href='/' className={styles.logoWrapper}>
+                      <picture>
+                        <source
+                          srcSet={beehiveCleanLogo.src}
+                          media='(max-width: 1024px)'
+                        />
+                        <Image
+                          src={beehiveCreativeAgencyLogo}
+                          priority
+                          alt='Beehive Agency Logo'
+                        />
+                      </picture>
+                    </Link>
+                    <ul>
+                      {routes.map((route, index) => (
+                        <li
+                          key={index}
+                          className={[
+                            'hoverable',
+                            pathname == route.href ||
+                            (route.href !== '/' &&
+                              pathname.slice(1).includes(route.href.slice(1)))
+                              ? styles.active
+                              : '',
+                          ].join(' ')}
+                        >
+                          <Link href={route.href} onClick={toggleMenu}>
+                            {route.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={styles.menuFooter}>
                     <div className={styles.langSwitcherWrapper}>
                       <p>{messages.lang}</p>
                       <LocaleSwitcher messages={messages.locales} />
@@ -311,20 +254,80 @@ export default function Header({ routes, messages }) {
                       </div>
                     </div>
                   </div>
-                  {headerTransformed && (
-                    <div
-                      className={styles.closeMenuButton}
-                      onClick={toggleBottomMenu}
-                    >
-                      <div className={styles.bar}></div>
-                      <div className={styles.bar}></div>
-                    </div>
-                  )}
                 </div>
-              </div>
-            </>
-          )}
-        </nav>
+
+                <div
+                  className={[styles.bottomMobileMenu, styles.mobileMenu].join(
+                    ' '
+                  )}
+                  ref={bottomMenuRef}
+                >
+                  <div>
+                    <Link href='/' className={styles.logoWrapper}>
+                      <Image
+                        src={beehiveCleanLogo}
+                        style={{ width: 'auto' }}
+                        priority
+                        alt='Beehive Agency Logo'
+                      />
+                    </Link>
+                    <ul>
+                      {routes.map((route, index) => (
+                        <li
+                          key={index}
+                          className={[
+                            'hoverable',
+                            pathname == route.href ||
+                            (route.href !== '/' &&
+                              pathname.slice(1).includes(route.href.slice(1)))
+                              ? styles.active
+                              : '',
+                          ].join(' ')}
+                        >
+                          <Link href={route.href} onClick={toggleBottomMenu}>
+                            {route.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                  <div className={styles.menuFooter}>
+                    <div>
+                      <div className={styles.langSwitcherWrapper}>
+                        <p>{messages.lang}</p>
+                        <LocaleSwitcher messages={messages.locales} />
+                      </div>
+                      <div className={styles.socialsWrapper}>
+                        <p>{messages.socialsTitle}</p>
+                        <div className={styles.socials}>
+                          {socials.map((social, index) => (
+                            <a
+                              key={index}
+                              href={social.link}
+                              className={styles.social}
+                              target='_blank'
+                            >
+                              <span>{social.text}</span>
+                            </a>
+                          ))}
+                        </div>
+                      </div>
+                    </div>
+                    {headerTransformed && (
+                      <div
+                        className={styles.closeMenuButton}
+                        onClick={toggleBottomMenu}
+                      >
+                        <div className={styles.bar}></div>
+                        <div className={styles.bar}></div>
+                      </div>
+                    )}
+                  </div>
+                </div>
+              </>
+            )}
+          </nav>
+        </div>
       </header>
 
       {!isDesktop && (
