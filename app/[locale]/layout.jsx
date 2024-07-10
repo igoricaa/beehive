@@ -3,8 +3,6 @@ import '../globals.scss';
 import Footer from '@/components/Footer';
 import Header from '@/components/Header';
 import { ViewTransitions } from 'next-view-transitions';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider, useTranslations } from 'next-intl';
 import { locales } from '../../navigation';
 import { unstable_setRequestLocale } from 'next-intl/server';
@@ -98,8 +96,6 @@ export default function LocaleLayout({ children, params: { locale } }) {
             <Header routes={routes} messages={headerMessages} />
             {children}
             <Footer routes={routes} message={t('socialsTitle')} />
-            <SpeedInsights />
-            <Analytics />
           </NextIntlClientProvider>
           <CustomCursor messages={cursorMessages} />
         </body>
