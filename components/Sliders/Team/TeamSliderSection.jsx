@@ -1,8 +1,8 @@
-import styles from './SliderSection.module.scss';
-import Slider from './Slider';
-import CtaButton from './CtaButton';
+import styles from './TeamSliderSection.module.scss';
+import TeamSlider from './TeamSlider';
+import CtaButton from '../../CtaButton';
 
-export default function SliderSection({ content, messages }) {
+export default function TeamSliderSection({ content, messages }) {
   return (
     <section className={styles.section}>
       <div className={styles.copyCtaWrapper}>
@@ -16,7 +16,7 @@ export default function SliderSection({ content, messages }) {
           specialClass='ctaLinkDesktop'
         />
       </div>
-      <Slider content={content} messages={messages.hover} />
+      <TeamSlider content={content} messages={messages.hover} />
       <CtaButton
         href="/kontakt"
         mainText={messages.cta.textMain}

@@ -2,7 +2,7 @@
 
 import styles from './Accordions.module.scss';
 import { useState } from 'react';
-import AccordionItem from './AccordionItem';
+import AccordionItem from './AccordionItem/AccordionItem';
 
 export default function Accordions({ messages }) {
   const [activeIndex, setActiveIndex] = useState(0);

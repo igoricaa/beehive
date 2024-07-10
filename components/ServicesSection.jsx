@@ -1,6 +1,6 @@
 import styles from './ServicesSection.module.scss';
 import Image from 'next/image';
-import Accordions from './Accordions';
+import Accordions from './Accordions/Accordions';
 import servicesImage from '@/public/beehive-services.png';
 import servicesImageMobile from '@/public/beehive-services-mobile.webp';
 import servicesImageTablet from '@/public/beehive-services-tablet.webp';

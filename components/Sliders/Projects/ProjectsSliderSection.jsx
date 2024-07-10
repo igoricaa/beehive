@@ -1,6 +1,6 @@
 import styles from './ProjectsSliderSection.module.scss';
 import ProjectsSlider from './ProjectsSlider';
-import CtaButton from './CtaButton';
+import CtaButton from '../../CtaButton';
 import { projects } from '@/data';
 
 export default function ProjectsSliderSection({ messages }) {

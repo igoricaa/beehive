@@ -39,14 +39,7 @@
     max-height: 0;
 
     p {
-      display: flex;
-      justify-content: space-between;
-      gap: 3rem;
-      ul {
-        li {
-          font-size: 1.12rem;
-        }
-      }
+      color: #343434;
     }
   }
 
@@ -86,13 +79,6 @@
   .article {
     .accordionTop {
       padding: 1.5rem 0;
-    }
-
-    .accordionBottom {
-      p {
-        flex-direction: column;
-        gap: 0;
-      }
     }
   }
 }

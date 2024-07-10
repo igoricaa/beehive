@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import styles from './ProjectsSliderItem.module.scss';
-import Link from './Link';
+import Link from '../../Link';
 
 export default function ProjectsSliderItem({ project, messages }) {
   return (

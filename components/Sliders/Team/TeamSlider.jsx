@@ -1,7 +1,7 @@
 'use client';
 
-import styles from './Slider.module.scss';
-import SliderItem from './SliderItem';
+import styles from './TeamSlider.module.scss';
+import TeamSliderItem from './TeamSliderItem';
 import useEmblaCarousel from 'embla-carousel-react';
 
 const OPTIONS = {
@@ -10,7 +10,7 @@ const OPTIONS = {
   align: 'start',
 };
 
-export default function Slider({ content, messages }) {
+export default function TeamSlider({ content, messages }) {
   const [emblaRef, emblaApi] = useEmblaCarousel(OPTIONS);
 
   return (
@@ -18,7 +18,7 @@ export default function Slider({ content, messages }) {
       <div className={styles.emblaViewport} ref={emblaRef}>
         <div className={styles.emblaContainer}>
           {content.map((slideContent, index) => (
-            <SliderItem
+            <TeamSliderItem
               key={index}
               content={slideContent}
               imageAlignment={[0, 4, 7].includes(index) ? 'top' : 'center'}

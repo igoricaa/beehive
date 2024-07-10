@@ -34,7 +34,7 @@ export default function AccordionItem({
         </div>
 
         <div className={styles.accordionBottom}>
-          <span>{messages.description}</span>
+          <p>{messages.description}</p>
         </div>
       </div>
     </article>

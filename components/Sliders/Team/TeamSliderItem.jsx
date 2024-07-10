@@ -1,11 +1,11 @@
 'use client';
 
 import Image from 'next/image';
-import styles from './SliderItem.module.scss';
+import styles from './TeamSliderItem.module.scss';
 import { useEffect, useRef } from 'react';
-import { calculateOverlayPosition } from '../utils/utils';
+import { calculateOverlayPosition } from '../../../utils/utils';
 
-export default function SliderItem({ content, messages, imageAlignment }) {
+export default function TeamSliderItem({ content, messages, imageAlignment }) {
   const slideRef = useRef(null);
   const overlayRef = useRef(null);
 
@@ -38,7 +38,7 @@ export default function SliderItem({ content, messages, imageAlignment }) {
               alt={content.title}
               fill
               sizes='(max-width: 1024px) 50vw, 22.5vw'
-              style={{ objectFit: 'cover', objectPosition: imageAlignment}}
+              style={{ objectFit: 'cover', objectPosition: imageAlignment }}
             />
           </div>
         )}

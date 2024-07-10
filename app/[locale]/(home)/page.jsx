@@ -1,10 +1,10 @@
 import styles from './page.module.scss';
-import SliderSection from '@/components/SliderSection';
+import TeamSliderSection from '@/components/Sliders/Team/TeamSliderSection';
 import { team } from '@/data';
 import ServicesSection from '@/components/ServicesSection';
 import Typewriter from '@/components/Typewritter';
 import DistortionImage from '@/components/DistortionImage';
-import ProjectsSliderSection from '@/components/ProjectsSliderSection';
+import ProjectsSliderSection from '@/components/Sliders/Projects/ProjectsSliderSection';
 import { useTranslations } from 'next-intl';
 import { unstable_setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
@@ -148,7 +148,7 @@ export default function Home({ params: { locale } }) {
 
       <ServicesSection messages={servicesMessages} />
 
-      <SliderSection content={team} messages={teamMessages} />
+      <TeamSliderSection content={team} messages={teamMessages} />
     </main>
   );
 }

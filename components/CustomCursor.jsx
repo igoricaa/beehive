@@ -12,47 +12,60 @@ const CustomCursor = ({ messages }) => {
   const [cursorText, setCursorText] = useState('');
 
   function onMouseHover(bigBall, smallBall) {
-    gsap.to(bigBall, {
-      duration: 0.3,
-      scale: 4,
-      opacity: 0.5,
-    });
+    if (bigBall) {
+      gsap.to(bigBall, {
+        duration: 0.3,
+        scale: 4,
+        opacity: 0.5,
+      });
+    }
 
-    gsap.to(smallBall, {
-      duration: 0.1,
-      y: -50,
-    });
+    if (smallBall) {
+      gsap.to(smallBall, {
+        duration: 0.1,
+        y: -50,
+      });
+    }
   }
-  function onMouseHoverOut(bigBall, smallBall) {
-    gsap.to(bigBall, {
-      duration: 0.3,
-      scale: 1,
-      opacity: 1,
-    });
+
+  function onMouseHoverOut(bigBall) {
+    if (bigBall) {
+      gsap.to(bigBall, {
+        duration: 0.3,
+        scale: 1,
+        opacity: 1,
+      });
+    }
   }
 
   const onMouseMove = useCallback(
     (e, smallBall, bigBall, cursorTextElement) => {
-      gsap.to(bigBall, {
-        duration: 0.4,
-        x: e.pageX - 15,
-        y: e.pageY - 15,
-      });
+      if (bigBall) {
+        gsap.to(bigBall, {
+          duration: 0.4,
+          x: e.pageX - 15,
+          y: e.pageY - 15,
+        });
+      }
 
-      gsap.to(smallBall, {
-        duration: 0.1,
-        x: e.pageX - 5,
-        y: e.pageY - 12.5,
-      });
+      if (smallBall) {
+        gsap.to(smallBall, {
+          duration: 0.1,
+          x: e.pageX - 5,
+          y: e.pageY - 12.5,
+        });
+      }
 
       const cursorTextXTranslateAmount =
         locale === 'sr' ? (cursorText === 'view' ? 40 : 18) : 18;
 
-      gsap.to(cursorTextElement, {
-        duration: 0,
-        x: e.pageX - cursorTextXTranslateAmount,
-        y: e.pageY - 21,
-      });
+      if (cursorTextElement) {
+        gsap.to(cursorTextElement, {
+          duration: 0,
+          x: e.pageX - cursorTextXTranslateAmount,
+          y: e.pageY - 21,
+        });
+      }
     },
     [cursorText, locale]
   );
@@ -80,10 +93,10 @@ const CustomCursor = ({ messages }) => {
           onMouseHover(bigBall, smallBall);
         });
         hoverable.addEventListener('mouseleave', () => {
-          onMouseHoverOut(bigBall, smallBall);
+          onMouseHoverOut(bigBall);
         });
         hoverable.addEventListener('click', () => {
-          onMouseHoverOut(bigBall, smallBall);
+          onMouseHoverOut(bigBall);
         });
       });
 
@@ -94,11 +107,11 @@ const CustomCursor = ({ messages }) => {
         });
         hoverable.addEventListener('mouseleave', () => {
           setCursorText('');
-          onMouseHoverOut(bigBall, smallBall);
+          onMouseHoverOut(bigBall);
         });
         hoverable.addEventListener('click', () => {
           setCursorText('');
-          onMouseHoverOut(bigBall, smallBall);
+          onMouseHoverOut(bigBall);
         });
       });
 
