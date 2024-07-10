@@ -1,17 +1,24 @@
 'use client';
 
-import { useEffect, useState, useCallback } from 'react';
+import { useEffect, useState, useCallback, useRef } from 'react';
 import { gsap } from 'gsap';
 import { usePathname } from '@/navigation';
 import { useLocale } from 'next-intl';
+import styles from './CustomCursor.module.scss';
 
 const CustomCursor = ({ messages }) => {
   const pathname = usePathname();
   const locale = useLocale();
   const [isMobile, setIsMobile] = useState(false);
   const [cursorText, setCursorText] = useState('');
+  const [isHovering, setIsHovering] = useState(false);
+  const bigBallRef = useRef(null);
+  const smallBallRef = useRef(null);
+  const cursorTextRef = useRef(null);
 
-  function onMouseHover(bigBall, smallBall) {
+  function onMouseHover(e, bigBall, smallBall) {
+    setIsHovering(true);
+
     if (bigBall) {
       gsap.to(bigBall, {
         duration: 0.3,
@@ -29,6 +36,8 @@ const CustomCursor = ({ messages }) => {
   }
 
   function onMouseHoverOut(bigBall) {
+    setIsHovering(false);
+
     if (bigBall) {
       gsap.to(bigBall, {
         duration: 0.3,
@@ -41,10 +50,12 @@ const CustomCursor = ({ messages }) => {
   const onMouseMove = useCallback(
     (e, smallBall, bigBall, cursorTextElement) => {
       if (bigBall) {
+        const y = isHovering ? e.pageY - 8 : e.pageY - 16;
+
         gsap.to(bigBall, {
           duration: 0.4,
           x: e.pageX - 15,
-          y: e.pageY - 15,
+          y: y,
         });
       }
 
@@ -67,7 +78,7 @@ const CustomCursor = ({ messages }) => {
         });
       }
     },
-    [cursorText, locale]
+    [cursorText, locale, isHovering]
   );
 
   useEffect(() => {
@@ -77,56 +88,58 @@ const CustomCursor = ({ messages }) => {
 
       if (isMobileCurr) return;
 
-      const bigBall = document.querySelector('.cursor__ball--big');
-      const smallBall = document.querySelector('.cursor__ball--small');
       const hoverables = document.querySelectorAll('.hoverable');
       const hoverablesView = document.querySelectorAll('.hoverableView');
       const hoverablesDrag = document.querySelectorAll('.hoverableDrag');
-      const cursorTextElement = document.querySelector('.cursorText');
 
       document.body.addEventListener('mousemove', (event) =>
-        onMouseMove(event, smallBall, bigBall, cursorTextElement)
+        onMouseMove(
+          event,
+          smallBallRef.current,
+          bigBallRef.current,
+          cursorTextRef.current
+        )
       );
 
       hoverables.forEach((hoverable) => {
-        hoverable.addEventListener('mouseenter', () => {
-          onMouseHover(bigBall, smallBall);
+        hoverable.addEventListener('mouseenter', (event) => {
+          onMouseHover(event, bigBallRef.current, smallBallRef.current);
         });
         hoverable.addEventListener('mouseleave', () => {
-          onMouseHoverOut(bigBall);
+          onMouseHoverOut(bigBallRef.current);
         });
         hoverable.addEventListener('click', () => {
-          onMouseHoverOut(bigBall);
+          onMouseHoverOut(bigBallRef.current);
         });
       });
 
       hoverablesView.forEach((hoverable) => {
-        hoverable.addEventListener('mouseenter', () => {
+        hoverable.addEventListener('mouseenter', (event) => {
           setCursorText('view');
-          onMouseHover(bigBall, smallBall);
+          onMouseHover(event, bigBallRef.current, smallBallRef.current);
         });
         hoverable.addEventListener('mouseleave', () => {
           setCursorText('');
-          onMouseHoverOut(bigBall);
+          onMouseHoverOut(bigBallRef.current);
         });
         hoverable.addEventListener('click', () => {
           setCursorText('');
-          onMouseHoverOut(bigBall);
+          onMouseHoverOut(bigBallRef.current);
         });
       });
 
       hoverablesDrag.forEach((hoverable) => {
-        hoverable.addEventListener('mouseenter', () => {
+        hoverable.addEventListener('mouseenter', (event) => {
           setCursorText('drag');
-          onMouseHover(bigBall);
+          onMouseHover(event, bigBallRef.current);
         });
         hoverable.addEventListener('mouseleave', () => {
           setCursorText('');
-          onMouseHoverOut(bigBall);
+          onMouseHoverOut(bigBallRef.current);
         });
         hoverable.addEventListener('click', () => {
           setCursorText('');
-          onMouseHoverOut(bigBall);
+          onMouseHoverOut(bigBallRef.current);
         });
       });
     }
@@ -145,8 +158,8 @@ const CustomCursor = ({ messages }) => {
 
   return (
     !isMobile && (
-      <div className='cursor'>
-        <div className='cursor__ball cursor__ball--big '>
+      <div className={styles.cursor}>
+        <div ref={bigBallRef} className={styles.cursorBall}>
           <svg height='30' width='30'>
             <circle
               cx='15'
@@ -158,7 +171,8 @@ const CustomCursor = ({ messages }) => {
           </svg>
         </div>
         <span
-          className='cursorText'
+          ref={cursorTextRef}
+          className={styles.cursorText}
           style={cursorText ? { display: 'block' } : { display: 'none' }}
         >
           {cursorText === 'view'
@@ -167,7 +181,8 @@ const CustomCursor = ({ messages }) => {
         </span>
 
         <div
-          className='cursor__ball cursor__ball--small'
+          ref={smallBallRef}
+          className={styles.cursorBall}
           style={cursorText ? { display: 'none' } : { display: 'block' }}
         >
           <svg height='10' width='10'>

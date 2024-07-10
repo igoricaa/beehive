@@ -101,25 +101,6 @@ main {
   }
 }
 
-.cursor {
-  pointer-events: none;
-
-  &__ball {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1001;
-  }
-
-  .cursorText {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 1002;
-    text-transform: uppercase;
-  }
-}
-
 @media screen and (max-width: 1024px) {
   $sitePadding: 2rem;
   :root {
@@ -154,10 +135,6 @@ main {
       top: -0.5rem;
       right: 1px;
     }
-  }
-
-  .cursor {
-    display: none;
   }
 }
 

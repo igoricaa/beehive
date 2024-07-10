@@ -6,7 +6,7 @@ import { ViewTransitions } from 'next-view-transitions';
 import { NextIntlClientProvider, useTranslations } from 'next-intl';
 import { locales } from '../../navigation';
 import { unstable_setRequestLocale } from 'next-intl/server';
-import CustomCursor from '@/components/CustomCursor';
+import CustomCursor from '@/components/Cursor/CustomCursor';
 
 const poppins = Poppins({
   subsets: ['latin'],
