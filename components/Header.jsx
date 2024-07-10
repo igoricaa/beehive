@@ -159,7 +159,7 @@ export default function Header({ routes, messages }) {
           </picture>
         </Link>
         <div className={styles.helperWrapper}>
-          <LocaleSwitcher messages={messages.locales} />
+          {!isDesktop && <LocaleSwitcher messages={messages.locales} />}
           <nav
             className={[
               styles.navMenu,

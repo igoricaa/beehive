@@ -1,6 +1,6 @@
 import CalButton from '@/components/CalButton';
 import styles from './page.module.scss';
-import ContactForm from '@/components/ContactForm';
+import ContactForm from '@/components/ContactForm/ContactForm';
 import EyeAnimation from '@/components/EyeAnimation';
 import RoughNotationWrapper from '@/components/RoughNotationWrapper';
 import { unstable_setRequestLocale } from 'next-intl/server';

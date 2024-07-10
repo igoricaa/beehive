@@ -2,7 +2,7 @@
 
 import styles from './ContactFormButton.module.scss';
 import { useEffect, useRef } from 'react';
-import { calculateOverlayPosition } from '../utils/utils';
+import { calculateOverlayPosition } from '../../utils/utils';
 
 export default function ContactFormButton({ messages }) {
   const buttonRef = useRef(null);
