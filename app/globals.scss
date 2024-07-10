@@ -155,6 +155,10 @@ main {
       right: 1px;
     }
   }
+
+  .cursor {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 680px) {
