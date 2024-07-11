@@ -196,6 +196,8 @@ export default function Header({ routes, messages }) {
                   active={menuOpen || bottomMenuOpen}
                   burgerRef={burgerRef}
                   onClickHandler={toggleMenu}
+                  stroke='#fff'
+                  backgroundColor='#1f1f1f'
                 />
 
                 <div className={styles.mobileMenu} ref={menuRef}>
@@ -348,6 +350,8 @@ export default function Header({ routes, messages }) {
             burgerRef={stickyBurgerRef}
             isSticky={true}
             active={menuOpen || bottomMenuOpen}
+            stroke='#000'
+            backgroundColor='#fff'
           />
         </div>
       )}
