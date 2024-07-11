@@ -5,6 +5,7 @@ import { gsap } from 'gsap';
 import { usePathname } from '@/navigation';
 import { useLocale } from 'next-intl';
 import styles from './CustomCursor.module.scss';
+import CustomEase from 'gsap/CustomEase';
 
 const CustomCursor = ({ messages }) => {
   const pathname = usePathname();
@@ -16,21 +17,26 @@ const CustomCursor = ({ messages }) => {
   const smallBallRef = useRef(null);
   const cursorTextRef = useRef(null);
 
+  gsap.registerPlugin(CustomEase);
+  CustomEase.create('hoverIn', '.76,0,.24,1');
+  CustomEase.create('hoverOut', '.32,0,.67,0');
+
   function onMouseHover(e, bigBall, smallBall) {
     setIsHovering(true);
 
     if (bigBall) {
       gsap.to(bigBall, {
-        duration: 0.3,
+        duration: 0.4,
         scale: 4,
         opacity: 0.5,
+        ease: "hoverIn",
       });
     }
 
     if (smallBall) {
       gsap.to(smallBall, {
         duration: 0.1,
-        y: -50,
+        ease: "hoverIn",
       });
     }
   }
@@ -43,6 +49,7 @@ const CustomCursor = ({ messages }) => {
         duration: 0.3,
         scale: 1,
         opacity: 1,
+        ease: "hoverOut",
       });
     }
   }
@@ -50,7 +57,7 @@ const CustomCursor = ({ messages }) => {
   const onMouseMove = useCallback(
     (e, smallBall, bigBall, cursorTextElement) => {
       if (bigBall) {
-        const y = isHovering ? e.pageY - 8 : e.pageY - 16;
+        const y = isHovering ? e.pageY - 8 : e.pageY - 14;
 
         gsap.to(bigBall, {
           duration: 0.4,
