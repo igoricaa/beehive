@@ -82,7 +82,7 @@
     }
     p {
       margin-top: 1rem;
-      
+
       &:last-of-type {
         margin-top: 4rem;
       }
@@ -109,15 +109,19 @@
 
     &:first-of-type {
       right: 20vw;
-      top: 4rem;
+      top: 6rem;
       z-index: -1;
     }
 
     &:last-of-type {
       right: 0;
-      top: -5rem;
+      top: 0;
       z-index: -2;
     }
+  }
+
+  & + .contentSection {
+    margin-top: 11rem;
   }
 }
 
@@ -267,6 +271,7 @@
   .gallerySection {
     grid-column: 2 / 12;
     height: calc(25vw * 730 / 487 + 10rem);
+    margin-top: 2.5rem;
 
     .mediaWrapper {
       width: 35vw;
@@ -277,12 +282,16 @@
 
       &:first-of-type {
         right: 30vw;
-        top: 1rem;
+        top: 3rem;
       }
 
       &:last-of-type {
-        top: -3rem;
+        top: 0;
       }
+    }
+
+    & + .contentSection {
+      margin-top: 8rem;
     }
   }
 

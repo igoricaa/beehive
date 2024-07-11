@@ -87,15 +87,19 @@
 
     &:first-of-type {
       right: 20vw;
-      top: 4rem;
+      top: 6rem;
       z-index: -1;
     }
 
     &:last-of-type {
       right: 0;
-      top: -5rem;
+      top: 0;
       z-index: -2;
     }
+  }
+
+  & + .contentSection {
+    margin-top: 11rem;
   }
 }
 
