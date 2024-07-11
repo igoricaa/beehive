@@ -98,6 +98,7 @@
   grid-column: 2 / 11;
   position: relative;
   height: calc(25vw * 730 / 487 + 5rem);
+  margin-top: 5rem;
 
   .mediaWrapper {
     width: 25vw;
@@ -289,10 +290,6 @@
         top: 0;
       }
     }
-
-    & + .contentSection {
-      margin-top: 8rem;
-    }
   }
 
   .infoSection {
@@ -376,6 +373,10 @@
 
   .gallerySection {
     height: calc(25vw * 730 / 487 + 5rem);
+
+    & + .contentSection {
+      margin-top: 8rem;
+    }
   }
 
   .contentSection {
