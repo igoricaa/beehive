@@ -30,7 +30,12 @@ export default function ContactForm({ messages }) {
   }
 
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className={styles.contactForm}>
+    <form
+      id='contact-form'
+      name='contact-form'
+      onSubmit={handleSubmit(onSubmit)}
+      className={styles.contactForm}
+    >
       <div className={styles.rowWrapper}>
         <input
           placeholder={messages.namePlaceholder}
@@ -38,6 +43,7 @@ export default function ContactForm({ messages }) {
             required: { value: true, message: messages.nameReqError },
           })}
           className={errors.name ? styles.error : ''}
+          autoComplete='name'
         />
         <input
           placeholder={messages.emailPlaceholder}
@@ -49,6 +55,7 @@ export default function ContactForm({ messages }) {
             },
           })}
           className={errors.email ? styles.error : ''}
+          autoComplete='email'
         />
       </div>
 
@@ -68,7 +75,7 @@ export default function ContactForm({ messages }) {
           placeholder={messages.messagePlaceholder}
           rows={3}
           {...register('message', {
-            required: { value: true, message: messages.messageReqError   },
+            required: { value: true, message: messages.messageReqError },
           })}
           className={errors.message ? styles.error : ''}
         />

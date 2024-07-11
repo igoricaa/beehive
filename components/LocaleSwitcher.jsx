@@ -27,6 +27,7 @@ export default function LocaleSwitcher() {
         className={styles.checkbox}
         checked={locale === 'sr'}
         onChange={handleOnChange}
+        name='locale'
       />
       <span className={styles.switch} />
     </label>
