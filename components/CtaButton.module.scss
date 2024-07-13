@@ -63,7 +63,7 @@
     .iconWrapper {
       svg {
         path {
-          fill: #000
+          fill: #000;
         }
       }
     }
@@ -128,7 +128,10 @@
         padding: 0;
 
         &::after {
+          content: ' ';
           background-image: url('/question-mark.svg');
+          background-repeat: no-repeat;
+          background-size: cover;
           width: 20px;
           height: 45px;
           margin-right: 0.25rem;
