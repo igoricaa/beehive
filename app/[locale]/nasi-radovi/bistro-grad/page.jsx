@@ -10,7 +10,6 @@ const categories = [
   'Social Media',
   'Advertising',
   'Content Creation',
-  'Copywriting',
 ];
 const socials = [
   {
