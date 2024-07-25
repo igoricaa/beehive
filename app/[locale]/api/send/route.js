@@ -1,4 +1,4 @@
-import { EmailTemplate } from '../../../components/EmailTemplate';
+import { EmailTemplate } from '../../../../components/EmailTemplate';
 import { Resend } from 'resend';
 
 const resend = new Resend(process.env.RESEND_API_KEY);
@@ -9,7 +9,11 @@ export async function POST(req) {
   try {
     const data = await resend.emails.send({
       from: `Kontakt forma <contact@bhive.agency>`,
-      to: ['igor@bhive.agency'],
+      to: [
+        'igor@bhive.agency',
+        'stanisavljevic.igor4@gmail.com',
+        'darja@bhive.agency',
+      ],
       subject: 'cf bhive.agency',
       react: EmailTemplate({ name, email, message }),
     });
