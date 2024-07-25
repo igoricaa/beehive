@@ -13,7 +13,9 @@ export default function ContactForm({ messages }) {
   } = useForm();
 
   async function onSubmit(formData) {
-    await fetch('/api/send', {
+
+
+    await fetch('https://bhive.agency/api/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
