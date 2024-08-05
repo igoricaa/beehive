@@ -8,21 +8,22 @@
   grid-row: 1;
   aspect-ratio: 820 / 1008;
   position: relative;
+  width: 80%;
+  margin: auto;
   animation: floatY 6s ease-in-out infinite;
 
   picture {
-    margin: auto;
     display: block;
-    width: 80%;
+    width: 100%;
     transform: translate(0, -100%);
     transition: all 0.4s cubic-bezier(0.32, 0, 0.67, 0);
     position: absolute;
     top: 0;
-    left: 10%;
 
     &.active {
-      transform: translate(0, 0);
+      transform: translate(0, -50%);
       transition: all 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+      top: 50%;
     }
   }
 }
