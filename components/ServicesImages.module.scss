@@ -1,0 +1,52 @@
+.servicesImageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  grid-column: span 5;
+  grid-row: 1;
+  aspect-ratio: 820 / 1008;
+  position: relative;
+  animation: floatY 6s ease-in-out infinite;
+
+  picture {
+    margin: auto;
+    display: block;
+    width: 80%;
+    transform: translate(0, -100%);
+    transition: all 0.4s cubic-bezier(0.32, 0, 0.67, 0);
+    position: absolute;
+    top: 0;
+    left: 10%;
+
+    &.active {
+      transform: translate(0, 0);
+      transition: all 0.4s cubic-bezier(0.76, 0, 0.24, 1);
+    }
+  }
+}
+
+@keyframes floatY {
+  0% {
+    transform: translate(0px, 0px);
+  }
+  50% {
+    transform: translate(0px, -20px);
+  }
+  100% {
+    transform: translate(0px, 0px);
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .servicesImageWrapper {
+    grid-column: span 12;
+    aspect-ratio: 766 / 406;
+    height: unset;
+
+    picture {
+      aspect-ratio: 766 / 406;
+    }
+  }
+}

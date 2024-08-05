@@ -6,41 +6,15 @@ $gridGap: 2rem;
   grid-template-columns: repeat(12, minMax(0, 1fr));
   gap: $gridGap;
 
-  picture {
-    grid-column: span 5;
-    width: 80%;
-    margin: auto;
-    transform: translate(0px, 0px);
-    animation: floatY 6s ease-in-out infinite;
-    display: block;
-  }
-
-  @keyframes floatY {
-    0% {
-      transform: translate(0px, 0px);
-    }
-    50% {
-      transform: translate(0px, -20px);
-    }
-    100% {
-      transform: translate(0px, 0px);
-    }
-  }
-
   .servicesInfoWrapper {
     grid-column: span 7;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
   }
 }
 
 @media screen and (max-width: 1024px) {
   .servicesSection {
-    picture {
-      grid-column: span 12;
-    }
-
     .servicesInfoWrapper {
       grid-column: span 12;
     }

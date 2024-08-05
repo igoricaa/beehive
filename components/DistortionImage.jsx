@@ -42,6 +42,12 @@ const DistortionImage = () => {
       image2: image2.src,
       displacementImage: distortionImage.src,
     });
+
+    // return () => {
+    //   if (animate && typeof animate.destroy === 'function') {
+    //     animate.destroy();
+    //   }
+    // };
   }, []);
 
   return <div className={styles.distortionImageWrapper} ref={wrapperRef}></div>;

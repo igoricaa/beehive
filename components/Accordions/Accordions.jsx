@@ -1,14 +1,10 @@
 'use client';
 
 import styles from './Accordions.module.scss';
-import { useState } from 'react';
 
-export default function Accordions({ messages, handleChange }) {
-  const [activeIndex, setActiveIndex] = useState(0);
-
+export default function Accordions({ messages, activeIndex, setActiveIndex }) {
   const handleClick = (index) => {
     activeIndex === index ? setActiveIndex(null) : setActiveIndex(index);
-    handleChange(index);
   };
 
   return (
