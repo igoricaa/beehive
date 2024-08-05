@@ -1,0 +1,84 @@
+.article {
+  overflow: hidden;
+  border-bottom: 1px solid #000;
+  cursor: pointer;
+
+  &.active {
+    .accordionBottom {
+      max-height: 20rem;
+    }
+  }
+
+  &.active {
+    .accordionBottom {
+      opacity: 1;
+      visibility: visible;
+      padding-bottom: 3rem;
+    }
+
+    .accordionButton {
+      .verticalLine {
+        transform: translateX(-50%) rotate(180deg);
+      }
+    }
+  }
+
+  .accordionTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 0;
+  }
+
+  .accordionBottom {
+    opacity: 0;
+    visibility: hidden;
+    padding: 0 0 0 2rem;
+    transition: all 0.5s ease;
+    height: auto;
+    max-height: 0;
+
+    p {
+      color: #343434;
+    }
+  }
+
+  .accordionButton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    border: 1px solid rgba(136, 136, 136, 1);
+    background-color: transparent;
+
+    .horizontalLine,
+    .verticalLine {
+      width: 1.5rem;
+      height: 2px;
+      background-color: #000;
+      border-radius: 1px;
+    }
+
+    .horizontalLine {
+      transform: translateX(50%);
+    }
+
+    .verticalLine {
+      transform: translateX(-50%) rotate(90deg);
+      transition: transform 0.3s ease;
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+}
+
+@media screen and (max-width: 680px) {
+  .article {
+    .accordionTop {
+      padding: 1.5rem 0;
+    }
+  }
+}

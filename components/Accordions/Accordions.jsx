@@ -2,13 +2,14 @@
 
 import styles from './Accordions.module.scss';
 import { useState } from 'react';
-import AccordionItem from './AccordionItem/AccordionItem';
 
-export default function Accordions({ messages }) {
+export default function Accordions({ messages, handleChange }) {
   const [activeIndex, setActiveIndex] = useState(0);
 
-  const handleToggle = (index) =>
+  const handleClick = (index) => {
     activeIndex === index ? setActiveIndex(null) : setActiveIndex(index);
+    handleChange(index);
+  };
 
   return (
     <section className={styles.accordions}>
@@ -16,13 +17,33 @@ export default function Accordions({ messages }) {
         const isActive = activeIndex === index ? true : false;
 
         return (
-          <AccordionItem
-            messages={message}
-            index={index}
-            isActive={isActive}
-            handleToggle={handleToggle}
+          <article
             key={index}
-          />
+            className={[
+              'hoverable',
+              styles.article,
+              isActive ? styles.active : '',
+            ].join(' ')}
+            onClick={() => handleClick(index)}
+          >
+            <div className={styles.accordion}>
+              <div className={styles.accordionTop}>
+                <h3>{message.title}</h3>
+                <button
+                  className={styles.accordionButton}
+                  onClick={() => handleClick(index)}
+                  aria-label='Accordion Button'
+                >
+                  <span className={styles.horizontalLine}></span>
+                  <span className={styles.verticalLine}></span>
+                </button>
+              </div>
+
+              <div className={styles.accordionBottom}>
+                <p>{message.description}</p>
+              </div>
+            </div>
+          </article>
         );
       })}
     </section>
