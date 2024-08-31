@@ -26,7 +26,9 @@ const Contact = ({ params: { locale } }) => {
     button: {
       textMain: t('contactForm.button.textMain'),
       textSecondary: t('contactForm.button.textSecondary'),
-    }
+    },
+    successMessage: t('contactForm.submit.successMessage'),
+    errorMessage: t('contactForm.submit.errorMessage'),
   };
 
   return (

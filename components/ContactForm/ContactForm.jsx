@@ -8,9 +8,11 @@ import { useState, useEffect } from 'react';
 
 export default function ContactForm({ messages }) {
   const [captchatoken, setCaptchaToken] = useState('');
-
-  useEffect(() => {
-    setValue('recaptcha_response', captchatoken);
+  const [submissionStatus, setSubmissionStatus] = useState({
+    isSubmitted: false,
+    isSubmitting: false,
+    message: '',
+    isError: false,
   });
 
   const {
@@ -21,8 +23,19 @@ export default function ContactForm({ messages }) {
     formState: { errors },
   } = useForm();
 
+  useEffect(() => {
+    setValue('recaptcha_response', captchatoken);
+  }, [captchatoken, setValue]);
+
   async function onSubmit(formData) {
-    await fetch('/api/send', {
+    setSubmissionStatus({
+      isSubmitted: false,
+      isSubmitting: true,
+      message: '',
+      isError: false,
+    });
+
+    fetch('/api/send', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -33,9 +46,34 @@ export default function ContactForm({ messages }) {
         email: formData.email,
         message: formData.message,
       }),
-    });
+    })
+      .then((res) => {
+        if (!res.ok) {
+          throw new Error(`Error: ${res.statusTexts}`);
+        }
+        return res.json();
+      })
+      .then((result) => {
+        reset();
 
-    reset();
+        setSubmissionStatus({
+          isSubmitted: true,
+          isSubmitting: false,
+          message: messages.successMessage || 'Message sent successfully!',
+          isError: false,
+        });
+      })
+      .catch((error) => {
+        console.log(`Error submitting contact form ${error}`);
+        setSubmissionStatus({
+          isSubmitted: true,
+          isSubmitting: false,
+          message:
+            messages.errorMessage ||
+            'Failed to send message. Please try again.',
+          isError: true,
+        });
+      });
   }
 
   return (
@@ -103,7 +141,12 @@ export default function ContactForm({ messages }) {
         />
 
         <div className={styles.rowWrapper}>
-          <p className={styles.note}>{messages.subtitle}</p>
+          {submissionStatus.isSubmitted && !submissionStatus.isError && (
+            <p className={styles.note}>{messages.successMessage}</p>
+          )}
+          {submissionStatus.isSubmitted && submissionStatus.isError && (
+            <p className={styles.note}>{messages.errorMessage}</p>
+          )}
           <ContactFormButton messages={messages.button} />
         </div>
       </form>

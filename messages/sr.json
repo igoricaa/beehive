@@ -231,6 +231,10 @@
       "button": {
         "textMain": "Pošalji poruku",
         "textSecondary": "I proveri spam za svaki slučaj"
+      },
+      "submit": {
+        "successMessage": "Vaša poruka je uspješno poslata!",
+        "errorMessage": "Neuspešno slanje poruke. Molimo pokušajte ponovo."
       }
     },
     "cal": {
