@@ -89,7 +89,7 @@ export default function Header({ routes, messages }) {
       return;
     }
 
-    const isDesktopCurr = window.matchMedia('(min-width: 680px)').matches;
+    const isDesktopCurr = window.matchMedia('(min-width: 768px)').matches;
     setIsDesktop(isDesktopCurr);
 
     if (isDesktopCurr) {
