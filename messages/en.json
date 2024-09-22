@@ -452,7 +452,7 @@
             "partone": "From zero to hero"
           }
         },
-        "partone": "Roger.rs, a prominent provider of communication solutions, sought to elevate their digital presence through a sophisticated website. Specializing in interactive and web campaigns, film and video production, event management, research and insights analysis, and brand strategy development, Roger.rs needed a platform that could effectively represent their diverse capabilities.",
+        "partone": "Roger.rs, a prominent provider of communication solutions, sought to elevate their digital presence through a sophisticated website. Specialising in interactive web campaigns, film and video production, event management, research and insights analysis, including brand strategy development, Roger.rs needed a platform that could effectively represent their diverse capabilities.",
         "parttwo": "They aimed for a website that not only showcased their portfolio but also provided an engaging and seamless user experience. BeeHive Agency was selected to handle the technical development, employing Next.js, Sanity CMS, and MUX for an optimal solution."
       },
       "challenge": {
@@ -467,7 +467,7 @@
         "descBullet-2": "2. Dynamic Content Management: Implementing a flexible CMS that allowed Roger.rs to easily manage and update content without needing technical expertise.",
         "descBullet-3": "3. High-Quality Video Integration: Incorporating smooth and high-resolution video streaming to effectively showcase their video production work.",
         "descBullet-4": "4. SEO and Accessibility: Optimizing the site for search engines to increase visibility and ensuring it was accessible to a broad audience.",
-        "desc-final": "BeeHive Agency's task was to develop a robust, high-performance website that met these demands, utilizing cutting-edge technologies and adhering to best practices in web development."
+        "desc-final": "BeeHive Agency's task was to develop a robust, high-performance website that met these demands, utilising cutting-edge technologies and adhering to best practices in web development."
       },
       "approach": {
         "title": {

@@ -81,7 +81,7 @@ const CustomCursor = ({ messages }) => {
         gsap.to(cursorTextElement, {
           duration: 0,
           x: e.pageX - cursorTextXTranslateAmount,
-          y: e.pageY - 21,
+          y: e.pageY - 15,
         });
       }
     },
