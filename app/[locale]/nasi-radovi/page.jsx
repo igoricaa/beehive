@@ -6,11 +6,11 @@ import CtaButton from '@/components/CtaButton';
 import RoughNotationWrapper from '@/components/RoughNotationWrapper';
 import EyeAnimation from '@/components/EyeAnimation';
 import arrowDownOrange from '@/public/arrow-down-orange.svg';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
 const Projects = ({ params: { locale } }) => {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = useTranslations('ourWork');
   const t_cta = useTranslations('cta');
 

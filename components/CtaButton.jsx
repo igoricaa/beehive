@@ -38,9 +38,11 @@ const CtaButton = ({
   useEffect(() => {
     setIsMobile(window.matchMedia('(max-width: 1024px)').matches);
 
-    if (buttonRef.current) {
-      buttonRef.current.addEventListener('mouseenter', handleMouseEvent);
-      buttonRef.current.addEventListener('mouseout', handleMouseEvent);
+    const button = buttonRef.current;
+
+    if (button) {
+      button.addEventListener('mouseenter', handleMouseEvent);
+      button.addEventListener('mouseout', handleMouseEvent);
     }
 
     if (floating) {
@@ -48,9 +50,9 @@ const CtaButton = ({
     }
 
     return () => {
-      if (buttonRef.current) {
-        buttonRef.current.removeEventListener('mouseenter', handleMouseEvent);
-        buttonRef.current.removeEventListener('mouseout', handleMouseEvent);
+      if (button) {
+        button.removeEventListener('mouseenter', handleMouseEvent);
+        button.removeEventListener('mouseout', handleMouseEvent);
       }
       if (floating) {
         window.removeEventListener('scroll', toggleVisibility);

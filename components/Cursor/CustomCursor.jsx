@@ -1,11 +1,14 @@
 'use client';
 
-import { useEffect, useState, useCallback, useRef } from 'react';
+import { useState, useCallback, useRef } from 'react';
 import { gsap } from 'gsap';
 import { usePathname } from '@/navigation';
 import { useLocale } from 'next-intl';
 import styles from './CustomCursor.module.scss';
-import CustomEase from 'gsap/CustomEase';
+import { useGSAP } from '@gsap/react';
+import CustomEase from 'gsap/dist/CustomEase';
+
+
 
 const CustomCursor = ({ messages }) => {
   const pathname = usePathname();
@@ -17,7 +20,8 @@ const CustomCursor = ({ messages }) => {
   const smallBallRef = useRef(null);
   const cursorTextRef = useRef(null);
 
-  gsap.registerPlugin(CustomEase);
+  gsap.registerPlugin(useGSAP);
+
   CustomEase.create('hoverIn', '.76,0,.24,1');
   CustomEase.create('hoverOut', '.32,0,.67,0');
 
@@ -29,14 +33,14 @@ const CustomCursor = ({ messages }) => {
         duration: 0.4,
         scale: 4,
         opacity: 0.5,
-        ease: "hoverIn",
+        ease: 'hoverIn',
       });
     }
 
     if (smallBall) {
       gsap.to(smallBall, {
         duration: 0.1,
-        ease: "hoverIn",
+        ease: 'hoverIn',
       });
     }
   }
@@ -49,7 +53,7 @@ const CustomCursor = ({ messages }) => {
         duration: 0.3,
         scale: 1,
         opacity: 1,
-        ease: "hoverOut",
+        ease: 'hoverOut',
       });
     }
   }
@@ -88,8 +92,10 @@ const CustomCursor = ({ messages }) => {
     [cursorText, locale, isHovering]
   );
 
-  useEffect(() => {
+  useGSAP(() => {
     if (typeof window !== 'undefined') {
+      gsap.registerPlugin(CustomEase);
+
       const isMobileCurr = window.matchMedia('(max-width: 680px)').matches;
       setIsMobile(isMobileCurr);
 

@@ -3,8 +3,7 @@ import styles from './page.module.scss';
 import rogerHeader from '@/public/our-work/roger-header.png';
 import imageFloatingLeft from '@/public/our-work/roger-case-study-1.png';
 import imageFloatingRight from '@/public/our-work/roger-case-study-2.png';
-import breakBg from '@/public/our-work/roger-break-bg.png';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
 const categories = ['Website Development'];
@@ -24,7 +23,7 @@ const links = [
 ];
 
 const Project = ({ params: { locale } }) => {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = useTranslations('projects.roger-directors');
 
   return (

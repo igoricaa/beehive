@@ -4,11 +4,11 @@ import headerBg from '@/public/about-us-header-bg.png';
 import { coreValues } from '@/data';
 import RoughNotationWrapper from '@/components/RoughNotationWrapper';
 import aboutUsBgImage from '@/public/about-us-bg.png';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
 export default function AboutUs({ params: { locale } }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = useTranslations('aboutUs');
 
   return (

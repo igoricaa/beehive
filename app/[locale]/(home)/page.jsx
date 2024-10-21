@@ -5,14 +5,14 @@ import ServicesSection from '@/components/ServicesSection';
 import Typewriter from '@/components/Typewritter';
 import DistortionImage from '@/components/DistortionImage';
 import ProjectsSliderSection from '@/components/Sliders/Projects/ProjectsSliderSection';
-import { useTranslations } from 'next-intl';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import Image from 'next/image';
 import beehiveLogoMark from '@/public/logos/beehiveLogoMark.svg';
 import beehiveLogoMarkMobile from '@/public/logos/beehiveLogoMarkMobile.svg';
+import { useTranslations } from 'next-intl';
 
 export default function Home({ params: { locale } }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = useTranslations('home');
   const t_cta = useTranslations('cta');
 

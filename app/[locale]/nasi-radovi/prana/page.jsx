@@ -4,7 +4,7 @@ import pranaHeader from '@/public/our-work/prana-header.png';
 import imageFloatingLeft from '@/public/our-work/prana-case-study-1.png';
 import imageFloatingRight from '@/public/our-work/prana-case-study-2.png';
 import breakBg from '@/public/our-work/prana-break-bg.png';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
 const categories = [
@@ -21,7 +21,7 @@ const socials = [
 ];
 
 const Project = ({ params: { locale } }) => {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = useTranslations('projects.prana');
 
   return (

@@ -5,8 +5,8 @@ import Header from '@/components/Header';
 import { ViewTransitions } from 'next-view-transitions';
 import { NextIntlClientProvider, useTranslations } from 'next-intl';
 import { locales } from '../../navigation';
-import { unstable_setRequestLocale } from 'next-intl/server';
 import CustomCursor from '@/components/Cursor/CustomCursor';
+import { setRequestLocale } from 'next-intl/server';
 
 const poppins = Poppins({
   subsets: ['latin'],
@@ -64,7 +64,7 @@ export function generateStaticParams() {
 }
 
 export default function LocaleLayout({ children, params: { locale } }) {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = useTranslations('layout');
 
   const routes = [

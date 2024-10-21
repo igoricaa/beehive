@@ -4,7 +4,7 @@ import zlazlaHeader from '@/public/our-work/zla-zla-header.png';
 import MuxVideo from '@mux/mux-video-react';
 import imageFloatingRight from '@/public/our-work/zla-zla-case-study-2.jpg';
 import breakBg from '@/public/our-work/zla-zla-break-bg.png';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
 const categories = ['Brand', 'Social Media Strategy'];
@@ -16,7 +16,7 @@ const socials = [
 ];
 
 const Project = ({ params: { locale } }) => {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = useTranslations('projects.zla-zla');
 
   return (

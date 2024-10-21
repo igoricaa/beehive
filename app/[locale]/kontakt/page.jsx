@@ -3,11 +3,11 @@ import styles from './page.module.scss';
 import ContactForm from '@/components/ContactForm/ContactForm';
 import EyeAnimation from '@/components/EyeAnimation';
 import RoughNotationWrapper from '@/components/RoughNotationWrapper';
-import { unstable_setRequestLocale } from 'next-intl/server';
+import { setRequestLocale } from 'next-intl/server';
 import { useTranslations } from 'next-intl';
 
 const Contact = ({ params: { locale } }) => {
-  unstable_setRequestLocale(locale);
+  setRequestLocale(locale);
   const t = useTranslations('contact');
 
   const calButtonMessages = {
