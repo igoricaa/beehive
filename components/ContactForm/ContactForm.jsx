@@ -45,6 +45,7 @@ export default function ContactForm({ messages }) {
         name: formData.name,
         email: formData.email,
         message: formData.message,
+        recaptcha_token: formData.recaptcha_response,
       }),
     })
       .then((res) => {
