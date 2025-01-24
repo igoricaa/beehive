@@ -10,8 +10,10 @@ const limiter = rateLimit({
 });
 
 const verifyRecaptcha = async (token) => {
+  const recaptchaSecretKey = process.env.RECAPTCHA_SECRET_KEY;
+
   const recaptchaResponse = await fetch(
-    `https://www.google.com/recaptcha/api/siteverify?secret=${process.env.RECAPTCHA_SECRET_KEY}&response=${recaptcha_token}`,
+    `https://www.google.com/recaptcha/api/siteverify?secret=${recaptchaSecretKey}&response=${token}`,
     { method: 'POST' }
   );
 
@@ -24,15 +26,15 @@ export async function POST(req) {
   try {
     limiter.check(req, 3);
 
-    const { name, email, message } = await req.json();
+    const { name, email, message, recaptcha_token } = await req.json();
+
+    if (!name || !email || !message || !email.includes('@')) {
+      return Response.json({ error: 'Invalid form data' }, { status: 400 });
+    }
 
     const recaptchaSuccess = await verifyRecaptcha(recaptcha_token);
     if (!recaptchaSuccess) {
       return Response.json({ error: 'Invalid reCAPTCHA' }, { status: 400 });
-    }
-
-    if (!name || !email || !message || !email.includes('@')) {
-      return Response.json({ error: 'Invalid form data' }, { status: 400 });
     }
 
     const data = await resend.emails.send({
