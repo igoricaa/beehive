@@ -94,6 +94,10 @@ export default function Home({ params: { locale } }) {
         title: t('team.hover.andja.title'),
         text: t('team.hover.andja.text'),
       },
+      {
+        title: t('team.hover.tea.title'),
+        text: t('team.hover.tea.text'),
+      },
     ],
     cta: {
       textMain: t_cta('textMain'),

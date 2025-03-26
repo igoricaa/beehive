@@ -56,7 +56,7 @@
       "services": {
         "digital": {
           "title": "digital marketing strategy",
-          "description": "Producing content and running ads is our greatest love, but it is the final step to a comprehensive digital marketing strategy. We develop, produce and execute your story to get what you need. We do it with our hearts, knowledge and numbers."
+          "description": "Content production and campaigns are our greatest passion, but they are just the final step in creating and executing a digital marketing strategy. We set the strategy in a way that brings your story to life and expands its reach, targeting the right audience."
         },
         "social": {
           "title": "social media marketing",
@@ -111,6 +111,10 @@
         "andja": {
           "title": "Anđa, 35 years of buzzing",
           "text": "\"Salt, sea, a good book and an even better mille-feuille.\""
+        },
+        "tea": {
+          "title": "Tea, 30 years of buzzing",
+          "text": "The one who does it all."
         }
       }
     }

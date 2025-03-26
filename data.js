@@ -203,7 +203,7 @@ export const projects = [
 
 export const team = [
   {
-    listImage: '/team/darja-babovic.jpg',
+    listImage: '/team/darja-babovic.jpeg',
     subtitle: 'the founder',
     title: 'Darja Babović',
     hoverColor: '#ff3358ff',
@@ -249,6 +249,12 @@ export const team = [
     subtitle: 'the detail-oriented one',
     title: 'Anđa Nikolić',
     hoverColor: '#ffd600ff',
+  },
+  {
+    listImage: '/team/tea-vukadin.jpg',
+    subtitle: 'the one who does it all',
+    title: 'Tea Vukadin',
+    hoverColor: '#9cfffaff',
   },
 ];
 

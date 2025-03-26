@@ -50,7 +50,7 @@ export default function ContactForm({ messages }) {
     })
       .then((res) => {
         if (!res.ok) {
-          throw new Error(`Error: ${res.statusTexts}`);
+          throw new Error(`Error: ${res.statusText}`);
         }
         return res.json();
       })
@@ -154,11 +154,11 @@ export default function ContactForm({ messages }) {
       <Script
         id='recaptcha-load'
         strategy='lazyOnload'
-        src={`https://www.google.com/recaptcha/api.js?render=6Lf8xCUqAAAAAKqvzDfKX5X4SRlSuss5LQQT30yj`}
+        src={`https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}`}
         onLoad={() => {
           grecaptcha.ready(function () {
             grecaptcha
-              .execute('6Lf8xCUqAAAAAKqvzDfKX5X4SRlSuss5LQQT30yj', {
+              .execute(process.env.RECAPTCHA_SITE_KEY, {
                 action: 'contact',
               })
               .then(function (token) {

@@ -56,7 +56,7 @@
       "services": {
         "digital": {
           "title": "digitalni marketing & strategija",
-          "description": "Proizvodnja sadržaja i kampanje su naša najveća ljubav, ali to je poslednji korak u izradi i egzekuciji strategije digitalnog marketinga. Mi razvijamo, proizvodimo i realizujemo vašu priču kako bismo doveli vaše ciljeve do finish linije. Radimo to znanjem, srcem i brojevima."
+          "description": "Proizvodnja sadržaja i kampanje naša su najveća strast, ali tek završni korak u kreiranju i sprovođenju strategije digitalnog marketinga. Postavljamo strategiju tako da oživimo i proširimo vašu priču, ciljajući pravu publiku."
         },
         "social": {
           "title": "oglašavanje na društvenim medijima",
@@ -111,6 +111,10 @@
         "andja": {
           "title": "Anđa, 35 leta",
           "text": "\"So, more, dobra knjiga i još bolja krempita.\""
+        },
+        "tea": {
+          "title": "Tea, 30 leta",
+          "text": "Sve radi."
         }
       }
     }
