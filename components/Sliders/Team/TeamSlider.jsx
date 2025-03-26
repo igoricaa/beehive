@@ -21,7 +21,13 @@ export default function TeamSlider({ content, messages }) {
             <TeamSliderItem
               key={index}
               content={slideContent}
-              imageAlignment={[0, 4, 7].includes(index) ? 'top' : 'center'}
+              imageAlignment={
+                index === 0
+                  ? '100% 30%'
+                  : [4, 7].includes(index)
+                  ? 'top'
+                  : 'center'
+              }
               messages={messages[index]}
             />
           ))}
