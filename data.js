@@ -252,7 +252,7 @@ export const team = [
   },
   {
     listImage: '/team/tea-vukadin.jpg',
-    subtitle: 'the one who does it all',
+    subtitle: 'the patient one',
     title: 'Tea Vukadin',
     hoverColor: '#9cfffaff',
   },
