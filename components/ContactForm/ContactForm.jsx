@@ -154,11 +154,11 @@ export default function ContactForm({ messages }) {
       <Script
         id='recaptcha-load'
         strategy='lazyOnload'
-        src={`https://www.google.com/recaptcha/api.js?render=${process.env.RECAPTCHA_SITE_KEY}`}
+        src={`https://www.google.com/recaptcha/api.js?render=${process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}`}
         onLoad={() => {
           grecaptcha.ready(function () {
             grecaptcha
-              .execute(process.env.RECAPTCHA_SITE_KEY, {
+              .execute(process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY, {
                 action: 'contact',
               })
               .then(function (token) {
